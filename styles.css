@@ -19,34 +19,3 @@ body {
     margin-left: auto;
     margin-right: auto;
 }
-        body1 {
-            font-family: 'Inter', sans-serif;
-            background-color: #f0f8ff;
-        }
-        .section-card {
-            border-radius: 12px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-            padding: 2rem;
-            margin-bottom: 2rem;
-        }
-        .bg-section-1 {
-            background-color: #FFF2C3;
-        }
-        .bg-section-2 {
-            background-color: #D3F3EE;
-        }
-        .bg-section-3 {
-            background-color: #C3E3FF;
-        }
-        .bg-section-4 {
-            background-color: #E2D3F5;
-        }
-        .bg-section-5 {
-            background-color: #FFD3D3;
-        }
-        .text-header-color {
-            color: #004E89;
-        }
-        .text-accent-color {
-            color: #0077B6;
-        }
