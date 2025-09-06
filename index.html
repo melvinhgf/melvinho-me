@@ -40,6 +40,34 @@
         .text-accent-color {
             color: #0077B6;
         }
+
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: #48CAE4;
+            border: 4px solid #0077B6;
+            top: 0px;
+            left: -10px;
+            z-index: 1;
+        }
+        
     </style>
 </head>
 <body class="text-gray-800">
@@ -58,6 +86,50 @@
             </p>
         </section>
 
+                <section class="mb-12">
+            <div class="bg-white rounded-lg shadow-xl p-6 md:p-8">
+                <h2 class="text-3xl font-bold text-[#004E89] text-center mb-8">A Journey of Continuous Growth</h2>
+                <p class="text-center text-gray-600 max-w-3xl mx-auto mb-10">
+                    This timeline illustrates a career path defined by adaptability and the strategic acquisition of diverse skills across education, community management, and administration. Each role was a building block, contributing to a well-rounded and uniquely capable professional profile.
+                </p>
+                <div class="relative w-full max-w-4xl mx-auto">
+                    <div class="absolute left-0 h-full w-0.5 bg-[#0077B6] top-0"></div>
+                    <div class="space-y-12">
+                        <div class="relative pl-8 timeline-item">
+                            <p class="font-bold text-sm text-[#0077B6]">2023 - 2024</p>
+                            <h3 class="text-xl font-bold text-[#004E89]">Constituency Manager</h3>
+                            <p class="text-md text-gray-700">People's Association</p>
+                            <p class="text-sm mt-1 text-gray-600">Catalyzed community projects, managed budgets, and drove resident engagement.</p>
+                        </div>
+                        <div class="relative pl-8 timeline-item">
+                            <p class="font-bold text-sm text-[#0077B6]">2022 - 2023</p>
+                            <h3 class="text-xl font-bold text-[#004E89]">Assistant Manager, Graduate College</h3>
+                            <p class="text-md text-gray-700">Nanyang Technological University</p>
+                            <p class="text-sm mt-1 text-gray-600">Coordinated student system development and provided high-level committee support.</p>
+                        </div>
+                         <div class="relative pl-8 timeline-item">
+                            <p class="font-bold text-sm text-[#0077B6]">2020 - 2022</p>
+                            <h3 class="text-xl font-bold text-[#004E89]">Digital Ambassador & Community Executive</h3>
+                            <p class="text-md text-gray-700">IMDA & People's Association</p>
+                            <p class="text-sm mt-1 text-gray-600">Promoted digital literacy and managed frontline community services.</p>
+                        </div>
+                        <div class="relative pl-8 timeline-item">
+                            <p class="font-bold text-sm text-[#0077B6]">2015 - 2020</p>
+                            <h3 class="text-xl font-bold text-[#004E89]">Administration & Operations</h3>
+                            <p class="text-md text-gray-700">Sheraton Towers, YR Industries, Everrise Furniture</p>
+                            <p class="text-sm mt-1 text-gray-600">Managed inventory, procurement, client orders, and office operations.</p>
+                        </div>
+                        <div class="relative pl-8 timeline-item">
+                            <p class="font-bold text-sm text-[#0077B6]">2005 - 2015</p>
+                            <h3 class="text-xl font-bold text-[#004E89]">Teacher (Biology)</h3>
+                            <p class="text-md text-gray-700">St. Joseph's Institution & Catholic Junior College</p>
+                            <p class="text-sm mt-1 text-gray-600">Designed curriculum, led co-curricular activities, and mentored students for over a decade.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
         <section id="work-experience" class="section-card bg-section-2">
             <h2 class="text-3xl font-bold text-header-color mb-6">Work Experience</h2>
             
