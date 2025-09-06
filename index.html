@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Melvin Ho - The Versatile Professional</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet" />
+</head>
+<body class="text-gray-800">
+
+    <!-- HEADER -->
+    <header class="bg-[#FF6B6B] text-white py-12 text-center">
+        <h1 class="text-5xl md:text-6xl font-black uppercase tracking-wide">Melvin Ho</h1>
+        <p class="text-xl md:text-2xl mt-2 font-light">The Versatile Professional</p>
+    </header>
+
+    <!-- MAIN -->
+    <main class="container mx-auto p-4 md:p-8">
+        <!-- About -->
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+            <div class="md:col-span-2 bg-card">
+                <h2 class="text-3xl font-bold text-[#FF6B6B] mb-4">About the Infographic</h2>
+                <p class="text-gray-600 leading-relaxed">
+                    This infographic visualizes the career journey of Melvin Ho, highlighting his diverse experience across community, education, and administrative sectors.
+                </p>
+            </div>
+        </section>
+
+        <!-- Skills Chart -->
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+            <div class="bg-card">
+                <h2 class="text-3xl font-bold text-[#FFD933] mb-4">Key Career Metrics</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 text-center">
+                    <div>
+                        <p class="text-5xl font-black text-[#6B99FF]">19+</p>
+                        <p class="text-lg font-semibold text-gray-600">Years of Professional Experience</p>
+                    </div>
+                    <div>
+                        <p class="text-5xl font-black text-[#6B99FF]">4</p>
+                        <p class="text-lg font-semibold text-gray-600">Key Career Transitions</p>
+                    </div>
+                    <div>
+                        <p class="text-5xl font-black text-[#6B99FF]">3+</p>
+                        <p class="text-lg font-semibold text-gray-600">Decades of Volunteer Service</p>
+                    </div>
+                    <div>
+                        <p class="text-5xl font-black text-[#6B99FF]">1</p>
+                        <p class="text-lg font-semibold text-gray-600">Core Mission: 'Use Life to Influence Lives'</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-card">
+                <h2 class="text-3xl font-bold text-[#6BFFB8] mb-4">Core Competencies</h2>
+                <p class="text-gray-600 mb-6">
+                    Melvin's skills are a unique blend of soft and technical abilities.
+                </p>
+                <div class="chart-container">
+                    <canvas id="skillsRadarChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <!-- Career Chart -->
+        <section class="md:col-span-2 bg-card mb-8">
+            <h2 class="text-3xl font-bold text-[#FF6B6B] mb-6">Career Journey</h2>
+            <p class="text-gray-600 mb-6">
+                Melvin's career path shows progression across sectors.
+            </p>
+            <div class="chart-container">
+                <canvas id="careerChart"></canvas>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#90E0EF] text-center py-6">
+        <div class="flex flex-col md:flex-row justify-center items-center space-y-2 md:space-y-0 md:space-x-6 text-[#004E89]">
+            <a href="mailto:hgf.melvin@gmail.com" class="hover:underline">hgf.melvin@gmail.com</a>
+            <span>|</span>
+            <a href="https://www.linkedin.com/in/melvinhgf" target="_blank" class="hover:underline">LinkedIn Profile</a>
+        </div>
+    </footer>
+
+    <script src="js/charts.js"></script>
+</body>
+</html>
