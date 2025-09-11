@@ -40,7 +40,6 @@
         .text-accent-color {
             color: #0077B6;
         }
-
         .chart-container {
             position: relative;
             width: 100%;
@@ -67,11 +66,29 @@
             left: -10px;
             z-index: 1;
         }
-        
+        .card-shadow {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        /* Adjusted margin for sections with borders */
+        main section:not(:last-child) {
+            margin-bottom: 3rem; /* Add spacing between sections */
+        }    
     </style>
 </head>
 <body class="text-gray-800">
-
+    <!-- Header & Navigation -->
+        <header class="bg-white sticky top-0 z-50 card-shadow">
+        <nav class="section-container flex justify-between items-center py-4 lg:py-6">
+            <div class="text-2xl font-bold text-gray-900">Melvin Ho （何广福）</div>
+            <div class="space-x-4 md:space-x-6">
+                <a href="#about" class="text-gray-600 hover:text-indigo-600 transition-colors duration-300">About Me</a>
+                <a href="#resume" class="text-gray-600 hover:text-indigo-600 transition-colors duration-300">Resume</a>
+                <a href="#projects" class="text-gray-600 hover:text-indigo-600 transition-colors duration-300">Projects</a>
+                <a href="#contact" class="text-white bg-indigo-600 hover:bg-indigo-700 px-4 py-2 rounded-lg font-medium transition-colors duration-300">Contact</a>
+            </div>
+        </nav>
+    </header>
+    
     <header class="bg-[#004E89] text-white py-12 text-center">
         <h1 class="text-5xl md:text-6xl font-black uppercase tracking-wide">Melvin Ho</h1>
         <p class="text-xl md:text-2xl mt-2 font-light">Values-Driven Professional & Community Leader</p>
