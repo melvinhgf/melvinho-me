@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Professional Webpage</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            @apply bg-gray-50 text-gray-800;
+        }
+        .section-container {
+            @apply container mx-auto px-4 py-16 lg:py-24 max-w-7xl;
+            border: 6px solid transparent; /* The border is now colourless */
+            border-radius: 12px;
+            margin-bottom: 24px;
+        }
+        .card-shadow {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        /* Adjusted margin for sections with borders */
+        main section:not(:last-child) {
+            margin-bottom: 3rem; /* Add spacing between sections */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header class="bg-white sticky top-0 z-50 card-shadow">
+        <nav class="section-container flex justify-between items-center py-4 lg:py-6">
+            <div class="text-2xl font-bold text-gray-900">Melvin Ho （何广福）</div>
+            <div class="space-x-4 md:space-x-6">
+                <a href="#about" class="text-gray-600 hover:text-indigo-600 transition-colors duration-300">About Me</a>
+                <a href="#resume" class="text-gray-600 hover:text-indigo-600 transition-colors duration-300">Resume</a>
+                <a href="#projects" class="text-gray-600 hover:text-indigo-600 transition-colors duration-300">Projects</a>
+                <a href="#contact" class="text-white bg-indigo-600 hover:bg-indigo-700 px-4 py-2 rounded-lg font-medium transition-colors duration-300">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Self-Introduction Section -->
+    <main>
+        <section id="about" class="section-container text-center">
+            <div class="flex flex-col items-center">
+                <!-- Profile Picture Placeholder -->
+                <div class="w-32 h-32 md:w-48 md:h-48 bg-gray-200 rounded-full overflow-hidden mb-8 card-shadow">
+                    <img src="https://placehold.co/400x400/F5F5F5/6B7280?text=Jane+Doe" alt="Profile Picture" class="w-full h-full object-cover">
+                </div>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-4">
+                    Hello, I'm <span class="text-indigo-600">Melvin Ho</span>
+                </h1>
+                <p class="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+                    Educator | Administrator | Community Leader To-Be<br>“Using Life To Influence Lives” <br>I am an educator by birth, molecular biologist by training and community at heart.
+                </p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#projects" class="inline-block px-8 py-3 bg-indigo-600 text-white font-medium rounded-lg hover:bg-indigo-700 transition-colors duration-300 transform hover:scale-105 card-shadow">View My Work</a>
+                    <a href="mailto:hgf.melvin@gmail.com" class="inline-block px-8 py-3 bg-indigo-600 text-white font-medium rounded-lg hover:bg-indigo-700 transition-colors duration-300 transform hover:scale-105 card-shadow">Get In Touch</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Web Resume Section -->
+        <section id="resume" class="bg-white py-16 lg:py-24 section-container">
+            <div class="max-w-4xl mx-auto space-y-8">
+                <h2 class="text-3xl sm:text-4xl font-bold text-center text-gray-900 mb-12">My Professional Journey</h2>
+                <div class="bg-gray-100 p-8 rounded-xl card-shadow">
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-4">Summary</h3>
+                    <p class="text-gray-700">With a mission to "Use Life to Influence Lives," I am a professional defined by your integrity, empathy, and adaptability. My diverse background, spanning community management, education, and administration, gives me a unique ability to connect meaningfully with people from all walks of life.<br>
+
+<br>I thrive on challenges and excel at problem-solving, always considering all perspectives to drive innovation and improvement. Known for my impartiality and ability to motivate, you consistently maintain high standards for myself and others, creating a lasting positive impact wherever I apply my skills.<br>
+<br>This portfolio showcases my past work, highlights my current projects, and provides a pathway for new opportunities.</p>
+                </div>
+                <div class="bg-gray-100 p-8 rounded-xl card-shadow">
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-4">Qualities</h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                        <li>Adaptability and Problem-Solving</li>
+                        <li>Innovation-Oriented</li>
+                        <li>Broad Interests</li>
+                        <li>Strong Personal Values</li>
+                        <li>High Standards</li>
+                    </ul>
+                </div>
+                <div class="bg-gray-100 p-8 rounded-xl card-shadow">
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-4">Core Competencies</h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                        <li>Community Engagement and Stakeholder Management</li>
+                        <li>Project and Event Management</li>
+                        <li>Budget Planning and Financial Control</li>
+                        <li>HR Administration and Talent Development</li>
+                        <li>Curriculum Design and Training Delivery</li>
+                        <li>Process Improvement and Change Management</li>
+                        <li>Digital Literacy and Technology Adoption</li>
+                        <li>Bilingual Communication (English and Chinese)</li>
+                    </ul>
+                </div>
+                <!-- Resume Buttons -->
+                <div class="flex justify-center space-x-4 mt-8">
+                    <a href="#resume" class="inline-block px-8 py-4 bg-indigo-600 text-white font-medium rounded-lg hover:bg-indigo-700 transition-colors duration-300 transform hover:scale-105 card-shadow">
+                        Web Resume
+                    </a>
+                    <!-- IMPORTANT: Replace the href with the actual URL to your resume file. -->
+                    <a href="your_resume.pdf" download="Jane_Doe_Resume" class="inline-block px-8 py-4 bg-indigo-600 text-white font-medium rounded-lg hover:bg-indigo-700 transition-colors duration-300 transform hover:scale-105 card-shadow">
+                        Download Resume
+                    </a>
+                    <!-- IMPORTANT: Replace the href with your actual LinkedIn profile URL. -->
+                    <a href="https://www.linkedin.com/in/melvinhgf" class="inline-block px-8 py-4 bg-indigo-600 text-white font-medium rounded-lg hover:bg-indigo-700 transition-colors duration-300 transform hover:scale-105 card-shadow">
+                        My LinkedIn
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="bg-gray-100 py-16 lg:py-24 section-container">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center text-gray-900 mb-12">My Projects</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Project Card 1 (Red) -->
+                <div class="bg-white rounded-xl overflow-hidden card-shadow hover:scale-105 transition-transform duration-300">
+                    <img src="https://placehold.co/600x400/F87171/FFFFFF?text=Project+1" alt="Project 1" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Project Title One</h3>
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-3">A detailed description of the first project, highlighting the technologies used, challenges faced, and the final outcome.</p>
+                        <a href="#projects" class="text-red-600 font-medium hover:underline transition-colors duration-300">View Project &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Project Card 2 (Pink) -->
+                <div class="bg-white rounded-xl overflow-hidden card-shadow hover:scale-105 transition-transform duration-300">
+                    <img src="https://placehold.co/600x400/EC4899/FFFFFF?text=Project+2" alt="Project 2" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Project Title Two</h3>
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-3">This project involved building a responsive web application from scratch, focusing on performance and a clean UI.</p>
+                        <a href="#projects" class="text-pink-600 font-medium hover:underline transition-colors duration-300">View Project &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Project Card 3 (Orange) -->
+                <div class="bg-white rounded-xl overflow-hidden card-shadow hover:scale-105 transition-transform duration-300">
+                    <img src="https://placehold.co/600x400/F97316/FFFFFF?text=Project+3" alt="Project 3" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Project Title Three</h3>
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-3">An interactive data visualization project using modern JavaScript frameworks to present complex information clearly.</p>
+                        <a href="#projects" class="text-orange-600 font-medium hover:underline transition-colors duration-300">View Project &rarr;</a>
+                    </div>
+                </div>
+                
+                <!-- Project Card 4 (Yellow) -->
+                <div class="bg-white rounded-xl overflow-hidden card-shadow hover:scale-105 transition-transform duration-300">
+                    <img src="https://placehold.co/600x400/FACC15/FFFFFF?text=Project+4" alt="Project 4" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Project Title Four</h3>
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-3">This project showcases my ability to create dynamic and visually appealing interfaces using a new set of tools and technologies.</p>
+                        <a href="#projects" class="text-yellow-600 font-medium hover:underline transition-colors duration-300">View Project &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section-container text-center">
+            <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Let's Connect</h2>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
+                I'm currently open to new opportunities. Feel free to reach out to me to discuss collaborations or just to say hello!
+            </p>
+            <a href="mailto:hgf.melvin@gmail.com" class="inline-block px-8 py-4 bg-indigo-600 text-white font-medium rounded-lg hover:bg-indigo-700 transition-colors duration-300 transform hover:scale-105 card-shadow">
+                Send Me an Email
+            </a>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="section-container text-center text-sm">
+            <p>&copy; 2025 MelvinHGF. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
