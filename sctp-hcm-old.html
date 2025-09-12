@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCTP HCM Organisation Learning and Development</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0fdf4;
+        }
+        .section-header {
+            position: relative;
+            border-bottom: 2px solid #a7f3d0;
+            padding-bottom: 0.5rem;
+        }
+        .text-shadow {
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+        /* Adjusted margin for sections with borders */
+        main section:not(:last-child) {
+            margin-bottom: 3rem; /* Add spacing between sections */
+        }
+        .section-container {
+            @apply container mx-auto px-4 py-16 lg:py-24 max-w-7xl;
+            border: 6px solid transparent; /* The border is now colourless */
+            border-radius: 12px;
+            margin-bottom: 4px;
+        }
+
+    </style>
+</head>
+
+<!-- Header & Navigation -->
+            <header class="bg-white sticky top-0 z-50 card-shadow">
+        <nav class="section-container flex justify-between items-center py-4 lg:py-6">
+            <div class="text-2xl font-bold text-gray-900">Melvin Ho （何广福）</div>
+            <div class="space-x-4 md:space-x-6">
+                <a href="https://melvinhgf.github.io/melvinho-me/index.html#about" target="_blank" class="text-gray-600 hover:text-indigo-600 transition-colors duration-300">About Me</a>
+                <a href="https://melvinhgf.github.io/melvinho-me/index.html#resume" target="_blank" class="text-gray-600 hover:text-indigo-600 transition-colors duration-300">Summary</a>
+                <a href="https://melvinhgf.github.io/melvinho-me/index.html#projects" target="_blank" class="text-gray-600 hover:text-indigo-600 transition-colors duration-300">Projects</a>
+                <a href="https://melvinhgf.github.io/melvinho-me/index.html#contact" target="_blank" class="text-white bg-indigo-600 hover:bg-indigo-700 px-4 py-2 rounded-lg font-medium transition-colors duration-300">Contact</a>
+                </div>
+            </nav>
+    </header
+<body class="bg-gray-50 text-gray-800"> 
+    <header class="bg-green-600 shadow-md">
+        <div class="container mx-auto px-6 py-8 md:py-12 text-white text-center">
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">SCTP HCM Organisation Learning and Development</h1>
+            <p class="mt-4 text-sm sm:text-base max-w-2xl mx-auto">This is an assignment submitted for a fictitious company, GreenTech Solutions Pte Ltd, for its customer support team's learning and development plan.</p>
+        </div>
+    </header>
+    <main class="container mx-auto p-6 md:p-8 space-y-12 md:space-y-16">
+        <!-- Executive Summary Section -->
+        <section class="bg-white p-6 md:p-8 rounded-xl shadow-lg border border-gray-200">
+            <h2 class="text-xl sm:text-2xl font-bold text-green-700 mb-4 section-header">Executive Summary</h2>
+            <div class="space-y-4">
+                <p class="text-gray-700 leading-relaxed">The report outlines a comprehensive training development plan to address performance gaps within the Customer Service Team (CST). The goal is to enhance client engagement, product knowledge, and technical skills to improve customer satisfaction and increase revenue. Two key training programmes are proposed, with strategic use of government grants to manage costs and maximize ROI.</p>
+                <div class="flex items-center space-x-4 p-4 bg-green-50 rounded-lg border border-green-200">
+                    <svg class="w-8 h-8 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a8 8 0 100 16 8 8 0 000-16zM5 8a1 1 0 011-1h8a1 1 0 010 2H6a1 1 0 01-1-1z"></path><path fill-rule="evenodd" d="M10 2a8 8 0 100 16 8 8 0 000-16zM5 8a1 1 0 011-1h8a1 1 0 010 2H6a1 1 0 01-1-1z" clip-rule="evenodd"></path><path fill-rule="evenodd" d="M10 2a8 8 0 100 16 8 8 0 000-16zM5 8a1 1 0 011-1h8a1 1 0 010 2H6a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+                    <p class="text-green-800 font-semibold">Purpose: To develop a training plan to enhance CST performance and address key business challenges.</p>
+                </div>
+            </div>
+        </section>
+        <!-- Strategic Analysis & Performance Gaps -->
+        <section class="bg-white p-6 md:p-8 rounded-xl shadow-lg border border-gray-200">
+            <h2 class="text-xl sm:text-2xl font-bold text-green-700 mb-6 section-header">Strategic Analysis & Performance Gaps</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 items-center">
+                <!-- Underperforming Area -->
+                <div class="flex flex-col items-center text-center p-4 bg-amber-50 rounded-lg border border-amber-200">
+                    <div class="w-12 h-12 bg-amber-500 text-white rounded-full flex items-center justify-center mb-3">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9 5a1 1 0 012 0v5a1 1 0 01-2 0V5z" clip-rule="evenodd"></path></svg>
+                    </div>
+                    <h3 class="font-semibold text-lg text-amber-800">Performance Gap</h3>
+                    <p class="text-sm text-gray-600">Low customer satisfaction and recurring service escalations identified as key issues.</p>
+                </div>
+                <!-- Impact -->
+                <div class="flex flex-col items-center text-center p-4 bg-rose-50 rounded-lg border border-rose-200">
+                    <div class="w-12 h-12 bg-rose-500 text-white rounded-full flex items-center justify-center mb-3">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9 6a1 1 0 011-1h1a1 1 0 110 2h-1a1 1 0 01-1-1zm0 4a1 1 0 011-1h1a1 1 0 110 2h-1a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+                    </div>
+                    <h3 class="font-semibold text-lg text-rose-800">Business Impact</h3>
+                    <p class="text-sm text-gray-600">Decreased customer loyalty, negative brand perception, and reduced revenue.</p>
+                </div>
+                <!-- Goal -->
+                <div class="flex flex-col items-center text-center p-4 bg-lime-50 rounded-lg border border-lime-200">
+                    <div class="w-12 h-12 bg-lime-500 text-white rounded-full flex items-center justify-center mb-3">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM7 9a1 1 0 112 0 1 1 0 01-2 0zm5 0a1 1 0 112 0 1 1 0 01-2 0zM7 13a1 1 0 112 0 1 1 0 01-2 0zm5 0a1 1 0 112 0 1 1 0 01-2 0z" clip-rule="evenodd"></path></svg>
+                    </div>
+                    <h3 class="font-semibold text-lg text-lime-800">Business Goal</h3>
+                    <p class="text-sm text-gray-600">Achieve a 25% increase in customer satisfaction scores by Q4 2025.</p>
+                </div>
+            </div>
+        </section>
+        <!-- CST Training Development Plan -->
+        <section class="bg-white p-6 md:p-8 rounded-xl shadow-lg border border-gray-200">
+            <h2 class="text-xl sm:text-2xl font-bold text-green-700 mb-6 section-header">Customer Support Team Training Development Plan</h2>
+            <!-- 4.1 Proposed Training Plan Overview -->
+            <div class="mb-8">
+                <h3 class="text-lg font-semibold text-gray-700 mb-4">Proposed Training Plan Overview</h3>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="flex items-center space-x-4 p-4 bg-teal-50 rounded-lg border border-teal-200">
+                        <div class="w-12 h-12 bg-teal-500 text-white rounded-full flex items-center justify-center flex-shrink-0">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9 12a1 1 0 100-2 1 1 0 000 2z"></path><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v2.586l3 3V7a1 1 0 00-1-1z" clip-rule="evenodd"></path></svg>
+                        </div>
+                        <p class="text-teal-800 font-semibold">The plan is a <span class="text-lg">3-month</span> comprehensive program focused on client engagement and technical skills.</p>
+                    </div>
+                    <div class="flex items-center space-x-4 p-4 bg-cyan-50 rounded-lg border border-cyan-200">
+                        <div class="w-12 h-12 bg-cyan-500 text-white rounded-full flex items-center justify-center flex-shrink-0">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 2a8 8 0 100 16 8 8 0 000-16zm-1 9a1 1 0 011-1h1a1 1 0 110 2h-1a1 1 0 01-1-1zM9 6a1 1 0 011-1h1a1 1 0 110 2h-1a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+                        </div>
+                        <p class="text-cyan-800 font-semibold">Training aims to improve client engagement, product knowledge, and technical skills to address performance gaps.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Logistics and Administrative Plan -->
+            <div class="mb-8">
+                <h3 class="text-lg font-semibold text-gray-700 mb-4">Logistics and Administrative Plan</h3>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="flex flex-col items-center text-center p-4 bg-sky-50 rounded-lg border border-sky-200">
+                        <div class="w-12 h-12 bg-sky-500 text-white rounded-full flex items-center justify-center mb-3">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 3a1 1 0 00-1 1v2H6a1 1 0 000 2h3v2a1 1 0 002 0v-2h3a1 1 0 100-2h-3V4a1 1 0 00-1-1z"></path><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm0-10a1 1 0 011-1h1a1 1 0 110 2h-1a1 1 0 01-1-1zm-1 4a1 1 0 011-1h1a1 1 0 110 2h-1a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+                        </div>
+                        <h4 class="font-semibold text-lg text-sky-800">Locations</h4>
+                        <p class="text-sm text-gray-600">Training will be conducted off-site and in-house with convenience and minimal disruption in consideration.</p>
+                    </div>
+                    <div class="flex flex-col items-center text-center p-4 bg-emerald-50 rounded-lg border border-emerald-200">
+                        <div class="w-12 h-12 bg-emerald-500 text-white rounded-full flex items-center justify-center mb-3">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M6 2a1 1 0 00-1 1v1h10V3a1 1 0 10-2 0v1H7V3a1 1 0 10-2 0zM4 6h12a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V8a2 2 0 012-2zm2 4a1 1 0 100 2h8a1 1 0 100-2H6z"></path></svg>
+                        </div>
+                        <h4 class="font-semibold text-lg text-emerald-800">Schedule</h4>
+                        <p class="text-sm text-gray-600">The training schedule will be coordinated to avoid clashes and maintain operational efficiency.</p>
+                    </div>
+                    <div class="flex flex-col items-center text-center p-4 bg-blue-50 rounded-lg border border-blue-200">
+                        <div class="w-12 h-12 bg-blue-500 text-white rounded-full flex items-center justify-center mb-3">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path></svg>
+                        </div>
+                        <h4 class="font-semibold text-lg text-blue-800">Trainers</h4>
+                        <p class="text-sm text-gray-600">Training will be delivered by qualified external vendors and a dedicated in-house training team.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Programme One: Communication Excellence for Client Engagement -->
+            <div class="mb-8">
+                    <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
+                    <h3 class="text-lg font-semibold text-gray-700 mb-4">Programme One: Communication Excellence for Client Engagement</h3>
+                    <p class="text-gray-700 mb-4">This external off-site two-day workshop focuses on crucial soft skills to improve customer interactions and satisfaction. Qualified external vendor will be picked to conduct the training.</p>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div class="flex items-center space-x-3 p-3 bg-purple-100 rounded-lg">
+                            <svg class="w-6 h-6 text-purple-600" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 2a8 8 0 100 16 8 8 0 000-16zM5 8a1 1 0 112 0 1 1 0 01-2 0zm5 0a1 1 0 112 0 1 1 0 01-2 0zM7 13a1 1 0 112 0 1 1 0 01-2 0zm5 0a1 1 0 112 0 1 1 0 01-2 0z" clip-rule="evenodd"></path></svg>
+                            <span class="text-sm text-purple-800 font-semibold">Building Rapport & Trust</span>
+                        </div>
+                        <div class="flex items-center space-x-3 p-3 bg-indigo-100 rounded-lg">
+                            <svg class="w-6 h-6 text-indigo-600" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm-1 9a1 1 0 011-1h1a1 1 0 110 2h-1a1 1 0 01-1-1z" clip-rule="evenodd"></path><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm-1 9a1 1 0 011-1h1a1 1 0 110 2h-1a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+                            <span class="text-sm text-indigo-800 font-semibold">Active Listening & Questioning</span>
+                        </div>
+                        <div class="flex items-center space-x-3 p-3 bg-pink-100 rounded-lg">
+                            <svg class="w-6 h-6 text-pink-600" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9 5a1 1 0 012 0v5a1 1 0 01-2 0V5z" clip-rule="evenodd"></path><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9 5a1 1 0 012 0v5a1 1 0 01-2 0V5z" clip-rule="evenodd"></path></svg>
+                            <span class="text-sm text-pink-800 font-semibold">Conflict Resolution & De-escalation</span>
+                        </div>
+                    </div>
+                    <!-- Learning Objectives & Outcomes for Programme One -->
+                    <div class="mt-6 border-t border-gray-200 pt-6">
+                        <h4 class="font-semibold text-gray-700 mb-2">Learning Objectives</h4>
+                        <ul class="text-sm text-gray-600 space-y-2">
+                            <li class="flex items-center space-x-2"><svg class="w-4 h-4 text-purple-500" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm-1-10a1 1 0 112 0v4a1 1 0 11-2 0v-4z"></path></svg><span>To equip CST members with effective communication skills for building strong client relationships.</span></li>
+                            <li class="flex items-center space-x-2"><svg class="w-4 h-4 text-indigo-500" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zM9 5a1 1 0 011-1h1a1 1 0 110 2h-1a1 1 0 01-1-1z"></path></svg><span>To enable CST members to actively listen to client needs and respond with empathy and clarity.</span></li>
+                            <li class="flex items-center space-x-2"><svg class="w-4 h-4 text-pink-500" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zM8 9a1 1 0 112 0 1 1 0 01-2 0zm-2 2a1 1 0 112 0 1 1 0 01-2 0z"></path></svg><span>To train CST members to handle difficult situations and de-escalate conflicts professionally.</span></li>
+                        </ul>
+                        <h4 class="font-semibold text-gray-700 mt-4 mb-2">Learning Outcomes</h4>
+                        <ul class="text-sm text-gray-600 space-y-2">
+                            <li class="flex items-center space-x-2"><svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-10.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg><span>CST members will be able to build rapport and trust with clients more effectively.</span></li>
+                            <li class="flex items-center space-x-2"><svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-10.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg><span>A noticeable increase in positive customer feedback and satisfaction scores.</span></li>
+                            <li class="flex items-center space-x-2"><svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-10.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg><span>Reduced number of escalated customer service issues.</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Programme Two: Technical Upskilling - Product Mastery -->
+            <div class="mb-8">
+               <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
+                    <h3 class="text-lg font-semibold text-gray-700 mb-4">Programme Two: Technical Upskilling - Product Mastery</h3>
+                    <p class="text-gray-700 mb-4">This four half-day on-site workshop is designed to deepen product knowledge and technical expertise for more efficient problem-solving. It will be co-designed with, and facilitated by, subject matter experts from the Technical Team.</p>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div class="flex items-center space-x-3 p-3 bg-lime-100 rounded-lg">
+                            <svg class="w-6 h-6 text-lime-600" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M5 4a2 2 0 00-2 2v6a2 2 0 002 2h8a2 2 0 002-2V6a2 2 0 00-2-2H5z"></path><path d="M11 14a1 1 0 100 2h4a1 1 0 100-2h-4z"></path></svg>
+                            <span class="text-sm text-lime-800 font-semibold">Core Product Deep Dive</span>
+                        </div>
+                        <div class="flex items-center space-x-3 p-3 bg-fuchsia-100 rounded-lg">
+                            <svg class="w-6 h-6 text-fuchsia-600" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M13 10a1 1 0 000 2h2a1 1 0 100-2h-2z"></path><path fill-rule="evenodd" d="M10 2a8 8 0 100 16 8 8 0 000-16zM6 8a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+                            <span class="text-sm text-fuchsia-800 font-semibold">Technical Problem-Solving</span>
+                        </div>
+                        <div class="flex items-center space-x-3 p-3 bg-red-100 rounded-lg">
+                            <svg class="w-6 h-6 text-red-600" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9 5a1 1 0 012 0v5a1 1 0 01-2 0V5z" clip-rule="evenodd"></path></svg>
+                            <span class="text-sm text-red-800 font-semibold">New Product Updates</span>
+                        </div>
+                    </div>
+                    <!-- Learning Objectives & Outcomes for Programme Two -->
+                    <div class="mt-6 border-t border-gray-200 pt-6">
+                        <h4 class="font-semibold text-gray-700 mb-2">Learning Objectives</h4>
+                        <ul class="text-sm text-gray-600 space-y-2">
+                            <li class="flex items-center space-x-2"><svg class="w-4 h-4 text-lime-500" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm-1-10a1 1 0 112 0v4a1 1 0 11-2 0v-4z"></path></svg><span>To provide in-depth product knowledge, including features, configurations, and best practices.</span></li>
+                            <li class="flex items-center space-x-2"><svg class="w-4 h-4 text-fuchsia-500" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zM9 5a1 1 0 011-1h1a1 1 0 110 2h-1a1 1 0 01-1-1z"></path></svg><span>To enhance technical problem-solving skills, allowing for faster and more accurate issue resolution.</span></li>
+                            <li class="flex items-center space-x-2"><svg class="w-4 h-4 text-red-500" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zM8 9a1 1 0 112 0 1 1 0 01-2 0zm-2 2a1 1 0 112 0 1 1 0 01-2 0z"></path></svg><span>To ensure CST members are up-to-date with new product updates and functionalities.</span></li>
+                        </ul>
+                        <h4 class="font-semibold text-gray-700 mt-4 mb-2">Learning Outcomes</h4>
+                        <ul class="text-sm text-gray-600 space-y-2">
+                            <li class="flex items-center space-x-2"><svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-10.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg><span>CST members will be able to resolve client issues with greater efficiency.</span></li>
+                            <li class="flex items-center space-x-2"><svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-10.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg><span>A reduction in the number of technical service escalations.</span></li>
+                            <li class="flex items-center space-x-2"><svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-10.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg><span>Improved ability to communicate technical information clearly to clients.</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Estimated Costs & ROI Section -->
+            <div class="mb-8">
+                <h3 class="text-lg font-semibold text-gray-700 mb-4">Estimated Costs & ROI</h3>
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <!-- Costs -->
+                    <div class="flex flex-col items-center">
+                        <h4 class="text-lg font-semibold text-gray-700 mb-4">Total Estimated Costs</h4>
+                        <div class="relative w-40 h-40">
+                            <svg class="absolute w-full h-full transform -rotate-90" viewBox="0 0 100 100">
+                                <!-- Background Circle -->
+                                <circle class="text-gray-200 stroke-current" cx="50" cy="50" r="45" stroke-width="10"></circle>
+                                <!-- Foreground Arc (60% of the circle for costs) -->
+                                <circle class="text-teal-500 stroke-current" cx="50" cy="50" r="45" stroke-width="10" stroke-dasharray="282.74" stroke-dashoffset="113.09"></circle>
+                            </svg>
+                            <div class="absolute inset-0 flex flex-col items-center justify-center">
+                                <span class="text-2xl font-bold text-teal-800">S$40,500</span>
+                                <span class="text-sm text-teal-700 mt-1">Total Budget</span>
+                            </div>
+                        </div>
+                        <p class="text-xs text-gray-500 mt-2">*Note: Based on a 15-pax team and cost per programme.</p>
+                    </div>
+                    <!-- ROI -->
+                    <div class="space-y-4">
+                        <h4 class="text-lg font-semibold text-gray-700 mb-2">Measurement of Success (ROI)</h4>
+                        <div class="flex items-start space-x-3">
+                            <span class="text-teal-500 font-bold text-2xl">✓</span>
+                            <p class="text-sm text-gray-600">Increase in customer satisfaction score from 75% to 85%.</p>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <span class="text-teal-500 font-bold text-2xl">✓</span>
+                            <p class="text-sm text-gray-600">Reduction in the number of customer complaints by 15%.</p>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <span class="text-teal-500 font-bold text-2xl">✓</span>
+                            <p class="text-sm text-gray-600">Increase in repeat business rate by 5%.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Government Grants and Subsidies -->
+        <section class="bg-white p-6 md:p-8 rounded-xl shadow-lg border border-gray-200">
+            <h2 class="text-xl sm:text-2xl font-bold text-green-700 mb-6 section-header">Government Grants & Subsidies</h2>
+            <p class="text-gray-700 mb-6">Leveraging government grants is crucial for managing training costs. Here is a comparison of two key schemes that GreenTech Solutions can tap on.</p>
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- SFEC -->
+                <div class="bg-indigo-50 p-6 rounded-lg border border-indigo-200 space-y-4">
+                    <h3 class="text-lg font-semibold text-indigo-800">SkillsFuture Enterprise Credit (SFEC)</h3>
+                    <div class="space-y-2">
+                        <h4 class="font-medium text-gray-700">Advantages</h4>
+                        <ul class="text-sm text-gray-600 space-y-1 pl-4">
+                            <li class="relative before:content-[''] before:absolute before:top-2 before:-left-4 before:w-2 before:h-2 before:bg-indigo-500 before:rounded-full">High Subsidy Rate & Broad Coverage</li>
+                            <li class="relative before:content-[''] before:absolute before:top-2 before:-left-4 before:w-2 before:h-2 before:bg-indigo-500 before:rounded-full">Flexible for various business initiatives</li>
+                        </ul>
+                    </div>
+                    <div class="space-y-2">
+                        <h4 class="font-medium text-gray-700">Disadvantages</h4>
+                        <ul class="text-sm text-gray-600 space-y-1 pl-4">
+                            <li class="relative before:content-[''] before:absolute before:top-2 before:-left-4 before:w-2 before:h-2 before:bg-indigo-500 before:rounded-full">One-off S$10,000 credit (not renewable)</li>
+                            <li class="relative before:content-[''] before:absolute before:top-2 before:-left-4 before:w-2 before:h-2 before:bg-indigo-500 before:rounded-full">Time-consuming application process</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- WSQ -->
+                <div class="bg-teal-50 p-6 rounded-lg border border-teal-200 space-y-4">
+                    <h3 class="text-lg font-semibold text-teal-800">WSQ Course Subsidies</h3>
+                    <div class="space-y-2">
+                        <h4 class="font-medium text-gray-700">Advantages</h4>
+                        <ul class="text-sm text-gray-600 space-y-1 pl-4">
+                            <li class="relative before:content-[''] before:absolute before:top-2 before:-left-4 before:w-2 before:h-2 before:bg-teal-500 before:rounded-full">Significant cost reduction (directly applied)</li>
+                            <li class="relative before:content-[''] before:absolute before:top-2 before:-left-4 before:w-2 before:h-2 before:bg-teal-500 before:rounded-full">Nationally recognized qualifications</li>
+                            <li class="relative before:content-[''] before:absolute before:top-2 before:-left-4 before:w-2 before:h-2 before:bg-teal-500 before:rounded-full">High-quality, standardized curriculum</li>
+                        </ul>
+                    </div>
+                    <div class="space-y-2">
+                        <h4 class="font-medium text-gray-700">Disadvantages</h4>
+                        <ul class="text-sm text-gray-600 space-y-1 pl-4">
+                            <li class="relative before:content-[''] before:absolute before:top-2 before:-left-4 before:w-2 before:h-2 before:bg-teal-500 before:rounded-full">Less flexible than custom programs</li>
+                            <li class="relative before:content-[''] before:absolute before:top-2 before:-left-4 before:w-2 before:h-2 before:bg-teal-500 before:rounded-full">Potential administrative burden</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer Section with Buttons -->
+    <footer class="mt-16 py-8 text-center">
+        <div class="flex flex-col sm:flex-row justify-center items-center gap-4 max-w-2xl mx-auto mb-4">
+            <!-- Download Button -->
+            <a href="#" download="Module 2 Report Ho Guang Fu.pdf" class="w-full sm:w-auto px-8 py-3 bg-green-500 text-white font-semibold rounded-full shadow-lg hover:bg-green-600 transition-colors duration-300">
+                Download Report
+            </a>
+            <!-- Contact Button -->
+            <a href="mailto:hgf.melvin@gmail.com" class="w-full sm:w-auto px-8 py-3 bg-white text-green-500 font-semibold border-2 border-green-500 rounded-full shadow-lg hover:bg-green-50 transition-colors duration-300">
+                Contact Me
+            </a>
+        </div>
+        <p class="text-gray-500 text-sm">This assignment is for educational purposes and based on assignment guidelines.</p>
+    </footer>
+    <footer class="bg-gray-900 text-white py-3">
+        <div class="section-container text-center text-sm">
+            <p>&copy; 2025 MelvinHGF. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
