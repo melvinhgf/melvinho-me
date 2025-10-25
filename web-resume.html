@@ -3,100 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Melvin Ho - Personal Website</title>
+    <meta name="author" content="Melvin Ho">
+    <meta name="date" content="21 August 2025">
+    <title>Melvin Ho's Web Resume</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f0f8ff;
-        }
-        .section-container {
-            @apply container mx-auto px-4 py-16 lg:py-24 max-w-7xl;
-            border: 6px solid transparent; /* The border is now colourless */
-            border-radius: 12px;
-            margin-bottom: 4px;
-        }
-            .section-card {
-            border-radius: 12px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-            padding: 2rem;
-            margin-bottom: 2rem;
-        }
-        .bg-section-1 {
-            background-color: #FFF2C3;
-        }
-        .bg-section-2 {
-            background-color: #D3F3EE;
-        }
-        .bg-section-3 {
-            background-color: #C3E3FF;
-        }
-        .bg-section-4 {
-            background-color: #E2D3F5;
-        }
-        .bg-section-5 {
-            background-color: #FFD3D3;
-        }
-        .text-header-color {
-            color: #004E89;
-        }
-        .text-accent-color {
-            color: #0077B6;
-        }
-        .chart-container {
-            position: relative;
-            width: 100%;
-            max-width: 500px;
-            margin-left: auto;
-            margin-right: auto;
-            height: 300px;
-            max-height: 400px;
-        }
-        @media (min-width: 768px) {
-            .chart-container {
-                height: 350px;
-            }
-        }
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            background-color: #48CAE4;
-            border: 4px solid #0077B6;
-            top: 0px;
-            left: -10px;
-            z-index: 1;
-        }
-        .card-shadow {
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-        }
-        /* Adjusted margin for sections with borders */
-        main section:not(:last-child) {
-            margin-bottom: 3rem; /* Add spacing between sections */
-        }    
+        body { font-family: 'Inter', sans-serif; background-color: #f0f8ff; }
+        .section-card { border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1),0 2px 4px -1px rgba(0,0,0,0.06); padding: 2rem; margin-bottom: 2rem; }
+        .bg-section-1 { background-color: #FFF2C3; }
+        .bg-section-2 { background-color: #D3F3EE; }
+        .bg-section-3 { background-color: #C3E3FF; }
+        .bg-section-4 { background-color: #E2D3F5; }
+        .bg-section-5 { background-color: #FFD3D3; }
+        .text-header-color { color: #004E89; }
+        .text-accent-color { color: #0077B6; }
+        .chart-container { position: relative; width: 100%; max-width: 500px; margin: 0 auto; height: 300px; max-height: 400px; }
+        @media (min-width:768px) { .chart-container { height: 350px; } }
+        .timeline-item::before { content: ''; position: absolute; width: 20px; height: 20px; border-radius: 50%; background-color: #48CAE4; border: 4px solid #0077B6; top: 0; left: -10px; z-index: 1; }
+        .card-shadow { box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05); }
+        main section:not(:last-child) { margin-bottom: 3rem; }
     </style>
 </head>
 <body class="text-gray-800">
-
-    <!-- Header & Navigation -->
     <header class="bg-white sticky top-0 z-50 card-shadow">
         <nav class="container mx-auto px-4 py-4 lg:py-6 flex justify-between items-center">
-            <!-- Logo/Title -->
             <div class="text-2xl font-bold text-gray-900">Melvin Ho (何广福)</div>
-
-            <!-- Mobile Menu Button (Hamburger) -->
-            <button id="menu-button" class="md:hidden text-gray-600 focus:outline-none">
+            <button id="menu-button" class="md:hidden text-gray-600 focus:outline-none" aria-label="Toggle menu">
                 <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
                 </svg>
             </button>
-            
-            <!-- Desktop Navigation -->
             <div class="hidden md:flex space-x-4 md:space-x-6">
                 <a href="https://melvinhgf.github.io/melvinho-me/#about" class="text-gray-600 hover:text-indigo-600 transition-colors duration-300">About Me</a>
                 <a href="https://melvinhgf.github.io/melvinho-me/#resume" class="text-gray-600 hover:text-indigo-600 transition-colors duration-300">Resume</a>
@@ -104,8 +43,6 @@
                 <a href="https://melvinhgf.github.io/melvinho-me/#contact" class="text-white bg-indigo-600 hover:bg-indigo-700 px-4 py-2 rounded-lg font-medium transition-colors duration-300">Contact</a>
             </div>
         </nav>
-
-        <!-- Mobile Menu (hidden by default) -->
         <div id="mobile-menu" class="hidden md:hidden bg-white py-4 shadow-lg">
             <div class="flex flex-col items-center space-y-4">
                 <a href="https://melvinhgf.github.io/melvinho-me/#about" class="block w-full text-center py-2 text-gray-600 hover:bg-gray-100 transition-colors duration-300">About Me</a>
@@ -114,23 +51,26 @@
                 <a href="https://melvinhgf.github.io/melvinho-me/#contact" class="block w-full text-center py-2 text-white bg-indigo-600 hover:bg-indigo-700 transition-colors duration-300">Contact</a>
             </div>
         </div>
-    </header>   
+    </header>
+
     <header class="bg-[#004E89] text-white py-12 text-center">
         <h1 class="text-5xl md:text-6xl font-black uppercase tracking-wide">Melvin Ho</h1>
         <p class="text-xl md:text-2xl mt-2 font-light">Values-Driven Professional & Community Leader</p>
     </header>
+
     <main class="container mx-auto p-4 md:p-8">
-            <section id="about" class="section-card bg-section-1">
+        <section id="about" class="section-card bg-section-1">
             <h2 class="text-3xl font-bold text-header-color mb-4">About Me</h2>
             <p class="text-gray-600 leading-relaxed">
-                I am a highly adaptable and values-driven professional with a diverse background in <b>community management, education, and administration</b>. I thrive on challenges and excel at <b>problem-solving</b> by considering all perspectives. I am known for my <b>integrity</b>, <b>impartiality</b>, and <b>empathy</b>, and I take pride in <b>maintaining high standards</b> for myself and those around me. My mission is to live out the principle of <b>"Using Life to Influence Lives"</b>, connecting meaningfully with people from all walks of life. I have broad interests in social and geopolitical issues, science, and education, which enables me to bring a unique and well-rounded perspective to any team.
+                I am a highly adaptable, values-driven professional with experience in community management, education, and administration. I enjoy tackling challenges, building relationships, and delivering outcomes that benefit communities and stakeholders.
             </p>
         </section>
+
         <section class="mb-12">
             <div class="bg-white rounded-lg shadow-xl p-6 md:p-8">
                 <h2 class="text-3xl font-bold text-[#004E89] text-center mb-8">A Journey of Continuous Growth</h2>
                 <p class="text-center text-gray-600 max-w-3xl mx-auto mb-10">
-                    This timeline illustrates a career path defined by adaptability and the strategic acquisition of diverse skills across education, community management, and administration. Each role was a building block, contributing to a well-rounded and uniquely capable professional profile.
+                    This timeline illustrates a career path defined by adaptability and strategic skill development across education, community management, and administration.
                 </p>
                 <div class="relative w-full max-w-4xl mx-auto">
                     <div class="absolute left-0 h-full w-0.5 bg-[#0077B6] top-0"></div>
@@ -145,7 +85,7 @@
                             <h3 class="text-xl font-bold text-[#004E89]">Assistant Manager, Graduate College</h3>
                             <p class="text-md text-gray-700">Nanyang Technological University</p>
                         </div>
-                         <div class="relative pl-8 timeline-item">
+                        <div class="relative pl-8 timeline-item">
                             <p class="font-bold text-sm text-[#0077B6]">2020 - 2022</p>
                             <h3 class="text-xl font-bold text-[#004E89]">Digital Ambassador & Community Executive</h3>
                             <p class="text-md text-gray-700">IMDA & People's Association</p>
@@ -164,9 +104,10 @@
                 </div>
             </div>
         </section>
+
         <section id="work-experience" class="section-card bg-section-2">
             <h2 class="text-3xl font-bold text-header-color mb-6">Work Experience</h2>
-            
+
             <div class="mb-8">
                 <h3 class="text-2xl font-semibold text-accent-color mb-4">Community & Public Service</h3>
                 <div class="space-y-6">
@@ -174,9 +115,9 @@
                         <h4 class="text-lg font-bold">Constituency Manager</h4>
                         <p class="text-gray-600">People's Association | May 2023 - Oct 2024</p>
                         <ul class="list-disc list-inside mt-2 text-gray-600">
-                            <li>Served as a catalyst to support grassroots organisations in planning and executing community projects aimed at increasing resident engagements.</li>
-                            <li>Provided administrative and logistical support to grassroots organisations to enable effective implementation of activities.</li>
-                            <li>Monitored budgetary requirements and managed expenditure controls for grassroots organisations to ensure optimal use of resources.</li>
+                            <li>Supported grassroots organisations in planning and executing community projects to increase resident engagement.</li>
+                            <li>Provided administrative and logistical support to enable effective implementation of activities.</li>
+                            <li>Monitored budgets and managed expenditure controls for efficient use of resources.</li>
                         </ul>
                     </div>
                     <div>
@@ -204,7 +145,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="mb-8">
                 <h3 class="text-2xl font-semibold text-accent-color mb-4">Education</h3>
                 <div class="space-y-6">
@@ -212,22 +153,20 @@
                         <h4 class="text-lg font-bold">Assistant Manager, Graduate College</h4>
                         <p class="text-gray-600">Nanyang Technological University | Aug 2022 - Apr 2023</p>
                         <ul class="list-disc list-inside mt-2 text-gray-600">
-                            <li>Coordinated the development of a student system for postgraduate students.</li>
-                            <li>Supported high-level committee meetings and provided secretariat services.</li>
+                            <li>Coordinated development of a student system for postgraduate students.</li>
+                            <li>Supported committee meetings and provided secretariat services.</li>
                         </ul>
                     </div>
                     <div>
                         <h4 class="text-lg font-bold">Teacher (Biology)</h4>
                         <p class="text-gray-600">St. Joseph's Institution & Catholic Junior College | Jan 2005 - Dec 2015</p>
                         <ul class="list-disc list-inside mt-2 text-gray-600">
-                            <li>Designed and taught curriculum to students from various levels.</li>
-                            <li>Led and managed co-curricular activities.</li>
-                            <li>Guided and mentored students.</li>
+                            <li>Designed and taught curriculum across multiple levels.</li>
+                            <li>Led and managed co-curricular activities and student mentoring.</li>
                         </ul>
                     </div>
                 </div>
             </div>
-
         </section>
 
         <section id="skills" class="section-card bg-section-3">
@@ -262,9 +201,7 @@
 
         <section id="volunteering" class="section-card bg-section-4">
             <h2 class="text-3xl font-bold text-header-color mb-6">Volunteer & Service</h2>
-            <p class="text-gray-600 mb-6">
-                I believe in contributing to the community and have been actively involved in various volunteer services throughout my life.
-            </p>
+            <p class="text-gray-600 mb-6">I believe in contributing to the community and have been actively involved in various volunteer services throughout my life.</p>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div>
                     <h3 class="text-xl font-semibold text-accent-color mb-3">Current</h3>
@@ -288,8 +225,8 @@
                 <div>
                     <h3 class="text-xl font-semibold text-accent-color mb-3">Academic Achievements</h3>
                     <ul class="list-disc list-inside space-y-2 text-gray-600">
-                        <li><b>Postgraduate Diploma in Education</b> (with Credit), National Institute of Education, Nanyang Technological University</li>
-                        <li><b>Bachelor of Science</b> with Second Class Honours (Lower Division), University Scholars Programme, National University of Singapore</li>
+                        <li><strong>Postgraduate Diploma in Education</strong> (with Credit), National Institute of Education, Nanyang Technological University</li>
+                        <li><strong>Bachelor of Science</strong> with Second Class Honours (Lower Division), University Scholars Programme, National University of Singapore</li>
                     </ul>
                 </div>
                 <div>
@@ -302,7 +239,6 @@
                 </div>
             </div>
         </section>
-
     </main>
 
     <footer class="bg-[#90E0EF] text-center py-6">
@@ -310,25 +246,18 @@
             <p>&copy; 2025 MelvinHGF. All rights reserved.</p>
             <span>|</span>
             <a href="https://www.linkedin.com/in/melvinhgf" target="_blank" class="hover:underline">LinkedIn Profile</a>
-             <span>|</span>
+            <span>|</span>
             <a href="https://melvinhgf.github.io/melvinho-me/infographics.html" target="_blank" class="hover:underline">Infographics</a>
         </div>
     </footer>
-    <!-- JavaScript to toggle the mobile menu -->
+
     <script>
         const menuButton = document.getElementById('menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
-
-        menuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        // Close mobile menu when a link is clicked
-        mobileMenu.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-            });
-        });
+        if (menuButton && mobileMenu) {
+            menuButton.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+            mobileMenu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => mobileMenu.classList.add('hidden')));
+        }
     </script>
 </body>
 </html>
