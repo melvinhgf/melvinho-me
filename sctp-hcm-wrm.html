@@ -3,64 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Updated Title for the new content -->
-    <title>Workplace Conflict: Unconscious Bias</title>
-    
-    <!-- Load Inter Font and Tailwind CSS -->
+    <meta name="author" content="Melvin Ho">
+    <meta name="date" content="2 October 2025">
+    <title>SCTP HCM Workplace Relationship Management - Unconscious Bias</title>
+
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Custom CSS Styles -->
+
     <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f7fafc; /* Light gray background */
-        }
-        /* Custom underline for section titles */
-        .section-header {
-            position: relative;
-            padding-bottom: 0.5rem;
-        }
-        .section-header::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 100px;
-            height: 4px;
-            background-color: #3b82f6; /* Blue underline */
-            border-radius: 9999px;
-        }
-        /* Stylish card container with hover effect */
-        .info-card {
-            background-color: #ffffff;
-            border-radius: 1.5rem;
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .info-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 25px -5px rgba(0, 0, 0, 0.1), 0 6px 10px -3px rgba(0, 0, 0, 0.08);
-        }
-        /* Removed redundant margin-bottom for sections; relying on space-y-12 on <main> for equal spacing. */
+        body { font-family: 'Inter', sans-serif; background-color:#f7fafc; }
+        .section-header { position:relative; padding-bottom:0.5rem; }
+        .section-header::after { content:''; position:absolute; left:0; bottom:0; width:100px; height:4px; background-color:#3b82f6; border-radius:9999px; }
+        .info-card { background:#fff; border-radius:1.5rem; box-shadow:0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05); transition:transform .3s ease,box-shadow .3s ease; }
+        .info-card:hover { transform:translateY(-5px); box-shadow:0 15px 25px -5px rgba(0,0,0,0.1),0 6px 10px -3px rgba(0,0,0,0.08); }
     </style>
 </head>
-
+<body class="text-gray-800">
 
     <!-- Header & Navigation -->
-    <header class="bg-white sticky top-0 z-50 card-shadow">
+    <header class="bg-white sticky top-0 z-50">
         <nav class="container mx-auto px-4 py-4 lg:py-6 flex justify-between items-center">
-            <!-- Logo/Title -->
             <div class="text-2xl font-bold text-gray-900">Melvin Ho (何广福)</div>
 
-            <!-- Mobile Menu Button (Hamburger) -->
-            <button id="menu-button" class="md:hidden text-gray-600 focus:outline-none">
+            <button id="menu-button" class="md:hidden text-gray-600 focus:outline-none" aria-label="Toggle menu">
                 <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
                 </svg>
             </button>
-            
-            <!-- Desktop Navigation -->
+
             <div class="hidden md:flex space-x-4 md:space-x-6">
                 <a href="https://melvinhgf.github.io/melvinho-me/#about" class="text-gray-600 hover:text-indigo-600 transition-colors duration-300">About Me</a>
                 <a href="https://melvinhgf.github.io/melvinho-me/#resume" class="text-gray-600 hover:text-indigo-600 transition-colors duration-300">Resume</a>
@@ -69,7 +39,6 @@
             </div>
         </nav>
 
-        <!-- Mobile Menu (hidden by default) -->
         <div id="mobile-menu" class="hidden md:hidden bg-white py-4 shadow-lg">
             <div class="flex flex-col items-center space-y-4">
                 <a href="https://melvinhgf.github.io/melvinho-me/#about" class="block w-full text-center py-2 text-gray-600 hover:bg-gray-100 transition-colors duration-300">About Me</a>
@@ -79,53 +48,39 @@
             </div>
         </div>
     </header>
-    
-<body class="text-gray-800">
 
-    <!-- Main Report Header - Background color updated to #F5C20A -->
-    <header class="shadow-lg p-6 md:p-12 rounded-b-3xl mb-12" style="background-color: #F5C20A;">
+    <!-- Main Report Header -->
+    <header class="shadow-lg p-6 md:p-12 rounded-b-3xl mb-12" style="background-color:#F5C20A;">
         <div class="max-w-4xl mx-auto text-center">
-            <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-2">
-                Workplace Conflict: Unconscious Bias
-            </h1>
-            <!-- Subtitle text color adjusted to gray-700 for better readability on gold background -->
-            <p class="text-base sm:text-lg md:text-xl text-gray-700 font-medium max-w-3xl mx-auto">
-                A Strategic Conflict Management Framework Using the Thomas-Kilmann Conflict Mode Instrument (TKI)
-            </p>
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-2">Workplace Conflict: Unconscious Bias</h1>
+            <p class="text-base sm:text-lg md:text-xl text-gray-700 font-medium max-w-3xl mx-auto">A Strategic Conflict Management Framework Using the Thomas-Kilmann Conflict Mode Instrument (TKI)</p>
         </div>
     </header>
 
-    <!-- Main Content Container. space-y-12 ensures equal spacing between all direct <section> children. -->
     <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 pb-16">
-
-        <!-- Executive Summary Section -->
         <section class="info-card p-6 md:p-8">
             <h2 class="text-2xl font-bold text-gray-800 mb-4 section-header">Executive Summary</h2>
             <p class="text-gray-600 leading-relaxed">
-                This report provides a comprehensive analysis of <b>workplace conflict</b> and its severe impact on employee relations and business performance, specifically addressing the context of the <b>Singapore workplace</b>. The core problem identified is the influence of <b>unconscious bias</b> in driving these conflicts. To address this, a structured conflict management strategy is proposed, centered around the <b>Thomas-Kilmann Conflict Mode Instrument (TKI)</b>. The goal is to equip employees with practical tools and knowledge to foster a more inclusive, productive, and communicative work environment.
+                This report provides a comprehensive analysis of <strong>workplace conflict</strong> and its impact on employee relations and business performance, specifically addressing the context of Singapore workplaces.
             </p>
         </section>
 
-        <!-- Key Forms of Unconscious Bias in Singapore Section -->
         <section class="info-card p-6 md:p-8 bg-pink-50 border border-pink-200">
-            <h2 class="text-2xl font-bold text-gray-800 mb-4 section-header text-pink-700">Key Forms of Unconscious Bias in Singapore</h2>
+            <h2 class="text-2xl font-bold text-pink-700 mb-4 section-header">Key Forms of Unconscious Bias in Singapore</h2>
             <ul class="list-disc list-inside space-y-3 text-gray-700 ml-4 mb-4">
                 <li><strong>Appearance-Based Bias:</strong> Complimenting appearance over professional competence.</li>
-                <li><strong>Regional & Gender Stereotypes:</strong> Jokes like “Madrasi bonding” that imply preferential treatment.</li>
+                <li><strong>Regional & Gender Stereotypes:</strong> Jokes or comments that imply preferential treatment or exclusion.</li>
                 <li><strong>Age-Based Work Ethic Bias:</strong> Assuming younger employees are less committed.</li>
                 <li><strong>Age & Disability Bias:</strong> Denying opportunities based on assumptions about capability.</li>
             </ul>
             <div class="mt-4 p-4 bg-pink-100 rounded-lg text-sm text-pink-800 border-l-4 border-pink-500">
-                <p>According to AWARE (2022), 55% of Singapore workers experienced discrimination in 5 years—89% among minorities, 78% among persons with disabilities, and 68% among LGBTQ+ individuals.</p>
+                <p>According to AWARE (2022), 55% of Singapore workers experienced discrimination in the last five years—89% among minorities, 78% among persons with disabilities, and 68% among LGBTQ+ individuals.</p>
             </div>
         </section>
 
-        <!-- TKI Strategy Section -->
         <section class="info-card p-6 md:p-8">
             <h2 class="text-2xl font-bold text-gray-800 mb-4 section-header">Proposed Strategy: Thomas-Kilmann Conflict Mode Instrument (TKI)</h2>
-            <p class="text-gray-600 leading-relaxed mb-4">
-                The TKI model identifies five conflict-handling styles: <em>Competing, Collaborating, Compromising, Avoiding,</em> and <em>Accommodating</em>. It is chosen because it:
-            </p>
+            <p class="text-gray-600 leading-relaxed mb-4">The TKI model identifies five conflict-handling styles: <em>Competing, Collaborating, Compromising, Avoiding,</em> and <em>Accommodating</em>. It is chosen because it:</p>
             <ul class="list-disc list-inside space-y-2 text-gray-700 ml-4">
                 <li>Diagnoses root causes of conflict</li>
                 <li>Enables multiple tailored approaches</li>
@@ -133,9 +88,8 @@
             </ul>
         </section>
 
-        <!-- Implementation Plan Section -->
         <section class="info-card p-6 md:p-8 bg-blue-50 border border-blue-200">
-            <h2 class="text-2xl font-bold text-gray-800 mb-4 section-header text-blue-700">Four-Pronged Implementation Plan</h2>
+            <h2 class="text-2xl font-bold text-blue-700 mb-4 section-header">Four-Pronged Implementation Plan</h2>
             <ol class="list-decimal list-inside space-y-3 text-gray-700 ml-4">
                 <li><strong>Education & Awareness:</strong> Company-wide workshops with TKI assessments and video case studies.</li>
                 <li><strong>Collaborative Dialogue:</strong> Use the <em>Collaborating</em> style to resolve regional/age-related biases through mediated discussions.</li>
@@ -144,7 +98,6 @@
             </ol>
         </section>
 
-        <!-- Communication Section -->
         <section class="info-card p-6 md:p-8">
             <h2 class="text-2xl font-bold text-gray-800 mb-4 section-header">Targeted Communication by Audience</h2>
             <ul class="list-disc list-inside space-y-3 text-gray-700 ml-4">
@@ -154,54 +107,29 @@
                 <li><strong>All Employees:</strong> Foster psychological safety and provide tools for respectful conflict resolution.</li>
             </ul>
         </section>
-
     </main>
 
-    <!-- Call to Action and Disclaimer Section -->
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 pb-8 text-center">
-        <!-- Buttons Container (Flex for responsive layout) -->
         <div class="flex flex-col sm:flex-row justify-center items-center gap-4 mb-6">
-            
-            <!-- Download Button -->
-            <a href="Module 3 Report Ho Guang Fu.pdf" download="Workplace Conflict Resolution Report.pdf" class="w-full sm:w-auto px-10 py-3 bg-indigo-600 text-white font-semibold rounded-full shadow-lg hover:bg-indigo-700 transition-colors duration-300 transform hover:scale-105 text-center">
-                Download Report
-            </a>
-            
-            <!-- Contact Me Button -->
-            <a href="mailto:hgf.melvin@gmail.com" class="w-full sm:w-auto px-10 py-3 bg-gray-200 text-gray-800 font-semibold rounded-full shadow-lg hover:bg-gray-300 transition-colors duration-300 transform hover:scale-105 text-center border border-gray-300">
-                Contact Me
-            </a>
+            <a href="Module 3 Report Ho Guang Fu.pdf" download="Workplace Conflict Resolution Report.pdf" class="w-full sm:w-auto px-10 py-3 bg-indigo-600 text-white font-semibold rounded-full shadow-lg hover:bg-indigo-700 transition-colors duration-300">Download Report</a>
+            <a href="mailto:hgf.melvin@gmail.com" class="w-full sm:w-auto px-10 py-3 bg-gray-200 text-gray-800 font-semibold rounded-full shadow-lg hover:bg-gray-300 transition-colors duration-300">Contact Me</a>
         </div>
-
-        <!-- Disclaimer Text -->
-        <p class="text-xs text-gray-500 italic mt-4">
-            This assignment is for educational purposes and based on assignment guidelines.
-        </p>
+        <p class="text-xs text-gray-500 italic mt-4">This assignment is for educational purposes and based on assignment guidelines.</p>
     </div>
 
-    <!-- Footer Section -->
     <footer class="py-6 bg-white border-t border-gray-200">
         <div class="max-w-4xl mx-auto px-4 text-center">
-            <p class="text-gray-500 text-sm">
-                &copy; 2025 MelvinHGF | For SCTP Human Capital Management: Workplace Relationship Management Module
-            </p>
+            <p class="text-gray-500 text-sm">&copy; 2025 MelvinHGF | For SCTP Human Capital Management: Workplace Relationship Management Module</p>
         </div>
     </footer>
-     <!-- JavaScript to toggle the mobile menu -->
+
     <script>
         const menuButton = document.getElementById('menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
-
-        menuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        // Close mobile menu when a link is clicked
-        mobileMenu.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-            });
-        });
+        if (menuButton && mobileMenu) {
+            menuButton.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+            mobileMenu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => mobileMenu.classList.add('hidden')));
+        }
     </script>
 </body>
 </html>
