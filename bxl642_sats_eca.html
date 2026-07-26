@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BXL642 ECA Showcase | A+ Grade - Ho Guang Fu (Melvin Ho)</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        sats: {
+                            red: '#D32F2F',
+                            darkred: '#9A0007',
+                            lightred: '#FFEBEE',
+                            navy: '#0F172A',
+                            slate: '#334155',
+                            gold: '#D97706',
+                            goldlight: '#FEF3C7',
+                            goldborder: '#FCD34D',
+                            accent: '#0284C7'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        serif: ['Georgia', 'Cambria', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Alpine.js for interactive UI state management -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Google Fonts: Inter & Playfair Display -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F8FAFC;
+            color: #1E293B;
+        }
+        .serif-title {
+            font-family: 'Playfair Display', serif;
+        }
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #F1F5F9;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #CBD5E1;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #D32F2F;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(226, 232, 240, 0.9);
+            box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.03);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.75);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+        }
+        .gold-border-glow {
+            box-shadow: 0 0 15px rgba(217, 119, 6, 0.15);
+        }
+        .print-only {
+            display: none;
+        }
+        @media print {
+            .no-print { display: none !important; }
+            .print-only { display: block !important; }
+            body { background: white !important; color: black !important; }
+        }
+    </style>
+</head>
+<body x-data="showcaseApp()" class="min-h-screen flex flex-col selection:bg-sats-red selection:text-white">
+
+    <!-- Top Global Notification Banner (Fluid & Responsive) -->
+    <div class="bg-gradient-to-r from-sats-darkred via-sats-red to-slate-900 text-white text-xs md:text-sm py-2 px-3 sm:px-6 shadow-sm no-print">
+        <div class="w-full max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
+            <div class="flex items-center gap-2 min-w-0">
+                <span class="bg-amber-400 text-slate-950 font-extrabold px-2 py-0.5 rounded text-[11px] sm:text-xs uppercase tracking-wider shrink-0">A+ Distinction</span>
+                <span class="text-slate-100 font-medium truncate text-xs sm:text-sm">BXL642 End-of-Course Assessment • Singapore University of Social Sciences</span>
+            </div>
+            <div class="flex items-center gap-3 sm:gap-4 text-xs text-slate-200 shrink-0 ml-auto sm:ml-0">
+                <span><i class="fa-solid fa-graduation-cap text-amber-300 mr-1"></i> GDALL Programme</span>
+                <span class="hidden sm:inline"><i class="fa-solid fa-calendar mr-1"></i> 23 March 2026</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation Header (Fluid, Adaptive for all screens) -->
+    <header class="sticky top-0 z-50 glass-panel border-b border-slate-200/90 no-print">
+        <div class="w-full max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-2.5 sm:py-3 flex items-center justify-between gap-2 sm:gap-4">
+            
+            <!-- Brand & Academic Context (Fluid shrink/expand) -->
+            <a href="#hero" class="flex items-stretch gap-2.5 sm:gap-3 group shrink-0 min-w-0">
+                <div class="aspect-square self-stretch rounded-xl bg-sats-red text-white flex items-center justify-center font-extrabold text-sm sm:text-base shadow-md shadow-sats-red/20 group-hover:scale-105 transition-transform shrink-0">
+                    HGF
+                </div>
+                <div class="min-w-0 flex flex-col justify-center">
+                    <div class="font-bold text-slate-900 text-sm sm:text-base leading-tight tracking-tight flex items-center gap-1.5 sm:gap-2 truncate">
+                        <span class="truncate">Ho Guang Fu (Melvin Ho)</span>
+                        <span class="hidden md:inline-block text-[11px] text-amber-800 font-semibold px-2 py-0.5 rounded-full bg-amber-50 border border-amber-300 shrink-0">A+ ECA Showcase</span>
+                    </div>
+                    <div class="text-[10px] sm:text-xs text-slate-500 truncate leading-tight">IAL Singapore • SUSS</div>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Links (Adaptive gap) -->
+            <nav class="hidden xl:flex items-center gap-1 text-xs sm:text-sm font-medium text-slate-600">
+                <button @click="activeTab = 'overview'" :class="activeTab === 'overview' ? 'text-sats-red bg-red-50/80 font-semibold border-sats-red' : 'hover:text-slate-900 hover:bg-slate-100'" class="px-3 py-2 rounded-lg border-b-2 border-transparent transition-all">Overview</button>
+                <button @click="activeTab = 'paper'" :class="activeTab === 'paper' ? 'text-sats-red bg-red-50/80 font-semibold border-sats-red' : 'hover:text-slate-900 hover:bg-slate-100'" class="px-3 py-2 rounded-lg border-b-2 border-transparent transition-all">Main ECA Paper</button>
+                <button @click="activeTab = 'curriculum'" :class="activeTab === 'curriculum' ? 'text-sats-red bg-red-50/80 font-semibold border-sats-red' : 'hover:text-slate-900 hover:bg-slate-100'" class="px-3 py-2 rounded-lg border-b-2 border-transparent transition-all">3-Session Curriculum</button>
+                <button @click="activeTab = 'appendices'" :class="activeTab === 'appendices' ? 'text-sats-red bg-red-50/80 font-semibold border-sats-red' : 'hover:text-slate-900 hover:bg-slate-100'" class="px-3 py-2 rounded-lg border-b-2 border-transparent transition-all flex items-center gap-1.5">
+                    Appendices 
+                    <span class="bg-sats-red/10 text-sats-red text-xs px-1.5 py-0.5 rounded-full font-bold">A–K</span>
+                </button>
+                <button @click="activeTab = 'ojt'" :class="activeTab === 'ojt' ? 'text-sats-red bg-red-50/80 font-semibold border-sats-red' : 'hover:text-slate-900 hover:bg-slate-100'" class="px-3 py-2 rounded-lg border-b-2 border-transparent transition-all">NACE OJT Blueprints</button>
+            </nav>
+
+            <!-- Quick Action Buttons -->
+            <div class="flex items-center gap-1.5 sm:gap-2 shrink-0">
+                <button @click="toggleSearchModal()" class="p-2 text-slate-600 hover:text-sats-red hover:bg-slate-100 rounded-lg transition-colors" title="Search Document">
+                    <i class="fa-solid fa-magnifying-glass text-base sm:text-lg"></i>
+                </button>
+                
+                <a href="BXL642_ECA_HoGuangFu.pdf" download="BXL642_ECA_HoGuangFu.PDF" class="flex items-center gap-1.5 px-2.5 sm:px-3.5 py-1.5 sm:py-2 text-xs font-semibold bg-sats-red hover:bg-sats-darkred text-white rounded-lg shadow-sm shadow-red-500/20 transition-all">
+                    <i class="fa-solid fa-file-arrow-down text-sm"></i>
+                    <span class="hidden sm:inline">Download Report</span>
+                    <span class="sm:hidden">PDF</span>
+                </a>
+                
+                <!-- Mobile Menu Button -->
+                <button @click="mobileMenuOpen = !mobileMenuOpen" class="xl:hidden p-2 text-slate-700 hover:bg-slate-100 rounded-lg">
+                    <i class="fa-solid" :class="mobileMenuOpen ? 'fa-xmark text-lg' : 'fa-bars text-lg'"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Dropdown Navigation -->
+        <div x-show="mobileMenuOpen" x-transition class="xl:hidden bg-white border-b border-slate-200 px-4 py-3 space-y-1.5 text-sm shadow-lg">
+            <button @click="activeTab = 'overview'; mobileMenuOpen = false" :class="activeTab === 'overview' ? 'bg-red-50 text-sats-red font-semibold' : 'text-slate-700 hover:bg-slate-100'" class="block w-full text-left px-3 py-2 rounded-lg transition-colors">Overview & Grade</button>
+            <button @click="activeTab = 'paper'; mobileMenuOpen = false" :class="activeTab === 'paper' ? 'bg-red-50 text-sats-red font-semibold' : 'text-slate-700 hover:bg-slate-100'" class="block w-full text-left px-3 py-2 rounded-lg transition-colors">Main ECA Paper</button>
+            <button @click="activeTab = 'curriculum'; mobileMenuOpen = false" :class="activeTab === 'curriculum' ? 'bg-red-50 text-sats-red font-semibold' : 'text-slate-700 hover:bg-slate-100'" class="block w-full text-left px-3 py-2 rounded-lg transition-colors">3-Session Programme</button>
+            <button @click="activeTab = 'appendices'; mobileMenuOpen = false" :class="activeTab === 'appendices' ? 'bg-red-50 text-sats-red font-semibold' : 'text-slate-700 hover:bg-slate-100'" class="block w-full text-left px-3 py-2 rounded-lg transition-colors">Appendices (A to K)</button>
+            <button @click="activeTab = 'ojt'; mobileMenuOpen = false" :class="activeTab === 'ojt' ? 'bg-red-50 text-sats-red font-semibold' : 'text-slate-700 hover:bg-slate-100'" class="block w-full text-left px-3 py-2 rounded-lg transition-colors">OJT Blueprints & Assessment Plan</button>
+        </div>
+    </header>
+
+    <!-- Hero Banner & Executive Header (Light Theme) -->
+    <section id="hero" class="relative overflow-hidden bg-gradient-to-b from-slate-100 via-white to-slate-50 py-10 md:py-16 border-b border-slate-200">
+        <!-- Background Subtle Grid -->
+        <div class="absolute inset-0 opacity-40 bg-[radial-gradient(#CBD5E1_1px,transparent_1px)] [background-size:16px_16px] pointer-events-none"></div>
+        <div class="absolute -top-32 -right-32 w-80 h-80 bg-sats-red/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute -bottom-32 -left-32 w-80 h-80 bg-amber-400/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="max-w-5xl mx-auto">
+                <!-- Academic Badges -->
+                <div class="flex flex-wrap items-center gap-2 mb-5">
+                    <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-amber-50 text-amber-800 border border-amber-300 shadow-sm">
+                        <i class="fa-solid fa-trophy text-amber-600"></i> GRADE A+ AWARDED
+                    </span>
+                    <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium bg-slate-100 text-slate-700 border border-slate-300">
+                        <i class="fa-solid fa-book-open text-slate-500"></i> BXL642: Innovative Design, Facilitation & Assessment of Learning
+                    </span>
+                    <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium bg-red-50 text-sats-red border border-red-200">
+                        <i class="fa-solid fa-plane-departure text-sats-red"></i> SATS Ground Operations Case
+                    </span>
+                </div>
+
+                <!-- Main Title -->
+                <h1 class="serif-title text-2xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900 leading-tight mb-5">
+                    Bridging the Pedagogical Design Gap: <br>
+                    <span class="bg-gradient-to-r from-sats-red via-sats-darkred to-amber-700 bg-clip-text text-transparent">
+                        An Innovative Learning Solution for SATS Training Officers
+                    </span>
+                </h1>
+
+                <!-- Subtitle / Executive Summary -->
+                <p class="text-slate-600 text-base md:text-lg leading-relaxed mb-8 max-w-4xl font-normal">
+                    An end-of-course assessment paper transforming technical demonstrators into reflective pedagogical facilitators in high-stakes aviation ground handling. Grounded in <strong>Bound &amp; Chia's 6PoLD Framework</strong>, <strong>Social Constructivism</strong>, and <strong>Dialogic Facilitation</strong> within SATS Ltd.
+                </p>
+
+                <!-- Academic Metadata Card -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 p-5 rounded-2xl glass-panel border border-slate-200/90 text-sm mb-8 shadow-sm">
+                    <div>
+                        <div class="text-slate-500 text-xs font-semibold uppercase tracking-wider mb-1">Author</div>
+                        <div class="font-bold text-slate-900">Ho Guang Fu (Melvin Ho)</div>
+                        <div class="text-xs text-slate-500">Student ID: W2610776</div>
+                    </div>
+                    <div>
+                        <div class="text-slate-500 text-xs font-semibold uppercase tracking-wider mb-1">Institution</div>
+                        <div class="font-bold text-slate-900">IAL Singapore / SUSS</div>
+                        <div class="text-xs text-slate-500">Graduate Diploma in Adult Learning</div>
+                    </div>
+                    <div>
+                        <div class="text-slate-500 text-xs font-semibold uppercase tracking-wider mb-1">Assessor / Lecturer</div>
+                        <div class="font-bold text-slate-900">Dr Stefanie Chye Yen Leng</div>
+                        <div class="text-xs text-slate-500">Submitted: 23 March 2026</div>
+                    </div>
+                    <div>
+                        <div class="text-slate-500 text-xs font-semibold uppercase tracking-wider mb-1">Operational Partner</div>
+                        <div class="font-bold text-slate-900">SATS Ltd.</div>
+                        <div class="text-xs text-slate-500">Apron Services Division</div>
+                    </div>
+                </div>
+
+                <!-- Navigation Quick-Tabs CTA -->
+                <div class="flex flex-wrap items-center gap-3">
+                    <button @click="activeTab = 'paper'" class="px-4 sm:px-5 py-2.5 rounded-xl bg-sats-red hover:bg-sats-darkred text-white font-semibold text-sm shadow-md shadow-red-500/20 transition-all flex items-center gap-2">
+                        <i class="fa-solid fa-file-lines"></i> Read Full ECA Paper
+                    </button>
+                    <button @click="activeTab = 'curriculum'" class="px-4 sm:px-5 py-2.5 rounded-xl bg-white hover:bg-slate-100 text-slate-800 font-semibold text-sm border border-slate-300 shadow-sm transition-all flex items-center gap-2">
+                        <i class="fa-solid fa-layer-group text-slate-600"></i> Explore 3-Session Architecture
+                    </button>
+                    <button @click="activeTab = 'appendices'" class="px-4 sm:px-5 py-2.5 rounded-xl bg-amber-50 hover:bg-amber-100 text-amber-900 font-semibold text-sm border border-amber-300 transition-all flex items-center gap-2">
+                        <i class="fa-solid fa-folder-open text-amber-600"></i> Browse Appendices (A-K)
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content Container with Reactive Tabs -->
+    <main class="flex-grow w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+
+        <!-- TAB 1: EXECUTIVE OVERVIEW & HIGHLIGHTS -->
+        <div x-show="activeTab === 'overview'" x-transition class="space-y-10">
+            
+            <!-- Strategic Solution Summary -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                <!-- Highlight 1: The Identified Problem -->
+                <div class="p-6 rounded-2xl glass-panel border border-slate-200 relative overflow-hidden group hover:border-sats-red/50 transition-all shadow-sm">
+                    <div class="w-12 h-12 rounded-xl bg-red-50 text-sats-red flex items-center justify-center text-xl mb-4 font-bold border border-red-100">
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">The Pedagogical Design Gap</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        SATS Ground Handling officers are promoted based on technical mastery of Ground Service Equipment (GSE). They default to <em>monologic lecture-and-demonstration</em>, creating a dangerous gap between surface-level procedural recall (e.g. 90% MCQ pass) and real-time apron safety competence.
+                    </p>
+                </div>
+
+                <!-- Highlight 2: The Proposed Solution -->
+                <div class="p-6 rounded-2xl glass-panel border border-slate-200 relative overflow-hidden group hover:border-amber-400/50 transition-all shadow-sm">
+                    <div class="w-12 h-12 rounded-xl bg-amber-50 text-amber-700 flex items-center justify-center text-xl mb-4 font-bold border border-amber-200">
+                        <i class="fa-solid fa-lightbulb"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">3-Session / 9-Hour Programme</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        A structured 9-hour adult learning solution shifting Training Officers from "technical demonstrators" to "pedagogical facilitators". Grounded in 6PoLD (Bound &amp; Chia, 2020), constructive alignment, micro-teaching, and dialogic inquiry.
+                    </p>
+                </div>
+
+                <!-- Highlight 3: High Stakes Balance -->
+                <div class="p-6 rounded-2xl glass-panel border border-slate-200 relative overflow-hidden group hover:border-sky-400/50 transition-all shadow-sm">
+                    <div class="w-12 h-12 rounded-xl bg-sky-50 text-sky-700 flex items-center justify-center text-xl mb-4 font-bold border border-sky-200">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">Rigidity vs. Messiness Balance</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        Navigates the tension between zero-error safety compliance and constructivist learner autonomy. Incorporates Socratic scaffolding within the Zone of Proximal Development while maintaining safety anchors.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Theoretical Foundations Grid -->
+            <div class="p-6 sm:p-8 rounded-2xl glass-panel border border-slate-200">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-6">
+                    <div>
+                        <h2 class="serif-title text-2xl font-bold text-slate-900">Theoretical Foundations &amp; Frameworks</h2>
+                        <p class="text-sm text-slate-500">Core adult education theories informing this award-winning ECA</p>
+                    </div>
+                    <span class="px-3 py-1 bg-slate-100 text-xs font-semibold text-slate-700 rounded-lg border border-slate-200 w-fit">Constructivist Alignment</span>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <!-- Framework 1 -->
+                    <div class="p-4 rounded-xl glass-card border border-slate-200 hover:border-slate-300 transition-all">
+                        <div class="text-sats-red font-bold text-sm mb-1">Bound &amp; Chia (2020)</div>
+                        <div class="font-bold text-slate-900 mb-2">6 Principles of Learning Design (6PoLD)</div>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Authenticity, Alignment, Holistic Design, Feedback, Judgement, and Future Orientation driving practical training redesign.
+                        </p>
+                    </div>
+
+                    <!-- Framework 2 -->
+                    <div class="p-4 rounded-xl glass-card border border-slate-200 hover:border-slate-300 transition-all">
+                        <div class="text-amber-700 font-bold text-sm mb-1">Vygotsky (1978)</div>
+                        <div class="font-bold text-slate-900 mb-2">Social Constructivism &amp; ZPD</div>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Active co-construction of knowledge through peer dialogue, collaborative problem solving, and facilitator scaffolding.
+                        </p>
+                    </div>
+
+                    <!-- Framework 3 -->
+                    <div class="p-4 rounded-xl glass-card border border-slate-200 hover:border-slate-300 transition-all">
+                        <div class="text-sky-700 font-bold text-sm mb-1">Knowles et al. (2015)</div>
+                        <div class="font-bold text-slate-900 mb-2">Andragogical Principles</div>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Treating adult operational officers as self-directed, experienced professionals motivated by immediate workplace relevance.
+                        </p>
+                    </div>
+
+                    <!-- Framework 4 -->
+                    <div class="p-4 rounded-xl glass-card border border-slate-200 hover:border-slate-300 transition-all">
+                        <div class="text-emerald-700 font-bold text-sm mb-1">Biggs (2003) &amp; Newton (2010)</div>
+                        <div class="font-bold text-slate-900 mb-2">Constructive Alignment &amp; Assessment</div>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Mutually reinforcing LOs, learning activities, and non-conflicting diagnostic, formative, and narrative summative reflections.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Learning Outcomes Card -->
+            <div class="p-6 sm:p-8 rounded-2xl glass-panel border border-slate-200">
+                <h2 class="serif-title text-2xl font-bold text-slate-900 mb-6 flex items-center gap-3">
+                    <i class="fa-solid fa-bullseye text-sats-red"></i> Programme Learning Outcomes
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="p-4 rounded-xl glass-card border border-slate-200 flex items-start gap-3">
+                        <span class="w-7 h-7 rounded-lg bg-sats-red text-white font-bold text-xs flex items-center justify-center shrink-0">LO1</span>
+                        <p class="text-sm text-slate-700"><strong>Explain</strong> how foundational adult learning theories (e.g. behaviourism, constructivism, social learning theory) inform training design choices in ground operations safety contexts.</p>
+                    </div>
+                    <div class="p-4 rounded-xl glass-card border border-slate-200 flex items-start gap-3">
+                        <span class="w-7 h-7 rounded-lg bg-sats-red text-white font-bold text-xs flex items-center justify-center shrink-0">LO2</span>
+                        <p class="text-sm text-slate-700"><strong>Critically examine</strong> their own current training design practices, identify underlying assumptions, and infer likely consequences for learning outcomes.</p>
+                    </div>
+                    <div class="p-4 rounded-xl glass-card border border-slate-200 flex items-start gap-3">
+                        <span class="w-7 h-7 rounded-lg bg-sats-red text-white font-bold text-xs flex items-center justify-center shrink-0">LO3</span>
+                        <p class="text-sm text-slate-700"><strong>Design</strong> a training session for a specific safety procedure using at least three of the Six Principles of Learning Design (6PoLD), demonstrating constructive alignment.</p>
+                    </div>
+                    <div class="p-4 rounded-xl glass-card border border-slate-200 flex items-start gap-3">
+                        <span class="w-7 h-7 rounded-lg bg-sats-red text-white font-bold text-xs flex items-center justify-center shrink-0">LO4</span>
+                        <p class="text-sm text-slate-700"><strong>Facilitate</strong> a short training activity using dialogic learner-centred approaches, and reflect critically drawing on peer and self-assessment feedback.</p>
+                    </div>
+                    <div class="p-4 rounded-xl glass-card border border-slate-200 flex items-start gap-3 md:col-span-2">
+                        <span class="w-7 h-7 rounded-lg bg-sats-red text-white font-bold text-xs flex items-center justify-center shrink-0">LO5</span>
+                        <p class="text-sm text-slate-700"><strong>Evaluate</strong> training designs (their own and peers') against principles of validity, reliability, and fairness in assessment.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB 2: MAIN ECA PAPER (FULL ACADEMIC TEXT) -->
+        <div x-show="activeTab === 'paper'" x-transition class="max-w-4xl mx-auto space-y-8">
+            <div class="p-6 sm:p-10 md:p-12 rounded-2xl glass-panel border border-slate-200 text-slate-800 leading-relaxed space-y-6 shadow-sm">
+                
+                <!-- Academic Header inside Paper -->
+                <div class="border-b border-slate-200 pb-6 mb-6">
+                    <div class="text-xs uppercase tracking-widest text-sats-red font-bold mb-2">End-of-Course Assessment Submission • Module Grade: A+</div>
+                    <h1 class="serif-title text-2xl sm:text-3xl font-bold text-slate-900 mb-3 leading-snug">
+                        Bridging the Pedagogical Design Gap: An Innovative Learning Solution for SATS Training Officers
+                    </h1>
+                    <div class="text-sm text-slate-600">
+                        <strong>Ho Guang Fu (W2610776)</strong> • Institute for Adult Learning Singapore, Singapore University of Social Sciences<br>
+                        Course: BXL642 Innovative Design, Facilitation and Assessment of Learning • Lecturer: Dr Stefanie Chye Yen Leng • 23 March 2026
+                    </div>
+                </div>
+
+                <!-- Section: Introduction & Identified Need -->
+                <section class="space-y-4">
+                    <h2 class="serif-title text-xl font-bold text-slate-900 border-l-4 border-sats-red pl-3 py-0.5">
+                        Introduction &amp; The Identified Learning Need
+                    </h2>
+                    <p>
+                        SATS Ltd. is one of Asia's foremost aviation services companies, providing ground handling, cargo, and catering services across 215 stations in 27 countries. Training Officers design and deliver safety-critical procedural training to ground operations staff who handle aircraft, baggage, cargo, and passengers under exacting regulatory and safety standards in an operationally complex environment (SATS Ltd., 2025).
+                    </p>
+                    <p>
+                        Training Officers possess deep familiarity with ground service equipment (GSE) and operational procedures, but their pedagogical practices used to transmit this knowledge often remain underdeveloped. They are frequently promoted from the ground operations workforce based on technical expertise rather than pedagogical skill, and many default to monologic lecture-and-demonstration approaches, presenting procedures step-by-step while learners observe passively, and rarely consider how adults learn or how to design conditions that promote deep understanding (Bound &amp; Chia, 2020; Merriam &amp; Bierema, 2014).
+                    </p>
+                    <p>
+                        This pattern is consequential. In aviation ground operations, where errors in handling aircrafts, operating vehicles near runways, or managing security procedures can result in aircraft damage, injury, or loss of life, the gap between surface-level procedural recall and deep transferable competence is not a minor pedagogical concern. It is an operational risk. Learners who can recite a pre-departure checklist when tested may nonetheless fail to apply it correctly when working at speed, managing multiple simultaneous demands, or confronted with a non-standard situation in operational environments (Bound &amp; Chia, 2020).
+                    </p>
+                    <div class="p-4 rounded-xl bg-red-50 border-l-4 border-sats-red my-4 shadow-sm">
+                        <strong class="text-sats-red font-bold block mb-1">Identified Core Need Statement:</strong>
+                        <p class="text-sm italic text-slate-800">
+                            "SATS Training Officers lack the skills and strategies to design and facilitate learner-centred, authentic training that promotes deep understanding, active engagement, and genuine transfer of safety-critical procedural knowledge to ground operations practice."
+                        </p>
+                    </div>
+                    <p>
+                        Addressing this requires Training Officers to interrogate their assumptions about teaching and learning, understand how adults construct knowledge, and develop a practical repertoire of learner-centred facilitation strategies that can be implemented within the constraints of operational training. The proposed three-session programme, totalling nine hours of structured learning, aims to address this gap by equipping Training Officers with theoretical grounding and practical design skills.
+                    </p>
+                </section>
+
+                <!-- Section: Teaching & Learning Approach -->
+                <section class="space-y-4 pt-4 border-t border-slate-200">
+                    <h2 class="serif-title text-xl font-bold text-slate-900 border-l-4 border-sats-red pl-3 py-0.5">
+                        Teaching and Learning Approach
+                    </h2>
+                    <p>
+                        A constructivist, dialogic inquiry approach is adopted because the learning need cannot be met through passive instruction without contradicting the very principles being promoted. Simply lecturing Training Officers about learner-centred facilitation would reproduce the monologic practices the programme seeks to change. Instead, participants learn about adult learning through experiential activities underpinned by social constructivist theory (Vygotsky, 1978).
+                    </p>
+                    <p>
+                        The design draws mainly on constructivism and social cognitivism where participants actively construct meaning through engagement with peers who share similar experience, rather than passively receiving transmitted content (Merriam &amp; Bierema, 2014). Dialogue around authentic problems provides a social context for learning via observation, modelling and joint problem-solving.
+                    </p>
+                    <p>
+                        In alignment with andragogical principles (Knowles et al., 2015), the programme recognises them as self-directed adults motivated by the immediate relevance of learning to professional challenges. The overall facilitation stance is intentionally positioned towards the dialogic end of Bound and Chia's (2020) monologic-dialogic continuum. Instruction is organised around learner sense-making and knowledge co-construction.
+                    </p>
+                </section>
+
+                <!-- Section: Assessment Strategies & Justification -->
+                <section class="space-y-4 pt-4 border-t border-slate-200">
+                    <h2 class="serif-title text-xl font-bold text-slate-900 border-l-4 border-sats-red pl-3 py-0.5">
+                        Assessment Strategies &amp; Rigor
+                    </h2>
+                    <p>
+                        The programme's assessment strategy is intentionally designed to be fit for purpose, valid, and reliable. Diagnostic and formative tasks such as case discussions ("The Apron Incident"), reflective journals, and micro-teaching feedback generate real-time data for instructional adjustment. In contrast, the summative critical reflection provides the evidence required to judge the achievement of higher-order outcomes without conflicting assessment purposes (Newton, 2010).
+                    </p>
+                    <p>
+                        The choice of a written, narrative-style summative reflection over a standard MCQ or knowledge test is a deliberate pedagogical decision. A checklist can verify a procedure, but only a reflection can capture the "Becoming" of a trainer. Reflections allow participants to bridge the gap between abstract theoretical concepts, like Cognitive Load Theory, and the specific, high-stakes realities of ground operations.
+                    </p>
+                </section>
+
+                <!-- Section: References -->
+                <section class="space-y-3 pt-6 border-t border-slate-200 text-xs text-slate-600">
+                    <h3 class="font-bold text-slate-900 text-sm uppercase tracking-wider">Academic References</h3>
+                    <ul class="list-disc pl-5 space-y-1.5 font-mono text-slate-600">
+                        <li>Biggs, J. (2003). Aligning teaching for constructing learning. The Higher Education Academy.</li>
+                        <li>Bound, H., &amp; Chia, A. (2020). The six principles of learning design: Designing learning for performance - A practice note. Institute for Adult Learning, SUSS.</li>
+                        <li>Knowles, M. S., Holton, E. F., &amp; Swanson, R. A. (2015). The adult learner (8th ed.). Routledge.</li>
+                        <li>Merriam, S. B., &amp; Bierema, L. L. (2014). Adult learning: Linking theory and practice. Jossey-Bass.</li>
+                        <li>Newton, P. E. (2010). The multiple purposes of assessment. In International encyclopedia of education (3rd ed., pp. 392-396). Elsevier.</li>
+                        <li>SATS Ltd. (2025, October). Training Officer [Job advertisement]. SATS Careers.</li>
+                        <li>Vygotsky, L. S. (1978). Mind in society: The development of higher psychological processes. Harvard University Press.</li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+
+        <!-- TAB 3: 3-SESSION PROGRAMME ARCHITECTURE -->
+        <div x-show="activeTab === 'curriculum'" x-transition class="space-y-8">
+            <div class="flex items-center justify-between">
+                <div>
+                    <h2 class="serif-title text-2xl font-bold text-slate-900">3-Session Learning Programme Architecture</h2>
+                    <p class="text-sm text-slate-600">Totaling 9 Hours of Structured Learning &amp; Workplace Redesign</p>
+                </div>
+            </div>
+
+            <!-- Session Cards Accordion/Grid -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                <!-- SESSION 1 -->
+                <div class="p-6 rounded-2xl glass-panel border border-slate-200 flex flex-col justify-between shadow-sm">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 bg-red-100 text-sats-red text-xs font-bold rounded-full border border-red-200">Session 1 • 3 Hours</span>
+                            <span class="text-xs text-slate-500"><i class="fa-solid fa-clock mr-1"></i> Foundation</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">Why Training Isn't Working: Examining Our Assumptions</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                            Opens with "The Apron Incident" case study to surface implicit mental models. Features theoretical mapping across Merriam's 5 orientations and initializes reflective portfolio.
+                        </p>
+                        <div class="space-y-2 border-t border-slate-200 pt-4 text-xs">
+                            <div class="flex justify-between text-slate-700">
+                                <span class="font-semibold text-slate-900">Key Activity:</span>
+                                <span>Apron Incident Diagnosis</span>
+                            </div>
+                            <div class="flex justify-between text-slate-700">
+                                <span class="font-semibold text-slate-900">Mediating Tool:</span>
+                                <span>Appendices A, B, C</span>
+                            </div>
+                            <div class="flex justify-between text-slate-700">
+                                <span class="font-semibold text-slate-900">Assessment:</span>
+                                <span>Formative Diagnostic Journal</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button @click="openAppendix('A')" class="mt-6 w-full py-2 bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs font-semibold rounded-lg border border-slate-300 transition-all">
+                        Inspect Session 1 Tools (App A-C)
+                    </button>
+                </div>
+
+                <!-- SESSION 2 -->
+                <div class="p-6 rounded-2xl glass-panel border border-slate-200 flex flex-col justify-between shadow-sm">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 bg-amber-100 text-amber-800 text-xs font-bold rounded-full border border-amber-300">Session 2 • 3 Hours</span>
+                            <span class="text-xs text-slate-500"><i class="fa-solid fa-compass mr-1"></i> Design</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">Redesigning for Depth: Applying 6PoLD to Ground Ops Training</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                            6PoLD Gallery Walk followed by a hands-on Learning Design Canvas workshop. Participants redesign real GSE training modules and participate in triadic peer review.
+                        </p>
+                        <div class="space-y-2 border-t border-slate-200 pt-4 text-xs">
+                            <div class="flex justify-between text-slate-700">
+                                <span class="font-semibold text-slate-900">Key Activity:</span>
+                                <span>6PoLD Canvas &amp; Triadic Review</span>
+                            </div>
+                            <div class="flex justify-between text-slate-700">
+                                <span class="font-semibold text-slate-900">Mediating Tool:</span>
+                                <span>Appendices D, E, F</span>
+                            </div>
+                            <div class="flex justify-between text-slate-700">
+                                <span class="font-semibold text-slate-900">Assessment:</span>
+                                <span>Evaluative Peer Judgement</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button @click="openAppendix('E')" class="mt-6 w-full py-2 bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs font-semibold rounded-lg border border-slate-300 transition-all">
+                        Inspect Session 2 Canvas (App D-F)
+                    </button>
+                </div>
+
+                <!-- SESSION 3 -->
+                <div class="p-6 rounded-2xl glass-panel border border-slate-200 flex flex-col justify-between shadow-sm">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 bg-sky-100 text-sky-800 text-xs font-bold rounded-full border border-sky-300">Session 3 • 3 Hours</span>
+                            <span class="text-xs text-slate-500"><i class="fa-solid fa-chalkboard-user mr-1"></i> Facilitation</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">Teaching as We Say: Facilitating, Receiving Feedback &amp; Reflecting</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                            15-minute micro-teaching simulation with dialogic questioning. Evaluated using structured peer checklists, Plus-Delta debriefs, and final written narrative reflection.
+                        </p>
+                        <div class="space-y-2 border-t border-slate-200 pt-4 text-xs">
+                            <div class="flex justify-between text-slate-700">
+                                <span class="font-semibold text-slate-900">Key Activity:</span>
+                                <span>Micro-Teaching &amp; Debrief</span>
+                            </div>
+                            <div class="flex justify-between text-slate-700">
+                                <span class="font-semibold text-slate-900">Mediating Tool:</span>
+                                <span>Appendices G, H, I</span>
+                            </div>
+                            <div class="flex justify-between text-slate-700">
+                                <span class="font-semibold text-slate-900">Assessment:</span>
+                                <span>Summative Narrative Reflection</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button @click="openAppendix('G')" class="mt-6 w-full py-2 bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs font-semibold rounded-lg border border-slate-300 transition-all">
+                        Inspect Session 3 Rubric (App G-I)
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB 4: COMPLETE APPENDICES SUITE (APPENDICES A TO K) -->
+        <div x-show="activeTab === 'appendices'" x-transition class="space-y-8">
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                <div>
+                    <h2 class="serif-title text-2xl font-bold text-slate-900">Complete Appendices Suite (A through K)</h2>
+                    <p class="text-sm text-slate-600">All original course materials, protocols, rubrics, and blueprints</p>
+                </div>
+
+                <!-- Appendix Selector Buttons -->
+                <div class="flex flex-wrap gap-1.5 bg-slate-100 p-1.5 rounded-xl border border-slate-300 shadow-inner">
+                    <template x-for="item in ['A','B','C','D','E','F','G','H','I','J','K']" :key="item">
+                        <button @click="currentAppendix = item" 
+                                :class="currentAppendix === item ? 'bg-sats-red text-white font-bold shadow-sm' : 'text-slate-700 hover:text-slate-900 hover:bg-slate-200'"
+                                class="w-8 h-8 rounded-lg text-xs transition-all flex items-center justify-center">
+                            <span x-text="item"></span>
+                        </button>
+                    </template>
+                </div>
+            </div>
+
+            <!-- APPENDIX A -->
+            <div x-show="currentAppendix === 'A'" x-transition class="p-6 sm:p-8 rounded-2xl glass-panel border border-slate-200 space-y-6 shadow-sm">
+                <div class="flex items-center justify-between border-b border-slate-200 pb-4">
+                    <span class="px-3 py-1 bg-red-100 text-sats-red font-bold text-xs rounded-lg border border-red-200">APPENDIX A</span>
+                    <span class="text-xs text-slate-500">Session 1 Diagnostic Case Study</span>
+                </div>
+                <h2 class="serif-title text-2xl font-bold text-slate-900">The Apron Incident Case Study</h2>
+                
+                <div class="p-6 rounded-xl glass-card border border-slate-200 space-y-4">
+                    <h3 class="font-bold text-amber-800 text-sm uppercase tracking-wider">Background</h3>
+                    <p class="text-sm leading-relaxed text-slate-700">
+                        SATS ground handler Rajan has worked in cargo operations for three months. Two weeks ago, he completed a mandatory GSE pre-departure check training module. His trainer, an experienced senior handler, conducted the session using a slide presentation followed by a live demonstration on a baggage tractor. At the end, Rajan completed a written knowledge check and scored 18 out of 20. He was certified as "competent".
+                    </p>
+                    
+                    <h3 class="font-bold text-sats-red text-sm uppercase tracking-wider pt-2">The Incident</h3>
+                    <p class="text-sm leading-relaxed text-slate-700">
+                        Yesterday, during a busy turnaround with three flights departing within 40 minutes of one another, Rajan was assigned to operate a baggage tractor independently for the first time. Under time pressure and distracted by a miscommunication from a colleague via radio, Rajan conducted a partial pre-departure check—he completed the items he could recall quickly and skipped several that he found less memorable from the training session. A low brake fluid level that would have been caught by a complete check was missed. The tractor was involved in a minor collision near the aircraft stand. Fortunately, no personnel were injured, and the aircraft was not damaged.
+                    </p>
+                </div>
+
+                <div class="p-6 rounded-xl bg-slate-50 border border-slate-200">
+                    <h3 class="font-bold text-slate-900 text-sm mb-3"><i class="fa-solid fa-comments text-amber-600 mr-2"></i> Small Group Discussion Questions (3-4 pax)</h3>
+                    <ol class="list-decimal pl-5 space-y-2 text-xs md:text-sm text-slate-700">
+                        <li>What do you think caused Rajan's failure to complete the full pre-departure check?</li>
+                        <li>In what ways might the design of the original training session have contributed to this outcome?</li>
+                        <li>Rajan passed the knowledge check with a score of 90%. What does this tell us, and not tell us, about his learning?</li>
+                        <li>If you were redesigning this training session, what is the one most important change you would make, and why?</li>
+                    </ol>
+                </div>
+            </div>
+
+            <!-- APPENDIX B -->
+            <div x-show="currentAppendix === 'B'" x-transition class="p-6 sm:p-8 rounded-2xl glass-panel border border-slate-200 space-y-6 shadow-sm">
+                <div class="flex items-center justify-between border-b border-slate-200 pb-4">
+                    <span class="px-3 py-1 bg-red-100 text-sats-red font-bold text-xs rounded-lg border border-red-200">APPENDIX B</span>
+                    <span class="text-xs text-slate-500">Merriam (2014) Reference Matrix</span>
+                </div>
+                <h2 class="serif-title text-2xl font-bold text-slate-900">Learning Theory Quick Reference Card</h2>
+                <p class="text-xs text-slate-500">For use during Session 1 theoretical orientation mapping task.</p>
+
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left text-xs md:text-sm border-collapse">
+                        <thead>
+                            <tr class="bg-slate-100 text-slate-800 border-b border-slate-300">
+                                <th class="p-3 font-bold">Theory</th>
+                                <th class="p-3 font-bold">Core Idea</th>
+                                <th class="p-3 font-bold">What this looks like in SATS training</th>
+                                <th class="p-3 font-bold">Strength / Limitation</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-200 text-slate-700">
+                            <tr>
+                                <td class="p-3 font-bold text-amber-800">Behaviourism</td>
+                                <td class="p-3">Learning = observable behaviour changes through stimulus-response. Trainer controls conditions.</td>
+                                <td class="p-3">Drill-and-practice checklists; pass/fail competency checks; reward for correct procedure.</td>
+                                <td class="p-3">Effective for simple procedural tasks. Limited for complex, non-standard situations.</td>
+                            </tr>
+                            <tr>
+                                <td class="p-3 font-bold text-sky-800">Cognitivism</td>
+                                <td class="p-3">Learning = internal mental processing. Focus on memory structures, schemas, attention.</td>
+                                <td class="p-3">Using worked examples, mnemonics, structured content flow to aid retention.</td>
+                                <td class="p-3">Supports knowledge retention. Less attention to social context or application under pressure.</td>
+                            </tr>
+                            <tr>
+                                <td class="p-3 font-bold text-purple-800">Humanism</td>
+                                <td class="p-3">Learning = self-actualisation, becoming autonomous. Learner's growth is central.</td>
+                                <td class="p-3">Personalised learning paths; respecting learner dignity and experience.</td>
+                                <td class="p-3">Affirms the whole person. Can be difficult to operationalise in high-compliance contexts.</td>
+                            </tr>
+                            <tr>
+                                <td class="p-3 font-bold text-emerald-800">Social Cognitivism</td>
+                                <td class="p-3">Learning = observation, modelling, social interaction. Self-efficacy is key.</td>
+                                <td class="p-3">Peer demonstrations; mentoring new staff; reflective discussion after a task.</td>
+                                <td class="p-3">Recognises learning as social. Builds confidence; requires skilled modelling.</td>
+                            </tr>
+                            <tr>
+                                <td class="p-3 font-bold text-sats-red">Constructivism</td>
+                                <td class="p-3">Learning = active construction of meaning through experience and dialogue.</td>
+                                <td class="p-3">Complex scenario-based tasks; dialogic debrief; learner-designed solutions to real problems.</td>
+                                <td class="p-3">Produces deep, transferable understanding. Requires more time and skilled facilitation.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- APPENDIX C -->
+            <div x-show="currentAppendix === 'C'" x-transition class="p-6 sm:p-8 rounded-2xl glass-panel border border-slate-200 space-y-6 shadow-sm">
+                <div class="flex items-center justify-between border-b border-slate-200 pb-4">
+                    <span class="px-3 py-1 bg-red-100 text-sats-red font-bold text-xs rounded-lg border border-red-200">APPENDIX C</span>
+                    <span class="text-xs text-slate-500">Session 1 Reflective Tool</span>
+                </div>
+                <h2 class="serif-title text-2xl font-bold text-slate-900">Session 1 Reflective Journal Prompt</h2>
+                <div class="p-6 rounded-xl glass-card border border-slate-200 space-y-4 text-xs md:text-sm text-slate-700">
+                    <p class="italic text-slate-500">Instructions: Complete individually. There are no right or wrong answers. This entry forms part of your portfolio.</p>
+                    <div class="space-y-3 pt-2">
+                        <div class="p-3 rounded-lg bg-slate-50 border border-slate-200">
+                            <strong>1.</strong> Describe a training session you delivered that went well. What made it successful?
+                        </div>
+                        <div class="p-3 rounded-lg bg-slate-50 border border-slate-200">
+                            <strong>2.</strong> Think about a training session where learners did not perform as expected after training. What happened?
+                        </div>
+                        <div class="p-3 rounded-lg bg-slate-50 border border-slate-200">
+                            <strong>3.</strong> Identify ONE assumption about your learners you have been making (motivation, prior knowledge, learning style).
+                        </div>
+                        <div class="p-3 rounded-lg bg-slate-50 border border-slate-200">
+                            <strong>4.</strong> Where does this assumption come from?
+                        </div>
+                        <div class="p-3 rounded-lg bg-slate-50 border border-slate-200">
+                            <strong>5.</strong> What might the consequences of this assumption be for your learners' performance on the apron?
+                        </div>
+                        <div class="p-3 rounded-lg bg-slate-50 border border-slate-200">
+                            <strong>6.</strong> What is one question today's session has opened for you that you want to explore further?
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- APPENDIX D -->
+            <div x-show="currentAppendix === 'D'" x-transition class="p-6 sm:p-8 rounded-2xl glass-panel border border-slate-200 space-y-6 shadow-sm">
+                <div class="flex items-center justify-between border-b border-slate-200 pb-4">
+                    <span class="px-3 py-1 bg-red-100 text-sats-red font-bold text-xs rounded-lg border border-red-200">APPENDIX D</span>
+                    <span class="text-xs text-slate-500">6PoLD Gallery Walk Templates</span>
+                </div>
+                <h2 class="serif-title text-2xl font-bold text-slate-900">6PoLD Gallery Walk Posters (A3 Display Format)</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <!-- Poster 1 -->
+                    <div class="p-5 rounded-xl bg-slate-50 border border-slate-200 space-y-3 shadow-sm">
+                        <span class="text-xs font-bold px-2 py-0.5 rounded bg-red-100 text-sats-red">PRINCIPLE 1</span>
+                        <h3 class="font-bold text-slate-900 text-base">AUTHENTICITY</h3>
+                        <p class="text-xs text-slate-600">Use of real work practices and settings; embodies complexity; enables engagement.</p>
+                        <div class="p-3 rounded bg-white border border-amber-200 text-xs text-amber-900 italic">
+                            "How often does your training present learners with the actual pressures, ambiguities and decision points on the apron?"
+                        </div>
+                    </div>
+
+                    <!-- Poster 2 -->
+                    <div class="p-5 rounded-xl bg-slate-50 border border-slate-200 space-y-3 shadow-sm">
+                        <span class="text-xs font-bold px-2 py-0.5 rounded bg-amber-100 text-amber-800">PRINCIPLE 2</span>
+                        <h3 class="font-bold text-slate-900 text-base">ALIGNMENT</h3>
+                        <p class="text-xs text-slate-600">Every aspect of learning working together for a common purpose.</p>
+                        <div class="p-3 rounded bg-white border border-amber-200 text-xs text-amber-900 italic">
+                            "Does your assessment measure 'performing checks under time pressure', or only step recall?"
+                        </div>
+                    </div>
+
+                    <!-- Poster 3 -->
+                    <div class="p-5 rounded-xl bg-slate-50 border border-slate-200 space-y-3 shadow-sm">
+                        <span class="text-xs font-bold px-2 py-0.5 rounded bg-sky-100 text-sky-800">PRINCIPLE 3</span>
+                        <h3 class="font-bold text-slate-900 text-base">HOLISTIC</h3>
+                        <p class="text-xs text-slate-600">Integrates knowing, doing, thinking and feeling; theory and practice.</p>
+                        <div class="p-3 rounded bg-white border border-amber-200 text-xs text-amber-900 italic">
+                            "Does training treat safety as isolated technical steps, or integrate situational awareness?"
+                        </div>
+                    </div>
+
+                    <!-- Poster 4 -->
+                    <div class="p-5 rounded-xl bg-slate-50 border border-slate-200 space-y-3 shadow-sm">
+                        <span class="text-xs font-bold px-2 py-0.5 rounded bg-purple-100 text-purple-800">PRINCIPLE 4</span>
+                        <h3 class="font-bold text-slate-900 text-base">FEEDBACK</h3>
+                        <p class="text-xs text-slate-600">Giving and receiving feedback from multiple sources; acting on feedback.</p>
+                        <div class="p-3 rounded bg-white border border-amber-200 text-xs text-amber-900 italic">
+                            "In current training, who gives feedback, and do learners get to act on it before final assessment?"
+                        </div>
+                    </div>
+
+                    <!-- Poster 5 -->
+                    <div class="p-5 rounded-xl bg-slate-50 border border-slate-200 space-y-3 shadow-sm">
+                        <span class="text-xs font-bold px-2 py-0.5 rounded bg-emerald-100 text-emerald-800">PRINCIPLE 5</span>
+                        <h3 class="font-bold text-slate-900 text-base">JUDGEMENT</h3>
+                        <p class="text-xs text-slate-600">Enabling learners to make judgements about their own and others' performance.</p>
+                        <div class="p-3 rounded bg-white border border-amber-200 text-xs text-amber-900 italic">
+                            "Do learners ever assess each other's work or self-assess against safety standards?"
+                        </div>
+                    </div>
+
+                    <!-- Poster 6 -->
+                    <div class="p-5 rounded-xl bg-slate-50 border border-slate-200 space-y-3 shadow-sm">
+                        <span class="text-xs font-bold px-2 py-0.5 rounded bg-indigo-100 text-indigo-800">PRINCIPLE 6</span>
+                        <h3 class="font-bold text-slate-900 text-base">FUTURE-ORIENTATION</h3>
+                        <p class="text-xs text-slate-600">Learning to learn; deep understanding; multiple perspectives; inquiry.</p>
+                        <div class="p-3 rounded bg-white border border-amber-200 text-xs text-amber-900 italic">
+                            "Does training help staff adapt when non-standard GSE problems occur on the apron?"
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- APPENDIX E: Learning Design Canvas -->
+            <div x-show="currentAppendix === 'E'" x-transition class="p-6 sm:p-8 rounded-2xl glass-panel border border-slate-200 space-y-6 shadow-sm">
+                <div class="flex items-center justify-between border-b border-slate-200 pb-4">
+                    <span class="px-3 py-1 bg-red-100 text-sats-red font-bold text-xs rounded-lg border border-red-200">APPENDIX E</span>
+                    <span class="text-xs text-slate-500">Session 2 Workshop Canvas</span>
+                </div>
+                <h2 class="serif-title text-2xl font-bold text-slate-900">Learning Design Canvas - SATS Training Redesign Workshop</h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs md:text-sm">
+                    <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-2">
+                        <span class="text-amber-800 font-bold uppercase text-xs">1. Learning Need</span>
+                        <p class="text-slate-700">What gap in performance or understanding does this training address? Where is the evidence for this gap?</p>
+                    </div>
+                    <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-2">
+                        <span class="text-amber-800 font-bold uppercase text-xs">2. Learning Outcome</span>
+                        <p class="text-slate-700">By the end of this session, learners will be able to... (Use observable, measurable verbs)</p>
+                    </div>
+                    <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-2">
+                        <span class="text-amber-800 font-bold uppercase text-xs">3. Authentic Context</span>
+                        <p class="text-slate-700">Where and under what conditions is this procedure actually performed? What pressures exist?</p>
+                    </div>
+                    <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-2">
+                        <span class="text-amber-800 font-bold uppercase text-xs">4. Learning Activities</span>
+                        <p class="text-slate-700">What will learners DO in this session? (Not just watch/listen). How does it connect to work?</p>
+                    </div>
+                    <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-2">
+                        <span class="text-amber-800 font-bold uppercase text-xs">5. Feedback &amp; Judgement</span>
+                        <p class="text-slate-700">How will learners receive feedback? How will they evaluate their own or peers' performance?</p>
+                    </div>
+                    <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-2">
+                        <span class="text-amber-800 font-bold uppercase text-xs">6. Assessment</span>
+                        <p class="text-slate-700">How will you know the outcome was achieved? What evidence will you collect?</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- APPENDIX F & G & H & I Overview -->
+            <div x-show="['F','G','H','I'].includes(currentAppendix)" x-transition class="p-6 sm:p-8 rounded-2xl glass-panel border border-slate-200 space-y-6 shadow-sm">
+                <div class="flex items-center justify-between border-b border-slate-200 pb-4">
+                    <span class="px-3 py-1 bg-red-100 text-sats-red font-bold text-xs rounded-lg border border-red-200" x-text="'APPENDIX ' + currentAppendix"></span>
+                    <span class="text-xs text-slate-500">Evaluation &amp; Rubric Protocol</span>
+                </div>
+
+                <template x-if="currentAppendix === 'F'">
+                    <div class="space-y-4">
+                        <h2 class="serif-title text-2xl font-bold text-slate-900">Triadic Peer Review Protocol</h2>
+                        <p class="text-sm text-slate-700">Provides structured feedback across Section A (Strengths), Section B (Development Areas in 6PoLD), and Section C (One Prioritised Recommendation).</p>
+                    </div>
+                </template>
+
+                <template x-if="currentAppendix === 'G'">
+                    <div class="space-y-4">
+                        <h2 class="serif-title text-2xl font-bold text-slate-900">Micro-Teaching Observation Checklist</h2>
+                        <p class="text-sm text-slate-700">Assesses Authenticity, Alignment, Holistic design, Feedback, Judgement, Future-Orientation, Dialogic Facilitation, and Learner Engagement during 15-min teaching segments.</p>
+                    </div>
+                </template>
+
+                <template x-if="currentAppendix === 'H'">
+                    <div class="space-y-4">
+                        <h2 class="serif-title text-2xl font-bold text-slate-900">Critical Reflection Template</h2>
+                        <p class="text-sm text-slate-700">600–800 word narrative structured into: Section 1 (Starting Assumptions), Section 2 (What Shifted &amp; Why), Section 3 (Evaluating Own Facilitation), and Section 4 (Implications for SATS Practice).</p>
+                    </div>
+                </template>
+
+                <template x-if="currentAppendix === 'I'">
+                    <div class="space-y-4">
+                        <h2 class="serif-title text-2xl font-bold text-slate-900">Critical Reflection Rubric (100 Marks)</h2>
+                        <div class="grid grid-cols-1 md:grid-cols-4 gap-3 text-xs">
+                            <div class="p-3 bg-amber-50 border border-amber-200 rounded-lg">
+                                <span class="font-bold text-amber-900">Distinction (22–25)</span>
+                                <p class="text-slate-700 mt-1">Sophisticated critical analysis, seamless theory integration, rigorous self-evaluation, concrete SATS changes.</p>
+                            </div>
+                            <div class="p-3 bg-sky-50 border border-sky-200 rounded-lg">
+                                <span class="font-bold text-sky-900">Merit (18–21)</span>
+                                <p class="text-slate-700 mt-1">Clear critical analysis, integrates 2 theoretical concepts accurately, clear self-evaluation drawing on feedback.</p>
+                            </div>
+                            <div class="p-3 bg-emerald-50 border border-emerald-200 rounded-lg">
+                                <span class="font-bold text-emerald-900">Pass (15–17)</span>
+                                <p class="text-slate-700 mt-1">Some critical reflection, partial theoretical application, general self-evaluation.</p>
+                            </div>
+                            <div class="p-3 bg-red-50 border border-red-200 rounded-lg">
+                                <span class="font-bold text-sats-red">Fail (&lt;15)</span>
+                                <p class="text-slate-700 mt-1">Descriptive, little theoretical engagement, absent self-evaluation.</p>
+                            </div>
+                        </div>
+                    </div>
+                </template>
+            </div>
+
+            <!-- APPENDIX J: ON-THE-JOB TRAINING BLUEPRINTS -->
+            <div x-show="currentAppendix === 'J'" x-transition class="p-6 sm:p-8 rounded-2xl glass-panel border border-slate-200 space-y-6 shadow-sm">
+                <div class="flex items-center justify-between border-b border-slate-200 pb-4">
+                    <span class="px-3 py-1 bg-red-100 text-sats-red font-bold text-xs rounded-lg border border-red-200">APPENDIX J</span>
+                    <span class="text-xs text-slate-500">NACE Workplace Framework</span>
+                </div>
+                <h2 class="serif-title text-2xl font-bold text-slate-900">SATS On-the-Job Training (OJT) Blueprints</h2>
+                <p class="text-sm text-slate-700">Developing systematic workplace learning across 3 modules using National Centre of Excellence for Workplace Learning (NACE) standards.</p>
+
+                <!-- Module Switcher for OJT Blueprints -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-2">
+                        <span class="text-xs text-sats-red font-bold">OJT MODULE 1 (3 Hours)</span>
+                        <h4 class="font-bold text-slate-900 text-sm">Why Training Isn't Working</h4>
+                        <ul class="text-xs text-slate-600 space-y-1 list-disc pl-4">
+                            <li>Task 1: Examine pedagogical assumptions (1.5h)</li>
+                            <li>Task 2: Map learning theories to operations (1.5h)</li>
+                        </ul>
+                    </div>
+
+                    <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-2">
+                        <span class="text-xs text-amber-800 font-bold">OJT MODULE 2 (3 Hours)</span>
+                        <h4 class="font-bold text-slate-900 text-sm">Redesigning for Depth</h4>
+                        <ul class="text-xs text-slate-600 space-y-1 list-disc pl-4">
+                            <li>Task 1: Design training using 6PoLD (2.0h)</li>
+                            <li>Task 2: Conduct triadic peer reviews (1.0h)</li>
+                        </ul>
+                    </div>
+
+                    <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-2">
+                        <span class="text-xs text-sky-800 font-bold">OJT MODULE 3 (3 Hours)</span>
+                        <h4 class="font-bold text-slate-900 text-sm">Teaching as We Say</h4>
+                        <ul class="text-xs text-slate-600 space-y-1 list-disc pl-4">
+                            <li>Task 1: Facilitate learner-centred sessions (2.0h)</li>
+                            <li>Task 2: Perform critical reflection (1.0h)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- APPENDIX K: WORKPLACE LEARNING ASSESSMENT PLAN -->
+            <div x-show="currentAppendix === 'K'" x-transition class="p-6 sm:p-8 rounded-2xl glass-panel border border-slate-200 space-y-6 shadow-sm">
+                <div class="flex items-center justify-between border-b border-slate-200 pb-4">
+                    <span class="px-3 py-1 bg-red-100 text-sats-red font-bold text-xs rounded-lg border border-red-200">APPENDIX K</span>
+                    <span class="text-xs text-slate-500">WpL Assessment Plan (NACE Template)</span>
+                </div>
+                <h2 class="serif-title text-2xl font-bold text-slate-900">Workplace Learning (WpL) Assessment Plan</h2>
+
+                <div class="space-y-4 text-xs md:text-sm">
+                    <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-2">
+                        <div class="flex items-center justify-between">
+                            <span class="font-bold text-amber-900">Assessment 1: Examining Pedagogical Assumptions</span>
+                            <span class="px-2 py-0.5 bg-slate-200 text-slate-800 rounded text-xs font-medium">1.5 Hours</span>
+                        </div>
+                        <p class="text-slate-700">Case Study Analysis &amp; Socratic Oral Questioning using "The Apron Incident". Focuses on diagnosing training gaps and safety triggers.</p>
+                    </div>
+
+                    <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-2">
+                        <div class="flex items-center justify-between">
+                            <span class="font-bold text-amber-900">Assessment 2: Redesigning for Depth</span>
+                            <span class="px-2 py-0.5 bg-slate-200 text-slate-800 rounded text-xs font-medium">3.0 Hours</span>
+                        </div>
+                        <p class="text-slate-700">Work Product Review (Learning Design Canvas) &amp; Triadic Peer Review. Must use real GSE yard tasks and avoid passive slides.</p>
+                    </div>
+
+                    <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-2">
+                        <div class="flex items-center justify-between">
+                            <span class="font-bold text-amber-900">Assessment 3: Facilitating and Reflecting</span>
+                            <span class="px-2 py-0.5 bg-slate-200 text-slate-800 rounded text-xs font-medium">3.0 Hours</span>
+                        </div>
+                        <p class="text-slate-700">Practical Micro-teaching Performance (15-min) &amp; Summative Narrative Reflection (600-800 words) marked against Criterion Rubric.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- TAB 5: DEDICATED OJT BLUEPRINTS VIEW -->
+        <div x-show="activeTab === 'ojt'" x-transition class="space-y-6">
+            <div class="p-6 sm:p-8 rounded-2xl glass-panel border border-slate-200 space-y-6 shadow-sm">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                    <div>
+                        <h2 class="serif-title text-2xl font-bold text-slate-900">NACE Workplace Learning &amp; OJT Architecture</h2>
+                        <p class="text-sm text-slate-600">Standardised SATS Ground Handling On-the-Job Training Framework</p>
+                    </div>
+                    <button @click="currentAppendix = 'J'; activeTab = 'appendices'" class="px-4 py-2 bg-sats-red text-white text-xs font-bold rounded-lg hover:bg-sats-darkred transition-all shadow-sm">
+                        Jump to Appendix J Detailed View
+                    </button>
+                </div>
+
+                <div class="p-6 rounded-xl bg-slate-50 border border-slate-200 space-y-4 text-xs md:text-sm">
+                    <h3 class="font-bold text-amber-900 text-base">Key Technical Implementation Standards</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="p-3 bg-white rounded border border-slate-200 shadow-sm">
+                            <strong class="text-slate-900">Safety &amp; Operational Alignment:</strong> All OJT tasks are conducted using real SATS Ground Service Equipment (GSE) yards or operational briefing areas to maintain <em>Authenticity</em>.
+                        </div>
+                        <div class="p-3 bg-white rounded border border-slate-200 shadow-sm">
+                            <strong class="text-slate-900">Dialogic Facilitation Guidelines:</strong> Trainers are mandated to use Socratic questioning rather than providing direct answers to model reflective facilitation.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Modal for Search and Quick Navigation -->
+    <div x-show="searchModalOpen" x-transition class="fixed inset-0 z-50 bg-slate-900/40 backdrop-blur-sm flex items-center justify-center p-4 no-print">
+        <div @click.away="searchModalOpen = false" class="w-full max-w-xl glass-panel p-6 rounded-2xl border border-slate-200 space-y-4 shadow-xl">
+            <div class="flex items-center justify-between">
+                <h3 class="font-bold text-slate-900 text-base"><i class="fa-solid fa-magnifying-glass text-sats-red mr-2"></i> Search Assessment Portfolio</h3>
+                <button @click="searchModalOpen = false" class="text-slate-400 hover:text-slate-700"><i class="fa-solid fa-xmark text-lg"></i></button>
+            </div>
+            
+            <input type="text" x-model="searchQuery" placeholder="Type keyword (e.g. 6PoLD, Rajan, Vygotsky, Rubric)..." class="w-full px-4 py-3 bg-white border border-slate-300 rounded-xl text-slate-800 focus:outline-none focus:border-sats-red text-sm shadow-sm">
+
+            <div class="text-xs text-slate-600 space-y-2 max-h-60 overflow-y-auto">
+                <div class="font-semibold text-slate-800">Quick Jump Links:</div>
+                <div class="grid grid-cols-2 gap-2">
+                    <button @click="activeTab = 'paper'; searchModalOpen = false" class="p-2 text-left bg-slate-50 hover:bg-slate-100 rounded border border-slate-200 text-slate-700">Main ECA Paper</button>
+                    <button @click="currentAppendix = 'A'; activeTab = 'appendices'; searchModalOpen = false" class="p-2 text-left bg-slate-50 hover:bg-slate-100 rounded border border-slate-200 text-slate-700">The Apron Incident Case</button>
+                    <button @click="currentAppendix = 'E'; activeTab = 'appendices'; searchModalOpen = false" class="p-2 text-left bg-slate-50 hover:bg-slate-100 rounded border border-slate-200 text-slate-700">Learning Design Canvas</button>
+                    <button @click="currentAppendix = 'I'; activeTab = 'appendices'; searchModalOpen = false" class="p-2 text-left bg-slate-50 hover:bg-slate-100 rounded border border-slate-200 text-slate-700">Critical Reflection Rubric</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-200 py-8 px-4 text-center text-xs text-slate-500 no-print">
+        <div class="w-full max-w-7xl mx-auto space-y-2">
+            <p class="font-bold text-slate-700">BXL642: Innovative Design, Facilitation and Assessment of Learning</p>
+            <p>Graduate Diploma in Adult Learning • Institute for Adult Learning Singapore / SUSS</p>
+            <p class="text-slate-400">Submitted by Ho Guang Fu (Melvin Ho) W2610776 • Assessor: Dr Stefanie Chye Yen Leng • Grade Awarded: A+</p>
+        </div>
+    </footer>
+
+    <script>
+        function showcaseApp() {
+            return {
+                activeTab: 'overview',
+                currentAppendix: 'A',
+                mobileMenuOpen: false,
+                searchModalOpen: false,
+                searchQuery: '',
+
+                openAppendix(code) {
+                    this.currentAppendix = code;
+                    this.activeTab = 'appendices';
+                },
+
+                toggleSearchModal() {
+                    this.searchModalOpen = !this.searchModalOpen;
+                }
+            }
+        }
+    </script>
+</body>
+</html>
