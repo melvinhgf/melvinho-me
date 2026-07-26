@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZCRSBQ4CTS"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZCRSBQ4CTS');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Melvin Ho, IHRP-CA, CHRA® | Professional Webpage</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        indigo: {
+                            50: '#eep2ff',
+                            100: '#e0e7ff',
+                            600: '#4f46e5',
+                            700: '#4338ca',
+                            800: '#3730a3',
+                            900: '#312e81'
+                        },
+                        sky: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1'
+                        },
+                        violet: {
+                            50: '#f5f3ff',
+                            100: '#ede9fe',
+                            600: '#7c3aed',
+                            700: '#6d28d9'
+                        },
+                        slate: {
+                            50: '#f8fafc',
+                            100: '#f1f5f9',
+                            200: '#e2e8f0',
+                            700: '#334155',
+                            800: '#1e293b',
+                            900: '#0f172a'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Plus Jakarta Sans', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        /* Crisp Light Mode Glass Card Styling */
+        .glass-panel-light {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(226, 232, 240, 0.9);
+        }
+        .light-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.03), 0 2px 4px -1px rgba(0, 0, 0, 0.02);
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .light-card:hover {
+            border-color: #cbd5e1;
+            box-shadow: 0 10px 20px -3px rgba(79, 70, 229, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.03);
+            transform: translateY(-2px);
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+        /* Active Tab Styling - Light Mode */
+        .tab-btn.active {
+            color: #4f46e5;
+            border-bottom-color: #4f46e5;
+            background: #e0e7ff;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-indigo-600 selection:text-white">
+
+    <header class="sticky top-0 z-40 glass-panel-light border-b border-slate-200 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-600 to-sky-500 flex items-center justify-center font-bold text-lg text-white shadow-md shadow-indigo-500/20">
+                    HGF
+                </div>
+                <div>
+                    <span class="font-bold text-lg text-slate-900 tracking-tight">Melvin Ho</span>
+                    <span class="text-xs text-indigo-600 block font-semibold">IHRP-CA, CHRA® | WSQ ACLP Certified</span>
+                </div>
+            </div>
+
+            <!-- Action CTA -->
+            <div class="flex items-center gap-3">
+                <a href="mailto:hgf.melvin@gmail.com" class="text-xs font-bold px-4 py-2 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white shadow-md shadow-indigo-600/20 transition flex items-center gap-1.5">
+                    <i class="fa-solid fa-paper-plane"></i>
+                    <span>Contact</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
+
+        <section class="bg-white rounded-3xl p-6 sm:p-8 relative overflow-hidden border border-slate-200 shadow-xl shadow-slate-200/50">
+            <!-- Decorative Light Gradient Blobs (No Green) -->
+            <div class="absolute -right-20 -top-20 w-80 h-80 bg-indigo-100/60 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="absolute -left-20 -bottom-20 w-80 h-80 bg-sky-100/60 rounded-full blur-3xl pointer-events-none"></div>
+
+            <div class="flex flex-col md:flex-row gap-6 md:gap-8 items-start md:items-center justify-between relative z-10">
+                <div class="space-y-4 max-w-3xl flex-1">
+                    <div class="flex flex-wrap items-center gap-2">
+                        <span class="px-3 py-1 rounded-full text-xs font-bold bg-sky-50 text-sky-700 border border-sky-200">
+                            <i class="fa-solid fa-graduation-cap mr-1"></i> WSQ ACLP Adult Educator
+                        </span>
+                        <span class="px-3 py-1 rounded-full text-xs font-bold bg-indigo-50 text-indigo-700 border border-indigo-200">
+                            <i class="fa-solid fa-award mr-1"></i> IHRP-CA
+                        </span>
+                        <span class="px-3 py-1 rounded-full text-xs font-bold bg-violet-50 text-violet-700 border border-violet-200">
+                            <i class="fa-solid fa-certificate mr-1"></i> CHRA®
+                        </span>
+                        
+                    </div>
+
+                    <div>
+                        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight">
+                            Melvin Ho <span class="text-slate-500 block sm:inline sm:ml-2">(何广福)</span>
+                        </h1>
+                        <p class="text-base sm:text-lg text-indigo-700 font-bold mt-1">
+                            Residential Life Advisor | Adult Education & Human Capital Specialist
+                        </p>
+                    </div>
+
+                    <p class="text-slate-600 text-sm sm:text-base leading-relaxed italic border-l-3 border-indigo-600 pl-4 py-0.5">
+                        "My life motto is "Using Life To Influence Lives. I am an educator by birth, molecular biologist by training, and community builder at heart."
+                    </p>
+
+                    <!-- IHRP & WSQ ACLP Banner (Equal height side-by-side boxes in one line) -->
+                    <div class="pt-2 flex flex-col sm:flex-row items-stretch gap-3">
+                        <div class="p-3.5 rounded-2xl bg-indigo-50/70 border border-indigo-200 flex items-center gap-3 flex-1">
+                            <div class="w-10 h-10 rounded-xl bg-indigo-600 text-white flex items-center justify-center font-bold text-base shrink-0 shadow-sm">
+                                <i class="fa-solid fa-briefcase"></i>
+                            </div>
+                            <div class="flex flex-col justify-center">
+                                <span class="text-xs font-bold text-indigo-900 block">IHRP Workplace Learning Champion Role Badge</span>
+                                <span class="text-[11px] text-slate-600 mt-0.5">Validated capability in Workplace Coaching & OJT Blueprinting</span>
+                            </div>
+                        </div>
+
+                        <div class="p-3.5 rounded-2xl bg-sky-50/70 border border-sky-200 flex items-center gap-3 flex-1">
+                            <div class="w-10 h-10 rounded-xl bg-sky-600 text-white flex items-center justify-center font-bold text-base shrink-0 shadow-sm">
+                                <i class="fa-solid fa-certificate"></i>
+                            </div>
+                            <div class="flex flex-col justify-center">
+                                <span class="text-xs font-bold text-sky-900 block">WSQ Advanced Certificate in Learning & Performance</span>
+                                <span class="text-[11px] text-slate-600 mt-0.5">Certified adult educator</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-full md:w-auto flex flex-col items-center md:items-start gap-4 shrink-0 pt-4 md:pt-0 border-t md:border-t-0 border-slate-200">
+                    <!-- Profile Picture Placeholder -->
+                    <div class="relative group mx-auto md:mx-0">
+                        <div class="w-28 h-28 sm:w-32 sm:h-32 rounded-2xl overflow-hidden border-2 border-indigo-300 bg-slate-100 shadow-md">
+                            <img src="https://melvinho.me/facepic.png" alt="Melvin Ho Profile Picture" style="max-width: 100%; height: auto;">
+                        </div>
+                    </div>
+
+                    <div class="w-full flex flex-col sm:flex-row md:flex-col gap-3 text-xs text-slate-700">
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-location-dot text-indigo-600 w-4 text-center"></i>
+                            <span>Singapore</span>
+                        </div>
+                        <a href="mailto:hgf.melvin@gmail.com" class="flex items-center gap-3 text-xs text-slate-700 hover:text-indigo-600 transition">
+                            <i class="fa-solid fa-envelope text-indigo-600 w-4 text-center"></i>
+                            <span>hgf.melvin@gmail.com</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/melvinhgf" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 text-xs text-slate-700 hover:text-indigo-600 transition">
+                            <i class="fa-brands fa-linkedin text-indigo-600 w-4 text-center"></i>
+                            <span>linkedin.com/in/melvinhgf</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <nav class="flex border-b border-slate-200 overflow-x-auto no-scrollbar gap-1 sm:gap-2">
+            <button onclick="switchTab('about')" id="tab-about" class="tab-btn active px-4 py-3 text-xs sm:text-sm font-bold text-slate-600 hover:text-indigo-600 border-b-2 border-transparent transition-all whitespace-nowrap flex items-center gap-2 rounded-t-lg">
+                <i class="fa-solid fa-user"></i>
+                <span>About & Overview</span>
+            </button>
+            <button onclick="switchTab('experience')" id="tab-experience" class="tab-btn px-4 py-3 text-xs sm:text-sm font-bold text-slate-600 hover:text-indigo-600 border-b-2 border-transparent transition-all whitespace-nowrap flex items-center gap-2 rounded-t-lg">
+                <i class="fa-solid fa-briefcase"></i>
+                <span>Career Highlights</span>
+            </button>
+            <button onclick="switchTab('projects')" id="tab-projects" class="tab-btn px-4 py-3 text-xs sm:text-sm font-bold text-slate-600 hover:text-indigo-600 border-b-2 border-transparent transition-all whitespace-nowrap flex items-center gap-2 rounded-t-lg">
+                <i class="fa-solid fa-folder-open"></i>
+                <span>Applied Capstone Projects</span>
+            </button>
+            <button onclick="switchTab('education')" id="tab-education" class="tab-btn px-4 py-3 text-xs sm:text-sm font-bold text-slate-600 hover:text-indigo-600 border-b-2 border-transparent transition-all whitespace-nowrap flex items-center gap-2 rounded-t-lg">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <span>Education & Certifications</span>
+            </button>
+            <button onclick="switchTab('skills')" id="tab-skills" class="tab-btn px-4 py-3 text-xs sm:text-sm font-bold text-slate-600 hover:text-indigo-600 border-b-2 border-transparent transition-all whitespace-nowrap flex items-center gap-2 rounded-t-lg">
+                <i class="fa-solid fa-layer-group"></i>
+                <span>Skills Matrix</span>
+            </button>
+            <button onclick="switchTab('honors')" id="tab-honors" class="tab-btn px-4 py-3 text-xs sm:text-sm font-bold text-slate-600 hover:text-indigo-600 border-b-2 border-transparent transition-all whitespace-nowrap flex items-center gap-2 rounded-t-lg">
+                <i class="fa-solid fa-trophy"></i>
+                <span>Honours & Community</span>
+            </button>
+        </nav>
+
+        <div id="content-about" class="tab-content space-y-6">
+            <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm space-y-4">
+                <h2 class="text-xl font-bold text-slate-900 flex items-center gap-2">
+                    <i class="fa-solid fa-compass text-indigo-600"></i> Professional Profile & Summary
+                </h2>
+                <p class="text-slate-700 leading-relaxed text-sm sm:text-base">
+                    I am a versatile professional with over 15 years of experience across education, higher education administration, adult learning, human capital development, and community engagement. Guided by the philosophy of <strong>"Using Life To Influence Lives,"</strong> my journey spans formal pedagogy in secondary and tertiary institutions, university residential advisor leadership, and grassroots community governance.
+                </p>
+                <p class="text-slate-700 leading-relaxed text-sm sm:text-base">
+                    Currently serving as <strong>Residential Life Advisor (Deputy Manager) at Singapore University of Technology and Design (SUTD)</strong>, I integrate evidence-based student development frameworks, pastoral care, and leadership training. My recent qualifications - including the <strong>Graduate Certificate in Innovative Approaches to Adult Learning (SUSS)</strong>, <strong>IHRP Workplace Learning Champion Role Badge</strong>, and <strong>WSQ Advanced Certificate in Learning & Performance (ACLP)</strong> - enable me to bridge adult education pedagogy with human capital alignment, capability building, and workplace learning blueprints.
+                </p>
+            </div>
+
+            <!-- Core Pillars -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="light-card rounded-2xl p-6 space-y-3">
+                    <div class="w-10 h-10 rounded-xl bg-indigo-100 text-indigo-700 flex items-center justify-center font-bold text-lg">
+                        <i class="fa-solid fa-chalkboard-user"></i>
+                    </div>
+                    <h3 class="text-base font-bold text-slate-900">Adult Education & Learning</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        Expertise in adult learning & ACLP certified facilitation, workplace coaching, learning needs analysis, OJT blueprinting, competency-based assessment, and technology-enhanced blended learning delivery.
+                    </p>
+                </div>
+
+                <div class="light-card rounded-2xl p-6 space-y-3">
+                    <div class="w-10 h-10 rounded-xl bg-sky-100 text-sky-700 flex items-center justify-center font-bold text-lg">
+                        <i class="fa-solid fa-users-gear"></i>
+                    </div>
+                    <h3 class="text-base font-bold text-slate-900">Human Capital Strategy</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        IHRP-CA and CHRA® credentialed in competency mapping, talent acquisition proposals, workplace conflict resolution, and total rewards strategy implementation.
+                    </p>
+                </div>
+
+                <div class="light-card rounded-2xl p-6 space-y-3">
+                    <div class="w-10 h-10 rounded-xl bg-violet-100 text-violet-700 flex items-center justify-center font-bold text-lg">
+                        <i class="fa-solid fa-hands-holding-child"></i>
+                    </div>
+                    <h3 class="text-base font-bold text-slate-900">Student Life & Community</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        Holistic residential life management, character and leadership training, crisis pastoral care, and multi-constituency grassroots stakeholder mobilisation.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div id="content-experience" class="tab-content hidden space-y-6">
+            <div class="flex items-center justify-between">
+                <h2 class="text-xl font-bold text-slate-900 flex items-center gap-2">
+                    <i class="fa-solid fa-briefcase text-indigo-600"></i> Career Highlights
+                </h2>
+                <span class="text-xs text-slate-500 font-medium">15+ Years Track Record</span>
+            </div>
+
+            <!-- Timeline -->
+            <div class="relative border-l-2 border-slate-200 ml-4 pl-6 space-y-8">
+
+                <!-- SUTD -->
+                <div class="relative group">
+                    <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-indigo-600 border-4 border-slate-50"></div>
+                    <div class="light-card rounded-2xl p-6 space-y-3">
+                        <div class="flex flex-wrap items-center justify-between gap-2">
+                            <div>
+                                <h3 class="text-lg font-bold text-slate-900">Residential Life Advisor (Deputy Manager)</h3>
+                                <p class="text-sm font-semibold text-indigo-600">Singapore University of Technology and Design (SUTD)</p>
+                            </div>
+                            <span class="px-3 py-1 rounded-full text-xs font-bold bg-indigo-100 text-indigo-700 border border-indigo-200">
+                                April 2026 – Present
+                            </span>
+                        </div>
+                        <ul class="text-xs sm:text-sm text-slate-700 space-y-2 list-disc list-inside">
+                            <li>Conduct leadership, character development, and skill training programmes for Residential College and hostel residents.</li>
+                            <li>Provide timely and empathetic pastoral support and manage critical student incidents and residential wellness.</li>
+                            <li>Lead investigations into hostel-related offences and support departmental disciplinary processes.</li>
+                            <li>Facilitate and lead Residential College living-learning activities and university-wide engagement programmes.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- People's Association CM -->
+                <div class="relative group">
+                    <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-sky-500 border-4 border-slate-50"></div>
+                    <div class="light-card rounded-2xl p-6 space-y-3">
+                        <div class="flex flex-wrap items-center justify-between gap-2">
+                            <div>
+                                <h3 class="text-lg font-bold text-slate-900">Constituency Manager</h3>
+                                <p class="text-sm font-semibold text-sky-700">People's Association</p>
+                            </div>
+                            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-slate-100 text-slate-600 border border-slate-200">
+                                May 2023 – October 2024 (1 yr 6 mos)
+                            </span>
+                        </div>
+                        <ul class="text-xs sm:text-sm text-slate-700 space-y-2 list-disc list-inside">
+                            <li>Supported three grassroots organisations concurrently in planning and executing community outreach projects.</li>
+                            <li>Managed financial budget controls, expenditure statements, and evaluation reports for public fund optimization.</li>
+                            <li>Provided comprehensive administrative and logistical support to committee leadership.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- NTU -->
+                <div class="relative group">
+                    <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-indigo-400 border-4 border-slate-50"></div>
+                    <div class="light-card rounded-2xl p-6 space-y-3">
+                        <div class="flex flex-wrap items-center justify-between gap-2">
+                            <div>
+                                <h3 class="text-lg font-bold text-slate-900">Assistant Manager</h3>
+                                <p class="text-sm font-semibold text-indigo-700">NTU Graduate College, Nanyang Technological University</p>
+                            </div>
+                            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-slate-100 text-slate-600 border border-slate-200">
+                                April 2022 – April 2023 (1 yr 1 mo)
+                            </span>
+                        </div>
+                        <ul class="text-xs sm:text-sm text-slate-700 space-y-2 list-disc list-inside">
+                            <li>Coordinated across 18 Colleges and Schools to implement the university student management system for Master's and PhD programmes.</li>
+                            <li>Provided secretariat support to the NTU Graduate College Executive Committee and enhanced institutional web operations.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- PA Temp CME -->
+                <div class="relative group">
+                    <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-slate-400 border-4 border-slate-50"></div>
+                    <div class="light-card rounded-2xl p-6 space-y-3">
+                        <div class="flex flex-wrap items-center justify-between gap-2">
+                            <div>
+                                <h3 class="text-lg font-bold text-slate-900">Constituency Management Executive (Temp)</h3>
+                                <p class="text-sm font-semibold text-slate-600">People's Association (Sengkang)</p>
+                            </div>
+                            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-slate-100 text-slate-600 border border-slate-200">
+                                Nov 2021 – Mar 2022 (5 mos)
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- IMDA -->
+                <div class="relative group">
+                    <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-slate-400 border-4 border-slate-50"></div>
+                    <div class="light-card rounded-2xl p-6 space-y-3">
+                        <div class="flex flex-wrap items-center justify-between gap-2">
+                            <div>
+                                <h3 class="text-lg font-bold text-slate-900">Digital Ambassador</h3>
+                                <p class="text-sm font-semibold text-slate-600">Infocomm Media Development Authority (IMDA)</p>
+                            </div>
+                            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-slate-100 text-slate-600 border border-slate-200">
+                                Aug 2020 – Mar 2021 (8 mos)
+                            </span>
+                        </div>
+                        <p class="text-xs sm:text-sm text-slate-700">Coached seniors on digital tool literacy and guided hawker merchants in e-payment digital adoption.</p>
+                    </div>
+                </div>
+
+                <!-- Sheraton Towers -->
+                <div class="relative group">
+                    <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-slate-400 border-4 border-slate-50"></div>
+                    <div class="light-card rounded-2xl p-6 space-y-3">
+                        <div class="flex flex-wrap items-center justify-between gap-2">
+                            <div>
+                                <h3 class="text-lg font-bold text-slate-900">Administrative Assistant (Housekeeping)</h3>
+                                <p class="text-sm font-semibold text-slate-600">Sheraton Towers Singapore Hotel</p>
+                            </div>
+                            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-slate-100 text-slate-600 border border-slate-200">
+                                Jul 2019 – Jul 2020 (1 yr 1 mo)
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- YR Industries -->
+                <div class="relative group">
+                    <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-slate-400 border-4 border-slate-50"></div>
+                    <div class="light-card rounded-2xl p-6 space-y-3">
+                        <div class="flex flex-wrap items-center justify-between gap-2">
+                            <div>
+                                <h3 class="text-lg font-bold text-slate-900">Operator (Admin & Laundry)</h3>
+                                <p class="text-sm font-semibold text-slate-600">YR Industries Pte Ltd</p>
+                            </div>
+                            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-slate-100 text-slate-600 border border-slate-200">
+                                Aug 2017 – Feb 2019 (1 yr 7 mos)
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Everrise -->
+                <div class="relative group">
+                    <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-slate-400 border-4 border-slate-50"></div>
+                    <div class="light-card rounded-2xl p-6 space-y-3">
+                        <div class="flex flex-wrap items-center justify-between gap-2">
+                            <div>
+                                <h3 class="text-lg font-bold text-slate-900">Personal Assistant</h3>
+                                <p class="text-sm font-semibold text-slate-600">Everrise Furniture Maker</p>
+                            </div>
+                            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-slate-100 text-slate-600 border border-slate-200">
+                                Dec 2015 – Apr 2017 (1 yr 5 mos)
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- St Joseph's Institution -->
+                <div class="relative group">
+                    <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-indigo-600 border-4 border-slate-50"></div>
+                    <div class="light-card rounded-2xl p-6 space-y-3">
+                        <div class="flex flex-wrap items-center justify-between gap-2">
+                            <div>
+                                <h3 class="text-lg font-bold text-slate-900">Teacher (GCE O-Level Biology & Science)</h3>
+                                <p class="text-sm font-semibold text-indigo-700">St Joseph's Institution (SJI)</p>
+                            </div>
+                            <span class="px-3 py-1 rounded-full text-xs font-bold bg-indigo-100 text-indigo-700 border border-indigo-200">
+                                June 2008 – November 2015 (7 yrs 6 mos)
+                            </span>
+                        </div>
+                        <ul class="text-xs sm:text-sm text-slate-700 space-y-2 list-disc list-inside">
+                            <li>Biology Coordinator for Sec 3 & 4 Integrated Programme Science.</li>
+                            <li>Overall Teacher-In-Charge of NCC Air Uniformed Group; SJI Anniversary Parades Chairman (2012–2015).</li>
+                            <li>Overseas Residential Programme (ORP) Coordinator and International Exchange Mentor.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- SAF -->
+                <div class="relative group">
+                    <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-slate-500 border-4 border-slate-50"></div>
+                    <div class="light-card rounded-2xl p-6 space-y-3">
+                        <div class="flex flex-wrap items-center justify-between gap-2">
+                            <div>
+                                <h3 class="text-lg font-bold text-slate-900">Operationally-Ready National Serviceman (NSman) / NSF</h3>
+                                <p class="text-sm font-semibold text-slate-600">Singapore Armed Forces (SAF) – 39 SCE CBRE Group</p>
+                            </div>
+                            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-slate-100 text-slate-600 border border-slate-200">
+                                16 Years 4 Months Total Service
+                            </span>
+                        </div>
+                        <p class="text-xs sm:text-sm text-slate-700">Awarded SAF Good Service Medal and National Service (NS) Medal.</p>
+                    </div>
+                </div>
+
+                <!-- Catholic Junior College -->
+                <div class="relative group">
+                    <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-indigo-600 border-4 border-slate-50"></div>
+                    <div class="light-card rounded-2xl p-6 space-y-3">
+                        <div class="flex flex-wrap items-center justify-between gap-2">
+                            <div>
+                                <h3 class="text-lg font-bold text-slate-900">Teacher (GCE A-Level Biology)</h3>
+                                <p class="text-sm font-semibold text-indigo-700">Catholic Junior College (CJC)</p>
+                            </div>
+                            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-slate-100 text-slate-600 border border-slate-200">
+                                June 2005 – June 2008 (3 yrs 1 mo)
+                            </span>
+                        </div>
+                        <p class="text-xs sm:text-sm text-slate-700">Awarded Special Award for Best Improvement in 2007 GCE A Level Results (Biology).</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div id="content-projects" class="tab-content hidden space-y-6">
+            <div class="bg-white rounded-2xl p-6 border-l-4 border-indigo-600 border border-slate-200 shadow-sm">
+                <h2 class="text-xl font-bold text-slate-900 mb-2">Applied Capstone Projects</h2>
+                <p class="text-sm text-slate-700 leading-relaxed">
+                    The following details the assignments I submitted for the SkillsFuture Career Transition Programme (SCTP) in Human Capital Management.
+                </p>
+            </div>
+
+            <!-- Grid of 4 Capstone Projects -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                <!-- Project 1 -->
+                <div class="light-card rounded-2xl p-6 flex flex-col justify-between space-y-4">
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs font-bold px-2.5 py-1 rounded-md bg-indigo-100 text-indigo-700 border border-indigo-200">
+                                Project 1
+                            </span>
+                            <span class="text-xs text-slate-500 font-medium">SCTP HCM Capstone</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900">Talent Acquisition and Recruitment</h3>
+                        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                            A talent acquisition proposal to recruit software engineers trained in AI and data analytics for <strong>SmartGen Solutions Pte Ltd</strong>.
+                        </p>
+                    </div>
+                    <div class="pt-2">
+                        <a href="https://melvinho.me/sctp-hcm-tar.html" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-xs font-bold text-indigo-600 hover:text-indigo-800 transition">
+                            <span>View Project</span>
+                            <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="light-card rounded-2xl p-6 flex flex-col justify-between space-y-4">
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs font-bold px-2.5 py-1 rounded-md bg-sky-100 text-sky-700 border border-sky-200">
+                                Project 2
+                            </span>
+                            <span class="text-xs text-slate-500 font-medium">SCTP HCM Capstone</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900">Organisational Learning & Development</h3>
+                        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                            A strategic learning and development plan for <strong>GreenTech Solutions Pte Ltd</strong> customer support team.
+                        </p>
+                    </div>
+                    <div class="pt-2">
+                        <a href="https://melvinho.me/sctp-hcm-old.html" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-xs font-bold text-indigo-600 hover:text-indigo-800 transition">
+                            <span>View Project</span>
+                            <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="light-card rounded-2xl p-6 flex flex-col justify-between space-y-4">
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs font-bold px-2.5 py-1 rounded-md bg-violet-100 text-violet-700 border border-violet-200">
+                                Project 3
+                            </span>
+                            <span class="text-xs text-slate-500 font-medium">SCTP HCM Capstone</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900">Workplace Relationship Management</h3>
+                        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                            A strategic conflict management framework to minimise unconscious bias at workplace.
+                        </p>
+                    </div>
+                    <div class="pt-2">
+                        <a href="https://melvinho.me/sctp-hcm-wrm.html" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-xs font-bold text-indigo-600 hover:text-indigo-800 transition">
+                            <span>View Project</span>
+                            <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="light-card rounded-2xl p-6 flex flex-col justify-between space-y-4">
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs font-bold px-2.5 py-1 rounded-md bg-indigo-100 text-indigo-700 border border-indigo-200">
+                                Project 4
+                            </span>
+                            <span class="text-xs text-slate-500 font-medium">SCTP HCM Capstone</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900">Compensation and Rewards</h3>
+                        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                            A Total Rewards Package proposal for <strong>InnoTech Ltd</strong>, a local tech startup, for the company's Administrative Assistants.
+                        </p>
+                    </div>
+                    <div class="pt-2">
+                        <a href="https://melvinho.me/sctp-hcm-cnb.html" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-xs font-bold text-indigo-600 hover:text-indigo-800 transition">
+                            <span>View Project</span>
+                            <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div id="content-education" class="tab-content hidden space-y-6">
+            <h2 class="text-xl font-bold text-slate-900 flex items-center gap-2">
+                <i class="fa-solid fa-graduation-cap text-indigo-600"></i> Academic Credentials & Certifications
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                <!-- Academic Qualifications -->
+                <div class="space-y-4">
+                    <h3 class="text-sm font-bold text-indigo-700 uppercase tracking-wider">Formal Academic Qualifications</h3>
+
+                    <div class="light-card rounded-2xl p-5 space-y-2">
+                        <span class="text-xs font-bold text-indigo-600">SUSS (2026)</span>
+                        <h4 class="text-base font-bold text-slate-900">Graduate Diploma in Adult Learning (GDALL) - in progress</h4>
+                        <p class="text-xs text-slate-600">Singapore University of Social Sciences</p>
+                    </div>
+
+                    <div class="light-card rounded-2xl p-5 space-y-2">
+                        <span class="text-xs font-bold text-indigo-600">SUSS (2026)</span>
+                        <h4 class="text-base font-bold text-slate-900">Graduate Certificate in Innovative Approaches to Adult Learning (GCIAL)</h4>
+                        <p class="text-xs text-slate-600">Singapore University of Social Sciences</p>
+                    </div>
+
+                    <div class="light-card rounded-2xl p-5 space-y-2">
+                        <span class="text-xs font-bold text-sky-600">NTU / NIE (2004–2005)</span>
+                        <h4 class="text-base font-bold text-slate-900">Postgraduate Diploma in Education (PGDE)</h4>
+                        <p class="text-xs text-slate-600">Specialised in Teaching at Secondary Level (Biology & Chemistry)</p>
+                    </div>
+
+                    <div class="light-card rounded-2xl p-5 space-y-2">
+                        <span class="text-xs font-bold text-sky-600">NUS (2000–2004)</span>
+                        <h4 class="text-base font-bold text-slate-900">B.Sc. (2nd Class Honours Lower)</h4>
+                        <p class="text-xs text-slate-600">Cell & Molecular Biology and Evolutionary Biology</p>
+                    </div>
+
+                    <div class="light-card rounded-2xl p-5 space-y-2">
+                        <span class="text-xs font-bold text-indigo-600">ITE (2025)</span>
+                        <h4 class="text-base font-bold text-slate-900">SCTP in Human Capital Management</h4>
+                        <p class="text-xs text-slate-600">SkillsFuture Career Transition Programme</p>
+                    </div>
+                </div>
+
+                <!-- Certifications & Attainments -->
+                <div class="space-y-4">
+                    <h3 class="text-sm font-bold text-indigo-700 uppercase tracking-wider">Professional Credentials & Attainments</h3>
+
+                    <a href="https://nexus.accredify.io/verify?id=019e20a5-d644-721c-91d2-a48998c1ac24" target="_blank" rel="noopener noreferrer" class="light-card block rounded-2xl p-5 space-y-3 hover:shadow-md transition-shadow cursor-pointer">
+                    <div class="flex items-center gap-3">
+                    <div class="w-9 h-9 rounded-xl bg-sky-100 text-sky-700 flex items-center justify-center font-bold text-base">
+                    <i class="fa-solid fa-award"></i>
+                </div>
+        <div>
+            <h4 class="text-sm font-bold text-slate-900">IHRP Workplace Learning Champion Role Badge</h4>
+            <p class="text-xs text-slate-600">Validated capability in Workplace Coaching & OJT Blueprinting</p>
+        </div>
+    </div>
+</a>
+
+                    <div class="light-card rounded-2xl p-5 space-y-3">
+                        <div class="flex items-center gap-3">
+                            <div class="w-9 h-9 rounded-xl bg-indigo-100 text-indigo-700 flex items-center justify-center font-bold text-base">
+                                <i class="fa-solid fa-award"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-slate-900">IHRP Associate (IHRP-CA)</h4>
+                                <p class="text-xs text-slate-600">Institute for Human Resource Professionals</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="light-card rounded-2xl p-5 space-y-3">
+                        <div class="flex items-center gap-3">
+                            <div class="w-9 h-9 rounded-xl bg-violet-100 text-violet-700 flex items-center justify-center font-bold text-base">
+                                <i class="fa-solid fa-certificate"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-slate-900">Certified Human Resources Associate (CHRA®)</h4>
+                                <p class="text-xs text-slate-600">American Academy of Project Management</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Certificates list -->
+                    <div class="light-card rounded-2xl p-5 space-y-2 text-xs text-slate-700">
+                        <h4 class="text-sm font-bold text-slate-900 mb-2">Certificates of Attainment & Competency</h4>
+                        <div class="grid grid-cols-1 gap-2">
+                            <div class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-indigo-600 text-xs"></i> WSQ Advanced Certificate in Learning & Performance (ACLP)</div>
+                            <div class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-indigo-600 text-xs"></i> Certificate of Attainment - Workplace Relationship Management</div>
+                            <div class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-indigo-600 text-xs"></i> Certificate of Attainment - Organisational L&D</div>
+                            <div class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-indigo-600 text-xs"></i> Certificate of Attainment - Compensation & Rewards</div>
+                            <div class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-indigo-600 text-xs"></i> Certificate of Competency - HR Automation Essentials</div>
+                            <div class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-indigo-600 text-xs"></i> Communication Styles for Managers</div>
+                            <div class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-indigo-600 text-xs"></i> Understanding Gen-Z Learners</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div id="content-skills" class="tab-content hidden space-y-6">
+            <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                <h2 class="text-xl font-bold text-slate-900 flex items-center gap-2">
+                    <i class="fa-solid fa-layer-group text-indigo-600"></i> Competency & Skills Matrix
+                </h2>
+                <!-- Search Filter -->
+                <div class="relative w-full sm:w-64">
+                    <i class="fa-solid fa-magnifying-glass absolute left-3 top-2.5 text-xs text-slate-400"></i>
+                    <input type="text" id="skillSearch" onkeyup="filterSkills()" placeholder="Search skills..." class="w-full pl-9 pr-3 py-1.5 bg-white border border-slate-300 rounded-lg text-xs text-slate-800 placeholder-slate-400 focus:outline-none focus:border-indigo-600 focus:ring-1 focus:ring-indigo-600">
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                <!-- Adult Learning & Pedagogy -->
+                <div class="light-card rounded-2xl p-5 space-y-3 skill-card">
+                    <h3 class="text-sm font-bold text-indigo-700 flex items-center gap-2">
+                        <i class="fa-solid fa-person-chalkboard"></i> Adult Learning & Pedagogy
+                    </h3>
+                    <div class="flex flex-wrap gap-1.5">
+                        <span class="skill-tag px-2.5 py-1 rounded-md text-xs bg-slate-100 text-slate-700 border border-slate-200">Adult Facilitation</span>
+                        <span class="skill-tag px-2.5 py-1 rounded-md text-xs bg-slate-100 text-slate-700 border border-slate-200">Learner Profile Analysis</span>
+                        <span class="skill-tag px-2.5 py-1 rounded-md text-xs bg-slate-100 text-slate-700 border border-slate-200">Workplace Learning Delivery</span>
+                        <span class="skill-tag px-2.5 py-1 rounded-md text-xs bg-slate-100 text-slate-700 border border-slate-200">OJT Blueprinting</span>
+                        <span class="skill-tag px-2.5 py-1 rounded-md text-xs bg-slate-100 text-slate-700 border border-slate-200">Blended Learning Design</span>
+                        <span class="skill-tag px-2.5 py-1 rounded-md text-xs bg-slate-100 text-slate-700 border border-slate-200">Workplace Coaching</span>
+                    </div>
+                </div>
+
+                <!-- Human Capital & HR -->
+                <div class="light-card rounded-2xl p-5 space-y-3 skill-card">
+                    <h3 class="text-sm font-bold text-sky-700 flex items-center gap-2">
+                        <i class="fa-solid fa-users-gear"></i> Human Capital & HR
+                    </h3>
+                    <div class="flex flex-wrap gap-1.5">
+                        <span class="skill-tag px-2.5 py-1 rounded-md text-xs bg-slate-100 text-slate-700 border border-slate-200">Competency Mapping</span>
+                        <span class="skill-tag px-2.5 py-1 rounded-md text-xs bg-slate-100 text-slate-700 border border-slate-200">Talent Acquisition</span>
+                        <span class="skill-tag px-2.5 py-1 rounded-md text-xs bg-slate-100 text-slate-700 border border-slate-200">Conflict Management</span>
+                        <span class="skill-tag px-2.5 py-1 rounded-md text-xs bg-slate-100 text-slate-700 border border-slate-200">Total Rewards Strategy</span>
+                        <span class="skill-tag px-2.5 py-1 rounded-md text-xs bg-slate-100 text-slate-700 border border-slate-200">HR Automation</span>
+                    </div>
+                </div>
+
+                <!-- Higher Ed & Mentorship -->
+                <div class="light-card rounded-2xl p-5 space-y-3 skill-card">
+                    <h3 class="text-sm font-bold text-violet-700 flex items-center gap-2">
+                        <i class="fa-solid fa-hands-holding-child"></i> Student Development & Leadership
+                    </h3>
+                    <div class="flex flex-wrap gap-1.5">
+                        <span class="skill-tag px-2.5 py-1 rounded-md text-xs bg-slate-100 text-slate-700 border border-slate-200">Youth Mentoring</span>
+                        <span class="skill-tag px-2.5 py-1 rounded-md text-xs bg-slate-100 text-slate-700 border border-slate-200">Residential Life Management</span>
+                        <span class="skill-tag px-2.5 py-1 rounded-md text-xs bg-slate-100 text-slate-700 border border-slate-200">Pastoral Care</span>
+                        <span class="skill-tag px-2.5 py-1 rounded-md text-xs bg-slate-100 text-slate-700 border border-slate-200">Community Outreach</span>
+                        <span class="skill-tag px-2.5 py-1 rounded-md text-xs bg-slate-100 text-slate-700 border border-slate-200">Crisis Pastoral Support</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div id="content-honors" class="tab-content hidden space-y-6">
+            <h2 class="text-xl font-bold text-slate-900 flex items-center gap-2">
+                <i class="fa-solid fa-trophy text-indigo-600"></i> Honors, Awards & Community
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                <!-- Honors & Medals -->
+                <div class="light-card rounded-2xl p-6 space-y-4">
+                    <h3 class="text-base font-bold text-indigo-700 flex items-center gap-2">
+                        <i class="fa-solid fa-medal"></i> Awards & Recognition
+                    </h3>
+                    <div class="space-y-3 text-xs sm:text-sm">
+                        <div class="flex items-start gap-3">
+                            <i class="fa-solid fa-award text-indigo-600 text-base mt-0.5"></i>
+                            <div>
+                                <span class="font-bold text-slate-900 block">Ministry of Education Teaching Award</span>
+                                <span class="text-slate-600">MOE Singapore</span>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i class="fa-solid fa-award text-indigo-600 text-base mt-0.5"></i>
+                            <div>
+                                <span class="font-bold text-slate-900 block">National Youth Achievement Award (NYAA) – Gold Award</span>
+                                <span class="text-slate-600">NYAA Council Singapore</span>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i class="fa-solid fa-award text-indigo-600 text-base mt-0.5"></i>
+                            <div>
+                                <span class="font-bold text-slate-900 block">National Service Medal & SAF Good Service Medal</span>
+                                <span class="text-slate-600">Singapore Armed Forces (SAF)</span>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i class="fa-solid fa-award text-indigo-600 text-base mt-0.5"></i>
+                            <div>
+                                <span class="font-bold text-slate-900 block">Special Award for Best Improvement in GCE A-Level Results</span>
+                                <span class="text-slate-600">Catholic Junior College (2007)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Languages & Attributes -->
+                <div class="light-card rounded-2xl p-6 space-y-4">
+                    <h3 class="text-base font-bold text-indigo-700 flex items-center gap-2">
+                        <i class="fa-solid fa-language"></i> Languages & Capabilities
+                    </h3>
+                    <div class="space-y-3 text-xs sm:text-sm text-slate-700">
+                        <div class="flex justify-between items-center py-1 border-b border-slate-200">
+                            <span class="font-medium">English</span>
+                            <span class="text-xs font-bold text-indigo-600">Native / Bilingual</span>
+                        </div>
+                        <div class="flex justify-between items-center py-1 border-b border-slate-200">
+                            <span class="font-medium">Chinese (Mandarin)</span>
+                            <span class="text-xs font-bold text-indigo-600">Professional Working</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="border-t border-slate-200 py-6 mt-12 bg-white text-center text-xs text-slate-500 shadow-inner">
+        <p>© 2026 Melvin Ho | Created using Google Gemini</p>
+    </footer>
+
+    <script>
+        function switchTab(tabId) {
+            // Hide all contents
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(el => el.classList.add('hidden'));
+
+            // Deactivate all tab buttons
+            const buttons = document.querySelectorAll('.tab-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+
+            // Show selected content and activate tab button
+            const selectedContent = document.getElementById('content-' + tabId);
+            const selectedTab = document.getElementById('tab-' + tabId);
+
+            if (selectedContent) selectedContent.classList.remove('hidden');
+            if (selectedTab) selectedTab.classList.add('active');
+        }
+
+        function filterSkills() {
+            const query = document.getElementById('skillSearch').value.toLowerCase();
+            const skillCards = document.querySelectorAll('.skill-card');
+
+            skillCards.forEach(card => {
+                const tags = card.querySelectorAll('.skill-tag');
+                let matches = false;
+
+                tags.forEach(tag => {
+                    if (tag.textContent.toLowerCase().includes(query)) {
+                        matches = true;
+                    }
+                });
+
+                if (matches || query === '') {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
