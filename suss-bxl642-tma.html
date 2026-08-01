@@ -19,6 +19,7 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Lora:ital,wght@0,500;0,600;1,400&display=swap');
         
@@ -72,43 +73,84 @@
         </div>
     </div>
     
-    <!-- Header Navigation -->
-    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200 shadow-sm no-print">
+    <!-- Dynamic & Fluid Header Navigation -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200 shadow-sm no-print transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16 items-center">
-                <div class="flex items-center space-x-3">
-                    <div class="w-10 h-10 rounded-xl bg-indigo-700 text-white flex items-center justify-center font-bold text-sm tracking-wider shadow-md shadow-indigo-700/20">
+            <div class="flex justify-between h-16 items-center gap-2 sm:gap-4">
+                
+                <!-- Branding Profile Badge -->
+                <div class="flex items-center space-x-2.5 sm:space-x-3 shrink-0">
+                    <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-indigo-700 text-white flex items-center justify-center font-bold text-xs sm:text-sm tracking-wider shadow-md shadow-indigo-700/20">
                         HGF
                     </div>
-                <div class="min-w-0 flex flex-col justify-center">
-                    <div class="font-bold text-slate-900 text-sm sm:text-base leading-tight tracking-tight flex items-center gap-1.5 sm:gap-2 truncate">
-                        <span class="truncate">Melvin Ho</span>
-                        <span class="hidden md:inline-block text-[9px] text-amber-800 font-semibold px-2 py-0.5 rounded-full bg-amber-50 border border-amber-300 shrink-0">92/100</span>
-                    </div>
-                    <div class="text-[10px] sm:text-xs text-slate-500 truncate leading-tight">IAL Singapore • SUSS</div>
-                </div>                 
-            </div> 
+                    <div class="min-w-0 flex flex-col justify-center">
+                        <div class="font-bold text-slate-900 text-xs sm:text-base leading-tight tracking-tight flex items-center gap-1.5 sm:gap-2 truncate">
+                            <span class="truncate">Melvin Ho</span>
+                            <span class="hidden sm:inline-block text-[9px] text-amber-800 font-semibold px-2 py-0.5 rounded-full bg-amber-50 border border-amber-300 shrink-0">92/100</span>
+                        </div>
+                        <div class="text-[10px] sm:text-xs text-slate-500 truncate leading-tight">IAL Singapore • SUSS</div>
+                    </div>                 
+                </div> 
 
-                <nav class="hidden md:flex space-x-1 lg:space-x-4 text-sm font-medium text-slate-600">
-                    <a href="#overview" class="hover:text-indigo-700 transition px-3 py-2 rounded-lg hover:bg-slate-50">Overview</a>
-                    <a href="#abstract" class="hover:text-indigo-700 transition px-3 py-2 rounded-lg hover:bg-slate-50">Abstract</a>
-                    <a href="#initiative" class="hover:text-indigo-700 transition px-3 py-2 rounded-lg hover:bg-slate-50">Context</a>
-                    <a href="#approaches" class="hover:text-indigo-700 transition px-3 py-2 rounded-lg hover:bg-slate-50">Pedagogy</a>
-                    <a href="#unintended" class="hover:text-indigo-700 transition px-3 py-2 rounded-lg hover:bg-slate-50">Critical Analysis</a>
-                    <a href="#philosophy" class="hover:text-indigo-700 transition px-3 py-2 rounded-lg hover:bg-slate-50">Philosophy</a>
-                    <a href="#references" class="hover:text-indigo-700 transition px-3 py-2 rounded-lg hover:bg-slate-50">References</a>
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden xl:flex items-center space-x-1 lg:space-x-1.5 text-xs lg:text-sm font-medium text-slate-600">
+                    <a href="#overview" class="nav-link hover:text-indigo-700 transition px-2.5 py-2 rounded-lg hover:bg-slate-100">Overview</a>
+                    <a href="#abstract" class="nav-link hover:text-indigo-700 transition px-2.5 py-2 rounded-lg hover:bg-slate-100">Abstract</a>
+                    <a href="#initiative" class="nav-link hover:text-indigo-700 transition px-2.5 py-2 rounded-lg hover:bg-slate-100">Context</a>
+                    <a href="#approaches" class="nav-link hover:text-indigo-700 transition px-2.5 py-2 rounded-lg hover:bg-slate-100">Pedagogy</a>
+                    <a href="#unintended" class="nav-link hover:text-indigo-700 transition px-2.5 py-2 rounded-lg hover:bg-slate-100">Critical Analysis</a>
+                    <a href="#philosophy" class="nav-link hover:text-indigo-700 transition px-2.5 py-2 rounded-lg hover:bg-slate-100">Philosophy</a>
+                    <a href="#references" class="nav-link hover:text-indigo-700 transition px-2.5 py-2 rounded-lg hover:bg-slate-100">References</a>
                 </nav>
 
-                <div class="flex items-center space-x-2">
-                    <a href="BXL642_TMA_HoGuangFu.pdf" download class="px-3 py-2 text-xs sm:text-sm font-semibold text-slate-700 bg-slate-100 hover:bg-slate-200 rounded-lg transition flex items-center gap-2">
-                        <i data-lucide="download" class="w-4 h-4 text-slate-600"></i>
+                <!-- Action Controls & Mobile Toggle -->
+                <div class="flex items-center space-x-1.5 sm:space-x-2 shrink-0">
+                    <a href="BXL642_TMA_HoGuangFu.pdf" download class="px-2.5 sm:px-3 py-2 text-xs sm:text-sm font-semibold text-slate-700 bg-slate-100 hover:bg-slate-200 rounded-lg transition flex items-center gap-1.5">
+                        <i data-lucide="download" class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-slate-600"></i>
                         <span class="hidden sm:inline">Download Paper</span>
                     </a>
-                    <a href="mailto:hgf.melvin@gmail.com" class="px-3.5 py-2 text-xs sm:text-sm font-semibold text-white bg-indigo-700 hover:bg-indigo-800 rounded-lg transition shadow-sm flex items-center gap-1.5">
-                        <i data-lucide="mail" class="w-4 h-4"></i>
-                        <span>Contact</span>
+                    <a href="mailto:hgf.melvin@gmail.com" class="px-2.5 sm:px-3.5 py-2 text-xs sm:text-sm font-semibold text-white bg-indigo-700 hover:bg-indigo-800 rounded-lg transition shadow-sm flex items-center gap-1.5">
+                        <i data-lucide="mail" class="w-3.5 h-3.5 sm:w-4 sm:h-4"></i>
+                        <span class="hidden xs:inline">Contact</span>
                     </a>
+
+                    <!-- Mobile & Tablet Menu Toggle Button -->
+                    <button id="mobile-menu-btn" aria-label="Toggle Menu" class="xl:hidden p-2 rounded-lg text-slate-700 hover:text-indigo-700 hover:bg-slate-100 focus:outline-none transition">
+                        <i data-lucide="menu" id="menu-icon-open" class="w-5 h-5 sm:w-6 sm:h-6"></i>
+                        <i data-lucide="x" id="menu-icon-close" class="w-5 h-5 sm:w-6 sm:h-6 hidden"></i>
+                    </button>
                 </div>
+            </div>
+        </div>
+
+        <!-- Dynamic Responsive Slide-Down Mobile & Tablet Drawer Menu -->
+        <div id="mobile-menu" class="hidden xl:hidden bg-white/95 backdrop-blur-xl border-b border-slate-200 shadow-xl transition-all duration-300">
+            <div class="px-4 pt-3 pb-6 space-y-1 max-w-7xl mx-auto">
+                <div class="px-3 py-1.5 mb-2 text-[11px] font-bold text-slate-400 uppercase tracking-wider border-b border-slate-100 flex items-center justify-between">
+                    <span>Navigation Menu</span>
+                    <span class="text-[10px] bg-amber-100 text-amber-800 px-2 py-0.5 rounded-full font-extrabold">92/100 A+</span>
+                </div>
+                <a href="#overview" class="mobile-nav-link flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-sm font-medium text-slate-700 hover:text-indigo-700 hover:bg-indigo-50/80 transition">
+                    <i data-lucide="layout-dashboard" class="w-4 h-4 text-indigo-600"></i> Overview
+                </a>
+                <a href="#abstract" class="mobile-nav-link flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-sm font-medium text-slate-700 hover:text-indigo-700 hover:bg-indigo-50/80 transition">
+                    <i data-lucide="file-text" class="w-4 h-4 text-indigo-600"></i> Abstract
+                </a>
+                <a href="#initiative" class="mobile-nav-link flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-sm font-medium text-slate-700 hover:text-indigo-700 hover:bg-indigo-50/80 transition">
+                    <i data-lucide="map-pin" class="w-4 h-4 text-indigo-600"></i> Context & Field Execution
+                </a>
+                <a href="#approaches" class="mobile-nav-link flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-sm font-medium text-slate-700 hover:text-indigo-700 hover:bg-indigo-50/80 transition">
+                    <i data-lucide="brain" class="w-4 h-4 text-indigo-600"></i> Pedagogical Framework
+                </a>
+                <a href="#unintended" class="mobile-nav-link flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-sm font-medium text-slate-700 hover:text-indigo-700 hover:bg-indigo-50/80 transition">
+                    <i data-lucide="alert-triangle" class="w-4 h-4 text-indigo-600"></i> Critical Analysis
+                </a>
+                <a href="#philosophy" class="mobile-nav-link flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-sm font-medium text-slate-700 hover:text-indigo-700 hover:bg-indigo-50/80 transition">
+                    <i data-lucide="compass" class="w-4 h-4 text-indigo-600"></i> Teaching Philosophy
+                </a>
+                <a href="#references" class="mobile-nav-link flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-sm font-medium text-slate-700 hover:text-indigo-700 hover:bg-indigo-50/80 transition">
+                    <i data-lucide="book-open" class="w-4 h-4 text-indigo-600"></i> References
+                </a>
             </div>
         </div>
     </header>
@@ -156,7 +198,7 @@
             </div>
         </section>
 
-        <!-- ACADEMIC ABSTRACT (REWRITTEN SUMMARY) -->
+        <!-- ACADEMIC ABSTRACT -->
         <section id="abstract" class="glass-card border border-indigo-100 rounded-2xl p-6 sm:p-8 space-y-4 shadow-sm">
             <div class="flex items-center gap-3 border-b border-slate-200 pb-3">
                 <div class="p-2 bg-indigo-50 text-indigo-700 rounded-xl">
@@ -576,11 +618,57 @@
         </div>
     </footer>
 
-    <!-- Tab Switching Logic Script -->
+    <!-- Tab Switching & Dynamic Navigation Script -->
     <script>
         // Initialize Lucide Icons
         lucide.createIcons();
 
+        // Dynamic Mobile & Tablet Navigation Menu Controls
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIconOpen = document.getElementById('menu-icon-open');
+        const menuIconClose = document.getElementById('menu-icon-close');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+        function toggleMobileMenu() {
+            const isHidden = mobileMenu.classList.contains('hidden');
+            if (isHidden) {
+                mobileMenu.classList.remove('hidden');
+                menuIconOpen.classList.add('hidden');
+                menuIconClose.classList.remove('hidden');
+            } else {
+                mobileMenu.classList.add('hidden');
+                menuIconOpen.classList.remove('hidden');
+                menuIconClose.classList.add('hidden');
+            }
+        }
+
+        if (mobileMenuBtn) {
+            mobileMenuBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                toggleMobileMenu();
+            });
+        }
+
+        // Auto-close menu when clicking any mobile link
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (!mobileMenu.classList.contains('hidden')) {
+                    toggleMobileMenu();
+                }
+            });
+        });
+
+        // Close menu when tapping anywhere outside the navigation
+        document.addEventListener('click', (event) => {
+            if (mobileMenu && mobileMenuBtn && !mobileMenu.contains(event.target) && !mobileMenuBtn.contains(event.target)) {
+                if (!mobileMenu.classList.contains('hidden')) {
+                    toggleMobileMenu();
+                }
+            }
+        });
+
+        // Tab Switching Logic
         function switchTab(tabName) {
             document.getElementById('content-soc').classList.add('hidden');
             document.getElementById('content-geragogy').classList.add('hidden');
@@ -593,6 +681,28 @@
             document.getElementById('content-' + tabName).classList.remove('hidden');
             document.getElementById('tab-' + tabName).classList.add('active');
         }
+
+        // Active Navigation Scroll Spy tracking
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section[id]');
+            const scrollY = window.pageYOffset;
+
+            sections.forEach(current => {
+                const sectionHeight = current.offsetHeight;
+                const sectionTop = current.offsetTop - 120;
+                const sectionId = current.getAttribute('id');
+                const desktopLink = document.querySelector(`.nav-link[href*="${sectionId}"]`);
+                const mobileLink = document.querySelector(`.mobile-nav-link[href*="${sectionId}"]`);
+
+                if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+                    if (desktopLink) desktopLink.classList.add('text-indigo-700', 'bg-slate-100', 'font-semibold');
+                    if (mobileLink) mobileLink.classList.add('text-indigo-700', 'bg-indigo-50', 'font-semibold');
+                } else {
+                    if (desktopLink) desktopLink.classList.remove('text-indigo-700', 'bg-slate-100', 'font-semibold');
+                    if (mobileLink) mobileLink.classList.remove('text-indigo-700', 'bg-indigo-50', 'font-semibold');
+                }
+            });
+        });
     </script>
 </body>
 </html>
