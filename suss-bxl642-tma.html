@@ -1,1 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BXL642 TMA Showcase | Highest Score 92 out of 100 - Ho Guang Fu (Melvin Ho)</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Lora:ital,wght@0,500;0,600;1,400&display=swap');
+        
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #f8fafc;
+            color: #0f172a;
+        }
 
+        .serif-font {
+            font-family: 'Lora', serif;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(226, 232, 240, 0.9);
+        }
+
+        .tab-btn.active {
+            color: #4338ca;
+            border-bottom: 2px solid #4338ca;
+            font-weight: 600;
+            background-color: #eef2ff;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        @media print {
+            .no-print { display: none !important; }
+            body { background: white; color: black; }
+            .glass-card { border: none; box-shadow: none; }
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+    <!-- Header Navigation -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200 shadow-sm no-print">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 rounded-xl bg-indigo-700 text-white flex items-center justify-center font-bold text-sm tracking-wider shadow-md shadow-indigo-700/20">
+                        HGF
+                    </div>
+                    <div>
+                        <span class="font-bold text-slate-900 text-lg leading-none block">Ho Guang Fu</span>
+                        <span class="text-xs text-indigo-700 font-medium">Adult Educator & Learning Specialist</span>
+                    </div>
+                </div>
+
+                <nav class="hidden md:flex space-x-1 lg:space-x-4 text-sm font-medium text-slate-600">
+                    <a href="#overview" class="hover:text-indigo-700 transition px-3 py-2 rounded-lg hover:bg-slate-50">Overview</a>
+                    <a href="#abstract" class="hover:text-indigo-700 transition px-3 py-2 rounded-lg hover:bg-slate-50">Abstract</a>
+                    <a href="#initiative" class="hover:text-indigo-700 transition px-3 py-2 rounded-lg hover:bg-slate-50">Context</a>
+                    <a href="#approaches" class="hover:text-indigo-700 transition px-3 py-2 rounded-lg hover:bg-slate-50">Pedagogy</a>
+                    <a href="#unintended" class="hover:text-indigo-700 transition px-3 py-2 rounded-lg hover:bg-slate-50">Critical Analysis</a>
+                    <a href="#philosophy" class="hover:text-indigo-700 transition px-3 py-2 rounded-lg hover:bg-slate-50">Philosophy</a>
+                    <a href="#references" class="hover:text-indigo-700 transition px-3 py-2 rounded-lg hover:bg-slate-50">References</a>
+                </nav>
+
+                <div class="flex items-center space-x-2">
+                    <a href="bxl642-tma.pdf" download class="px-3 py-2 text-xs sm:text-sm font-semibold text-slate-700 bg-slate-100 hover:bg-slate-200 rounded-lg transition flex items-center gap-2">
+                        <i data-lucide="download" class="w-4 h-4 text-slate-600"></i>
+                        <span class="hidden sm:inline">Download Paper</span>
+                    </a>
+                    <a href="mailto:hgf.melvin@gmail.com" class="px-3.5 py-2 text-xs sm:text-sm font-semibold text-white bg-indigo-700 hover:bg-indigo-800 rounded-lg transition shadow-sm flex items-center gap-1.5">
+                        <i data-lucide="mail" class="w-4 h-4"></i>
+                        <span>Contact</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Wrapper -->
+    <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-10">
+
+        <!-- HERO SECTION / PAPER METADATA -->
+        <section id="overview" class="bg-gradient-to-br from-slate-950 via-slate-900 to-indigo-950 text-white rounded-3xl p-6 sm:p-10 shadow-xl relative overflow-hidden">
+            <div class="absolute -right-12 -top-12 w-64 h-64 bg-indigo-500/10 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="absolute right-1/3 -bottom-12 w-64 h-64 bg-sky-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+            <div class="relative z-10 max-w-4xl">
+                <div class="flex flex-wrap items-center gap-2 mb-4 text-xs font-semibold uppercase tracking-wider text-indigo-300">
+                    <span class="bg-indigo-500/20 border border-indigo-500/30 px-3 py-1 rounded-full">Academic Critique</span>
+                    <span class="bg-sky-500/20 border border-sky-500/30 px-3 py-1 rounded-full">Distributed Cognition & Geragogy</span>
+                    <span class="bg-slate-800/80 px-3 py-1 rounded-full text-slate-300">IAL / SUSS</span>
+                </div>
+
+                <h1 class="text-2xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white mb-4 leading-tight">
+                    Teaching Seniors in a Digital Age
+                </h1>
+                <p class="text-base sm:text-xl text-slate-300 font-light serif-font italic leading-relaxed mb-6">
+                    A Critical Examination of Social Distribution of Cognition and Geragogy in Singapore's Seniors Go Digital Programme
+                </p>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 pt-6 border-t border-slate-800 text-xs sm:text-sm">
+                    <div>
+                        <span class="text-slate-400 block text-xs">Author</span>
+                        <span class="font-semibold text-slate-200">Ho Guang Fu <span class="text-slate-400 text-xs">(W2610776)</span></span>
+                    </div>
+                    <div>
+                        <span class="text-slate-400 block text-xs">Institution</span>
+                        <span class="font-semibold text-slate-200">Institute for Adult Learning (SUSS)</span>
+                    </div>
+                    <div>
+                        <span class="text-slate-400 block text-xs">Module</span>
+                        <span class="font-semibold text-slate-200">BXL642: Design, Facilitation & Assessment</span>
+                    </div>
+                    <div>
+                        <span class="text-slate-400 block text-xs">Supervisor / Date</span>
+                        <span class="font-semibold text-slate-200">Dr Stefanie Chye | 2 March 2026</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ACADEMIC ABSTRACT (REWRITTEN SUMMARY) -->
+        <section id="abstract" class="glass-card border border-indigo-100 rounded-2xl p-6 sm:p-8 space-y-4 shadow-sm">
+            <div class="flex items-center gap-3 border-b border-slate-200 pb-3">
+                <div class="p-2 bg-indigo-50 text-indigo-700 rounded-xl">
+                    <i data-lucide="file-text" class="w-5 h-5"></i>
+                </div>
+                <h2 class="text-xl font-bold text-slate-900 tracking-tight">Abstract</h2>
+            </div>
+            
+            <p class="text-slate-700 text-sm leading-relaxed serif-font">
+                This paper critically evaluates the pedagogical execution of Singapore’s Seniors Go Digital initiative, focusing on one-to-one coaching delivered at Ang Mo Kio GRC (Cheng San Ward). Grounded in Pea's (1993) Social Distribution of Cognition and Findsen & Formosa's (2011) Geragogy framework, the analysis examines how material scaffolding—specifically the policy mandating seniors' use of their own smartphones—and personalized facilitation drive learning outcomes across cognitive, psychomotor, and affective domains. The findings indicate that while distributed cognition and geragogical principles effectively build psychomotor fluency and alleviate technology anxiety, unverified cognitive internalisation and structural exclusions remain critical limitations. Additionally, the study identifies emergent unintended consequences, including metacognitive awareness and identity transformation as digital citizens, juxtaposed against device-dependency, displaced scam anxiety, and equipment-based exclusion. The paper concludes by synthesising these theoretical perspectives into a reflective teaching philosophy centered on learner agency, human dignity, and critical instructional evaluation.
+            </p>
+
+            <div class="flex flex-wrap gap-2 pt-2 text-xs">
+                <span class="font-semibold text-slate-500">Keywords:</span>
+                <span class="bg-slate-100 text-slate-700 px-2.5 py-0.5 rounded-md font-medium">Geragogy</span>
+                <span class="bg-slate-100 text-slate-700 px-2.5 py-0.5 rounded-md font-medium">Distributed Cognition</span>
+                <span class="bg-slate-100 text-slate-700 px-2.5 py-0.5 rounded-md font-medium">Cognitive Apprenticeship</span>
+                <span class="bg-slate-100 text-slate-700 px-2.5 py-0.5 rounded-md font-medium">Seniors Go Digital</span>
+                <span class="bg-slate-100 text-slate-700 px-2.5 py-0.5 rounded-md font-medium">Digital Inclusion</span>
+            </div>
+        </section>
+
+        <!-- PROGRAMME CONTEXT & IMPACT DATA -->
+        <section id="initiative" class="space-y-6">
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-2 border-b border-slate-200 pb-4">
+                <div>
+                    <h2 class="text-2xl font-bold text-slate-900 tracking-tight">1. Programme Context & Field Execution</h2>
+                    <p class="text-slate-600 text-sm">Overview of Singapore's Seniors Go Digital national initiative and learner demographics.</p>
+                </div>
+                <span class="text-xs font-semibold text-indigo-900 bg-indigo-50 px-3 py-1.5 rounded-lg border border-indigo-200 self-start md:self-auto">
+                    <i data-lucide="map-pin" class="w-3.5 h-3.5 inline mr-1 text-indigo-700"></i> Fieldwork: Ang Mo Kio GRC Cheng San
+                </span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Left Column: Context Narrative -->
+                <div class="md:col-span-2 glass-card rounded-2xl p-6 sm:p-8 space-y-4">
+                    <h3 class="text-lg font-bold text-slate-800 flex items-center gap-2">
+                        <i data-lucide="users" class="w-5 h-5 text-indigo-700"></i> Learner Demographics & Session Structure
+                    </h3>
+                    <p class="text-slate-700 text-sm leading-relaxed">
+                        Introduced by the Infocomm Media Development Authority (IMDA) during the COVID-19 pandemic, the <strong>Seniors Go Digital</strong> programme equips seniors aged 55 and above with foundational digital skills across three learning domains:
+                    </p>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
+                        <div class="p-3.5 bg-slate-50 border border-slate-200 rounded-xl">
+                            <span class="text-xs font-bold uppercase text-indigo-700 block mb-1">Cognitive</span>
+                            <p class="text-xs text-slate-600">Basic smartphone operation and cybersecurity concepts.</p>
+                        </div>
+                        <div class="p-3.5 bg-slate-50 border border-slate-200 rounded-xl">
+                            <span class="text-xs font-bold uppercase text-sky-700 block mb-1">Psychomotor</span>
+                            <p class="text-xs text-slate-600">Operating WhatsApp, Zoom, SingPass, and wet market e-payments.</p>
+                        </div>
+                        <div class="p-3.5 bg-slate-50 border border-slate-200 rounded-xl">
+                            <span class="text-xs font-bold uppercase text-slate-700 block mb-1">Affective</span>
+                            <p class="text-xs text-slate-600">Overcoming tech anxiety and building digital confidence.</p>
+                        </div>
+                    </div>
+
+                    <div class="p-4 bg-amber-50/80 border border-amber-200 rounded-xl text-xs sm:text-sm text-slate-700 space-y-2 mt-4">
+                        <span class="font-bold text-amber-900 block flex items-center gap-1.5">
+                            <i data-lucide="bookmark" class="w-4 h-4 text-amber-700"></i> Contextual Observation: Cheng San Ward
+                        </span>
+                        <ul class="list-disc list-inside space-y-1 text-slate-600">
+                            <li><strong>Demographics:</strong> ~5 unique seniors coached weekly; over 90% Chinese-speaking with basic English comprehension.</li>
+                            <li><strong>Educational Attainment:</strong> Up to Secondary Two education; high initial tech anxiety and feature phone reliance.</li>
+                            <li><strong>Session Design:</strong> 1-hour self-paced 1-on-1 sessions at Community Clubs, delivered in preferred dialects/languages. Progress logged via CRM.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Right Column: Data Metric Dashboard -->
+                <div class="glass-card rounded-2xl p-6 flex flex-col justify-between space-y-6">
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-4 flex items-center gap-2">
+                            <i data-lucide="trending-up" class="w-5 h-5 text-indigo-700"></i> National Adoption Metrics
+                        </h3>
+                        
+                        <div class="space-y-4">
+                            <div class="p-4 bg-indigo-50 border border-indigo-100 rounded-xl">
+                                <span class="text-2xl font-extrabold text-indigo-950">190,000+</span>
+                                <span class="text-xs text-indigo-700 block font-medium mt-0.5">Seniors Trained (Oct 2022)</span>
+                                <span class="text-xs text-slate-500 block mt-1">Up from 150,000 in August 2022 (IMDA)</span>
+                            </div>
+
+                            <div class="space-y-3">
+                                <span class="text-xs font-bold uppercase text-slate-500 tracking-wider">Digital Skill Adoption (2017 vs 2022)</span>
+                                
+                                <div>
+                                    <div class="flex justify-between text-xs font-medium mb-1">
+                                        <span>Online Communication Tools</span>
+                                        <span class="text-indigo-700 font-bold">87% → 92%</span>
+                                    </div>
+                                    <div class="w-full bg-slate-200 h-2 rounded-full overflow-hidden">
+                                        <div class="bg-indigo-700 h-full rounded-full" style="width: 92%"></div>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <div class="flex justify-between text-xs font-medium mb-1">
+                                        <span>Smartphone Ownership</span>
+                                        <span class="text-indigo-700 font-bold">74% → 89%</span>
+                                    </div>
+                                    <div class="w-full bg-slate-200 h-2 rounded-full overflow-hidden">
+                                        <div class="bg-sky-600 h-full rounded-full" style="width: 89%"></div>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <div class="flex justify-between text-xs font-medium mb-1">
+                                        <span>E-Payment Adoption</span>
+                                        <span class="text-indigo-700 font-bold">38% → 78% (+40%)</span>
+                                    </div>
+                                    <div class="w-full bg-slate-200 h-2 rounded-full overflow-hidden">
+                                        <div class="bg-slate-700 h-full rounded-full" style="width: 78%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="text-xs text-slate-500 pt-4 border-t border-slate-200">
+                        <i data-lucide="info" class="w-3.5 h-3.5 inline mr-1"></i> Data sourced from IMDA Singapore Digital Society Report (2023).
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PEDAGOGICAL APPROACHES EVALUATION -->
+        <section id="approaches" class="space-y-6">
+            <div class="border-b border-slate-200 pb-4">
+                <h2 class="text-2xl font-bold text-slate-900 tracking-tight">2. Pedagogical Framework Evaluation</h2>
+                <p class="text-slate-600 text-sm">Critical appraisal of Distributed Cognition and Geragogy in senior digital instruction.</p>
+            </div>
+
+            <!-- Tabbed Navigation -->
+            <div class="glass-card rounded-2xl overflow-hidden shadow-sm">
+                <div class="flex border-b border-slate-200 bg-slate-50 p-1 overflow-x-auto">
+                    <button onclick="switchTab('soc')" id="tab-soc" class="tab-btn active px-5 py-3 text-sm rounded-xl transition flex items-center gap-2 whitespace-nowrap">
+                        <i data-lucide="cpu" class="w-4 h-4"></i> Approach 1: Distributed Cognition
+                    </button>
+                    <button onclick="switchTab('geragogy')" id="tab-geragogy" class="tab-btn px-5 py-3 text-sm rounded-xl transition flex items-center gap-2 whitespace-nowrap">
+                        <i data-lucide="heart-handshake" class="w-4 h-4"></i> Approach 2: Geragogy Framework
+                    </button>
+                    <button onclick="switchTab('comparison')" id="tab-comparison" class="tab-btn px-5 py-3 text-sm rounded-xl transition flex items-center gap-2 whitespace-nowrap">
+                        <i data-lucide="table" class="w-4 h-4"></i> Learning Outcomes Matrix
+                    </button>
+                </div>
+
+                <div class="p-6 sm:p-8">
+                    <!-- Tab 1: Social Distribution of Cognition -->
+                    <div id="content-soc" class="space-y-6">
+                        <div class="flex items-start justify-between">
+                            <div>
+                                <span class="text-xs font-bold text-indigo-700 bg-indigo-50 px-2.5 py-1 rounded-md border border-indigo-200">Pea (1993) Theoretical Model</span>
+                                <h3 class="text-xl font-bold text-slate-900 mt-2">Social Distribution of Cognition via One-to-One Coaching</h3>
+                            </div>
+                            <span class="text-xs bg-slate-100 text-slate-600 px-3 py-1 rounded-full font-medium">Cognitive Apprenticeship</span>
+                        </div>
+
+                        <p class="text-slate-700 text-sm leading-relaxed">
+                            This approach views intelligence as distributed across persons, situations, and artifacts rather than residing solely within an individual's mind. By mandating that seniors use their own smartphones, instruction was situated directly within their daily physical environment.
+                        </p>
+
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                            <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 space-y-2">
+                                <h4 class="font-bold text-slate-800 text-sm flex items-center gap-2">
+                                    <i data-lucide="smartphone" class="w-4 h-4 text-indigo-700"></i> Material Distribution
+                                </h4>
+                                <p class="text-xs text-slate-600 leading-relaxed">
+                                    The smartphone UI acts as a <em>"smart tool"</em> offloading complex reasoning, reducing working memory load and error rates (Karasavvidis, 2002).
+                                </p>
+                            </div>
+
+                            <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 space-y-2">
+                                <h4 class="font-bold text-slate-800 text-sm flex items-center gap-2">
+                                    <i data-lucide="user-check" class="w-4 h-4 text-indigo-700"></i> External Executive
+                                </h4>
+                                <p class="text-xs text-slate-600 leading-relaxed">
+                                    The Digital Ambassador acts as an external cognitive regulator, scaffolding tasks into manageable knowledge chunks (Sweller, 2011).
+                                </p>
+                            </div>
+
+                            <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 space-y-2">
+                                <h4 class="font-bold text-slate-800 text-sm flex items-center gap-2">
+                                    <i data-lucide="shield-check" class="w-4 h-4 text-indigo-700"></i> Stereotype Mitigation
+                                </h4>
+                                <p class="text-xs text-slate-600 leading-relaxed">
+                                    Peer MKOs validate learner potential, mitigating the stereotype threat that older adults are inherently "bad with technology".
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tab 2: Geragogy -->
+                    <div id="content-geragogy" class="hidden space-y-6">
+                        <div class="flex items-start justify-between">
+                            <div>
+                                <span class="text-xs font-bold text-sky-700 bg-sky-50 px-2.5 py-1 rounded-md border border-sky-200">Findsen & Formosa (2011) Model</span>
+                                <h3 class="text-xl font-bold text-slate-900 mt-2">Geragogy: Senior-Centred Adult Learning</h3>
+                            </div>
+                            <span class="text-xs bg-slate-100 text-slate-600 px-3 py-1 rounded-full font-medium">Affective & Contextual Focus</span>
+                        </div>
+
+                        <p class="text-slate-700 text-sm leading-relaxed">
+                            Geragogy is a learner-centred framework tailored specifically to older adults' physical, cognitive, and psychosocial needs. It stresses emotional security, pace adjustment, and contextual relevance.
+                        </p>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="p-4 bg-sky-50/50 rounded-xl border border-sky-200 space-y-2">
+                                <h4 class="font-bold text-slate-800 text-sm flex items-center gap-2">
+                                    <i data-lucide="smile" class="w-4 h-4 text-sky-700"></i> Psychological Safety
+                                </h4>
+                                <p class="text-xs text-slate-600 leading-relaxed">
+                                    1-on-1 coaching delivered bilingually or in vernacular dialects mitigates the fear of "losing face", creating an emotionally safe environment for seeking help (Pihlainen et al., 2021).
+                                </p>
+                            </div>
+
+                            <div class="p-4 bg-sky-50/50 rounded-xl border border-sky-200 space-y-2">
+                                <h4 class="font-bold text-slate-800 text-sm flex items-center gap-2">
+                                    <i data-lucide="target" class="w-4 h-4 text-sky-700"></i> Contextual Relevance
+                                </h4>
+                                <p class="text-xs text-slate-600 leading-relaxed">
+                                    Content is anchored in immediate everyday needs (PayNow e-payments at wet markets or video calls with family), driving intrinsic motivation (Bulbul et al., 2022).
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tab 3: Matrix -->
+                    <div id="content-comparison" class="hidden space-y-4">
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">Evaluation Across Learning Domains</h3>
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-xs sm:text-sm text-left border-collapse">
+                                <thead>
+                                    <tr class="bg-slate-100 text-slate-800 border-b border-slate-300">
+                                        <th class="p-3 font-bold">Domain</th>
+                                        <th class="p-3 font-bold">Distributed Cognition</th>
+                                        <th class="p-3 font-bold">Geragogy Framework</th>
+                                        <th class="p-3 font-bold">Domain Efficacy</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-slate-200 text-slate-700">
+                                    <tr>
+                                        <td class="p-3 font-bold text-indigo-900">Cognitive</td>
+                                        <td class="p-3">Breaks tasks into chunks; reduces intrinsic cognitive load.</td>
+                                        <td class="p-3">Limits curriculum ideas clearly; lacks formal evaluation of conceptual internalisation.</td>
+                                        <td class="p-3"><span class="bg-amber-100 text-amber-900 px-2 py-0.5 rounded font-semibold text-xs">Moderate</span> (Unverified long-term)</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-3 font-bold text-sky-900">Psychomotor</td>
+                                        <td class="p-3">High success via personal device muscle memory & physical scaffolding.</td>
+                                        <td class="p-3">Task-oriented training grounded in context optimizes physical execution.</td>
+                                        <td class="p-3"><span class="bg-indigo-100 text-indigo-900 px-2 py-0.5 rounded font-semibold text-xs">High</span> (Immediate transfer)</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-3 font-bold text-slate-900">Affective</td>
+                                        <td class="p-3">Peer MKOs dismantle stereotype threat ("bad with technology").</td>
+                                        <td class="p-3">Patient facilitation directly addresses internal anxiety and self-confidence barriers.</td>
+                                        <td class="p-3"><span class="bg-indigo-100 text-indigo-900 px-2 py-0.5 rounded font-semibold text-xs">High</span> (Boosts confidence)</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CRITICAL ANALYSIS: UNINTENDED LEARNING OUTCOMES -->
+        <section id="unintended" class="space-y-6">
+            <div class="border-b border-slate-200 pb-4">
+                <h2 class="text-2xl font-bold text-slate-900 tracking-tight">3. Critical Analysis: Unintended Learning Outcomes</h2>
+                <p class="text-slate-600 text-sm">Evaluating emergent positive transformations alongside unintended structural risks.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Positive Unintended Outcomes -->
+                <div class="glass-card rounded-2xl p-6 sm:p-8 space-y-4 border-t-4 border-t-indigo-600">
+                    <div class="flex items-center gap-3">
+                        <div class="p-2.5 bg-indigo-100 text-indigo-900 rounded-xl">
+                            <i data-lucide="sparkles" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-slate-900">Positive Unintended Outcomes</h3>
+                            <span class="text-xs text-indigo-700 font-medium">Metacognition & Identity Capital</span>
+                        </div>
+                    </div>
+
+                    <div class="space-y-4 pt-2">
+                        <div class="p-4 bg-slate-50 rounded-xl space-y-1">
+                            <h4 class="font-bold text-slate-800 text-sm">1. Emergence of Metacognitive Awareness</h4>
+                            <p class="text-xs text-slate-600 leading-relaxed">
+                                Structured task-deconstruction exposed seniors to underlying mental models for navigating unfamiliar tech, allowing them to internalise problem-solving strategies beyond coached tasks (Pea, 1993).
+                            </p>
+                        </div>
+
+                        <div class="p-4 bg-slate-50 rounded-xl space-y-1">
+                            <h4 class="font-bold text-slate-800 text-sm">2. Identity as an Active Digital Citizen</h4>
+                            <p class="text-xs text-slate-600 leading-relaxed">
+                                Mastering digital transactions (e.g. SingPass, PayNow) strengthened seniors' identity capital, fostering a renewed sense of self-agency and social relevance in Singapore's digital society (Pihlainen et al., 2021).
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Negative Unintended Outcomes -->
+                <div class="glass-card rounded-2xl p-6 sm:p-8 space-y-4 border-t-4 border-t-amber-600">
+                    <div class="flex items-center gap-3">
+                        <div class="p-2.5 bg-amber-100 text-amber-900 rounded-xl">
+                            <i data-lucide="alert-circle" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-slate-900">Negative Unintended Outcomes</h3>
+                            <span class="text-xs text-amber-800 font-medium">Exclusion & Anxiety Displacement</span>
+                        </div>
+                    </div>
+
+                    <div class="space-y-4 pt-2">
+                        <div class="p-4 bg-slate-50 rounded-xl space-y-1">
+                            <h4 class="font-bold text-slate-800 text-sm">1. Equipment-Based Exclusion</h4>
+                            <p class="text-xs text-slate-600 leading-relaxed">
+                                Enforcing the "own smartphone" rule turned away seniors lacking devices, reproducing digital inequality. When the physical artifact is missing, the distributed cognitive system collapses entirely (Pihlainen et al., 2021).
+                            </p>
+                        </div>
+
+                        <div class="p-4 bg-slate-50 rounded-xl space-y-1">
+                            <h4 class="font-bold text-slate-800 text-sm">2. Interface & Device Dependency</h4>
+                            <p class="text-xs text-slate-600 leading-relaxed">
+                                Tightly coupling learning to specific phone models caused interface rigidities. Operating system updates or changing devices threatened skill transferability (Schnotz & Kürschner, 2007).
+                            </p>
+                        </div>
+
+                        <div class="p-4 bg-slate-50 rounded-xl space-y-1">
+                            <h4 class="font-bold text-slate-800 text-sm">3. Displaced Technology Anxiety</h4>
+                            <p class="text-xs text-slate-600 leading-relaxed">
+                                Fear shifted from device operation to fear of online scams. Without psychological scaffolding, cybersecurity warnings risked amplifying vigilance into complete digital avoidance (Hestyan et al., 2025).
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PERSONAL TEACHING PHILOSOPHY -->
+        <section id="philosophy" class="bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-900 text-white rounded-3xl p-6 sm:p-10 shadow-lg space-y-6">
+            <div class="flex items-center gap-3 border-b border-indigo-800/80 pb-4">
+                <div class="p-3 bg-indigo-500/20 rounded-2xl border border-indigo-400/30">
+                    <i data-lucide="compass" class="w-6 h-6 text-indigo-300"></i>
+                </div>
+                <div>
+                    <h2 class="text-2xl font-bold tracking-tight">4. Teaching Philosophy & Synthesis</h2>
+                    <span class="text-xs text-indigo-300">Educator Stance & Reflective Practice</span>
+                </div>
+            </div>
+
+            <blockquote class="serif-font italic text-lg sm:text-xl text-indigo-100 leading-relaxed pl-4 border-l-4 border-indigo-400">
+                "Teaching is most powerful when it begins where the learner stands and reaches toward who they can become. Genuine learning happens when instruction is translated into learner agency."
+            </blockquote>
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-2 text-sm">
+                <div class="space-y-2">
+                    <span class="font-bold text-indigo-300 text-base block">Learner Agency & Utility</span>
+                    <p class="text-slate-300 text-xs leading-relaxed">
+                        Instruction must immediately unlock practical everyday agency. Distributing cognition across personal devices translates abstract steps into actionable, real-world independence.
+                    </p>
+                </div>
+
+                <div class="space-y-2">
+                    <span class="font-bold text-indigo-300 text-base block">Humanity & Dignity</span>
+                    <p class="text-slate-300 text-xs leading-relaxed">
+                        Every adult learner deserves emotional safety and dignity. Facilitation must meet learners without condescension, rebuilding self-confidence before addressing technical competence.
+                    </p>
+                </div>
+
+                <div class="space-y-2">
+                    <span class="font-bold text-indigo-300 text-base block">Critical Evaluation</span>
+                    <p class="text-slate-300 text-xs leading-relaxed">
+                        Effective pedagogy requires honest reckoning with unintended consequences—ensuring instructional models do not inadvertently exclude the most vulnerable.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ACADEMIC REFERENCES SECTION -->
+        <section id="references" class="glass-card rounded-2xl p-6 sm:p-8 space-y-4">
+            <div class="flex items-center justify-between border-b border-slate-200 pb-3">
+                <h2 class="text-xl font-bold text-slate-900 flex items-center gap-2">
+                    <i data-lucide="book-open" class="w-5 h-5 text-indigo-700"></i> References
+                </h2>
+                <span class="text-xs text-slate-500 font-mono">APA 7th Edition</span>
+            </div>
+
+            <ul class="space-y-3 text-xs sm:text-sm text-slate-600 leading-relaxed divide-y divide-slate-100">
+                <li class="pt-2">Bulbul, A. H., Gunaydin, S., & Odabasi, H. F. (2022). Embracing older adults in online learning. <em>Turkish Online Journal of Educational Technology</em>, 21(1), 55–67.</li>
+                <li class="pt-2">Findsen, B., & Formosa, M. (2011). <em>Lifelong learning in later life</em>. Sense Publishers. https://doi.org/10.1007/978-94-6091-651-9</li>
+                <li class="pt-2">Hestyan, A. P., Mardliyah, S., & Susanto, S. F. (2025). Exploring geragogy as a non-formal education approach to promote quality of life for the elderly. <em>EduLine: Journal of Education and Learning Innovation</em>, 5(1), 188–194. https://doi.org/10.35877/454RI.eduline3624</li>
+                <li class="pt-2">Infocomm Media Development Authority. (2023). <em>Singapore digital society report 2023</em>. IMDA.</li>
+                <li class="pt-2">Infocomm Media Development Authority. (2024, February 28). <em>Seniors Go Digital</em>. IMDA. https://www.imda.gov.sg/How-We-Can-Help/Seniors-Go-Digital</li>
+                <li class="pt-2">Karasavvidis, I. (2002). Distributed cognition and educational practice. <em>Journal of Interactive Learning Research</em>, 13(1/2), 11–29.</li>
+                <li class="pt-2">Low, D. (2022, October 4). More than 190,000 seniors trained in basic digital skills under govt programme. <em>The Straits Times</em>.</li>
+                <li class="pt-2">Pea, R. D. (1993). Practices of distributed intelligence and designs for education. In G. Salomon (Ed.), <em>Distributed cognitions: Psychological and educational considerations</em> (pp. 47–87). Cambridge University Press.</li>
+                <li class="pt-2">Pihlainen, K., Korjonen-Kuusipuro, K., & Kärnä, E. (2021). Perceived benefits from non-formal digital training sessions in later life. <em>International Journal of Lifelong Education</em>, 40(2), 155–169. https://doi.org/10.1080/02601370.2021.1919768</li>
+                <li class="pt-2">Schirmer, M., Dalko, K., Stoevesandt, D., Paulicke, D., & Jahn, P. (2023). Educational concepts of digital competence development for older adults - A scoping review. <em>International Journal of Environmental Research and Public Health</em>, 20(13), Article 6269. https://doi.org/10.3390/ijerph20136269</li>
+                <li class="pt-2">Schnotz, W., & Kürschner, C. (2007). A reconsideration of cognitive load theory. <em>Educational Psychology Review</em>, 19(4), 469–508. https://doi.org/10.1007/s10648-007-9053-4</li>
+                <li class="pt-2">Stein, D. (1998). <em>Situated learning in adult education</em> (ERIC Digest No. 195). ERIC Clearinghouse on Adult, Career, and Vocational Education.</li>
+                <li class="pt-2">Sweller, J. (2011). Cognitive load theory. In J. P. Mestre & B. H. Ross (Eds.), <em>The psychology of learning and motivation</em> (Vol. 55, pp. 37–76). Academic Press.</li>
+            </ul>
+        </section>
+
+        <!-- FOOTER CALL TO ACTION -->
+        <section id="contact" class="bg-slate-100 border border-slate-200 rounded-2xl p-6 sm:p-8 text-center space-y-4 no-print">
+            <h3 class="text-xl font-bold text-slate-800">Academic & Professional Inquiries</h3>
+            <p class="text-sm text-slate-600 max-w-2xl mx-auto">
+                Ho Guang Fu is an Adult Educator specializing in innovative learning design, digital facilitation, and CET program evaluation within Singapore's workforce development landscape.
+            </p>
+            <div class="flex justify-center gap-4 pt-2">
+                <a href="mailto:hgf.melvin@gmail.com" class="px-5 py-2.5 bg-indigo-700 hover:bg-indigo-800 text-white font-semibold rounded-xl text-sm transition shadow-sm flex items-center gap-2">
+                    <i data-lucide="mail" class="w-4 h-4"></i> Contact
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-white border-t border-slate-200 py-8 px-4 text-center text-xs text-slate-500 no-print">
+        <div class="w-full max-w-7xl mx-auto space-y-2">
+            <p class="font-bold text-slate-700">BXL642: Innovative Design, Facilitation and Assessment of Learning</p>
+            <p>Graduate Diploma in Adult Learning • Institute for Adult Learning Singapore / SUSS</p>
+            <p class="text-slate-400">Submitted by Ho Guang Fu (Melvin Ho) W2610776 • Assessor: Dr Stefanie Chye Yen Leng • Grade Awarded: A+</p>
+        </div>
+    </footer>
+
+    <!-- Tab Switching Logic Script -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        function switchTab(tabName) {
+            document.getElementById('content-soc').classList.add('hidden');
+            document.getElementById('content-geragogy').classList.add('hidden');
+            document.getElementById('content-comparison').classList.add('hidden');
+
+            document.getElementById('tab-soc').classList.remove('active');
+            document.getElementById('tab-geragogy').classList.remove('active');
+            document.getElementById('tab-comparison').classList.remove('active');
+
+            document.getElementById('content-' + tabName).classList.remove('hidden');
+            document.getElementById('tab-' + tabName).classList.add('active');
+        }
+    </script>
+</body>
+</html>
